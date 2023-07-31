@@ -1,0 +1,668 @@
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 0.5; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.5)
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.5)
+  }
+
+#enrollees {
+    min-width: 320px;
+    width: 800px;
+    height: auto;
+    margin-top: 16vh;
+    margin-bottom: 10vh;
+    margin-right: auto;
+    margin-left: auto;
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#dropCourse {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px white solid;
+    border-radius: 6px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: white;
+    text-align: center;
+}
+
+.dropOption {
+    color: #303030;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.frm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-top: 3em;
+    border: 1px solid white;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.topHeader {
+    display: flex;
+    width: 97.2%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    
+}
+
+.leftHeader {
+    width: 34.33%;
+    display: flex;
+}
+
+#dropBatch {
+    width: 74%;
+    min-width: 100px;
+    height: 40px;
+    outline: none;
+    background: transparent;
+    border: 1px white solid;
+    border-radius: 6px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: .2em;
+}
+
+#dropBatch option {
+    text-align: center;
+}
+
+.btnRound {
+    margin: auto;
+    margin-left: .2em;
+    margin-right: .2em;
+    cursor: pointer;
+}
+
+.btnDelete {
+    margin: auto;
+    margin-left: .2em;
+    margin-right: .2em;
+    cursor: pointer;
+}
+
+.btnStatus {
+    margin: auto;
+    margin-left: .2em;
+    margin-right: .2em;
+    cursor: pointer;
+}
+
+.rightHeader {
+    display: flex;
+    width: 25%;
+    min-width: 125px;
+}
+
+.rightHeader p{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: white;
+    margin: auto;
+}
+
+#txtID {
+    width: 80px;
+    height: 38px;
+    margin-top: auto;
+    margin-bottom: auto;
+    outline: none;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.05);
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: white;
+    text-align: center;
+}
+
+.nextHeader {
+    display: flex;
+    width: 98%;
+    margin-bottom: .5em;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    height: 40px;
+}
+
+#btnConfirm {
+    display: flex;
+    background: rgba(116, 196, 255, 0.5);
+    border: 2px solid #74C4FF;
+    border-radius: 99px;
+    cursor: pointer;
+    margin-top: 1em;
+    margin-left: .5em;
+    margin-right: .5em;
+    margin-bottom: 1em;
+    height: 40px;
+}
+
+#btnConfirm h1 {
+    margin: auto;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 130%;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: white;
+}
+
+#btnConfirm:hover {
+    background: rgba(116, 196, 255, 1);
+}
+
+#trainees img {
+    scale: 100%;
+    object-fit: none;
+}
+
+.textbox {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    background-color: transparent;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    padding-left: .4em;
+    padding-right: .4em;
+    padding-top: auto;
+    padding-bottom: auto;
+    color: white;
+    outline: none;
+    margin: auto;
+    margin-left: .2em;
+    margin-right: .2em;
+}
+
+#txtSearch {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px white solid;
+    background-color: transparent;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    padding-left: .4em;
+    padding-right: .4em;
+    padding-top: auto;
+    padding-bottom: auto;
+    color: white;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#btnSearch {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#tblData {
+    display: inline-flex;
+    flex-direction: column;
+    width: auto;
+    min-height: 30vh;
+    height: auto;
+    margin-top: 3em;
+    border: 1px solid white;
+    border-radius: 6px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+#tblHScroll {
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+}
+
+#tblHScroll::-webkit-scrollbar {
+    height: 1px;
+  }
+  
+  /* Track */
+#tblHScroll::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+#tblHScroll::-webkit-scrollbar-thumb {
+	background: white;
+    opacity: .2;
+	border-radius: 10px;
+  }
+  
+#tblHScroll::-webkit-scrollbar-thumb:hover {
+	background: white;
+	border-radius: 10px;
+    opacity: 1;
+  }
+
+#tblContainer {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+}
+
+#tblHeader {
+    display: flex;
+    width: 98%;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    justify-content: space-between;
+}
+
+.txtHeader {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 100%;
+    justify-content: center;
+}
+
+.txtHeader img {
+    object-fit:none;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.txtHeaderID {
+    display: flex;
+    cursor: pointer;
+    width: 120px;
+    height: 100%;
+    justify-content: center;
+}
+
+.txtHeaderID img {
+    object-fit:none;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.txtHeaderShort {
+    display: flex;
+    cursor: pointer;
+    width: 74px;
+    height: 100%;
+    justify-content: center;
+}
+
+#tblHeader h1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.tblLineTop {
+    width: 98%;
+    height: 1px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: .5em;
+    opacity: .3;
+}
+
+.tblLine {
+    width: 98%;
+    height: 1px;
+    
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: .3;
+}
+
+#tblEntries {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 18vh;
+    height: auto;
+}
+
+.tblEntry {
+    display: flex;
+    width: 98%;
+    height: 40px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+
+.txtDel p {
+    text-decoration: underline;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: left;
+}
+
+.divEntryID {
+    display: flex;
+    cursor: pointer;
+    width: 120px;
+    height: 20px;
+    overflow: hidden;
+    justify-content:left;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+
+.divEntryName {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+    justify-content:left;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+.divEntryEmail {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+    justify-content:left;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.divEntryContact {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+    justify-content:left;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+.divEntrySocial {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+    justify-content:left;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: center;
+
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+.divEntryCourse {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+    justify-content:left;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: center;
+
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+
+.divEntryBatch {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: center;
+
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.divEntryTimestamp {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+    justify-content:left;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#dropEntry {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    margin: auto;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: white;
+    text-align: left;
+}
+
+.imgEntry {
+    display: flex;
+    cursor: pointer;
+    width: 74px;
+    height: 100%;
+    overflow: hidden;
+    justify-content:space-between;
+}
+
+#tblFooter {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    height: 4vh;
+}
+
+#lblRecords {
+    display: flex;
+    height: 100%;
+}
+
+#lblRecords h1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: .6em;
+    margin-left: auto;
+}
+
+#btnUpdateCerti {
+    opacity: .25;
+}

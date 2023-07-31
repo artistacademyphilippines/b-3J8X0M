@@ -1,0 +1,372 @@
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 0.5; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.5)
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.5)
+  }
+
+#resources {
+    width: 800px;
+    min-width: 320px;
+    margin:auto;
+    margin-top: 7.4em;
+    margin-bottom: 10vh;
+    height: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+#resources img {
+    cursor: pointer;
+}
+
+.dropHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3em;
+}
+
+#dropCourse {
+    width: 49%;
+    height: 50px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px white solid;
+    border-radius: 6px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: white;
+    text-align: center;
+}
+
+#dropBatch {
+    width: 49%;
+    height: 50px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px white solid;
+    border-radius: 6px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: white;
+    text-align: center;
+}
+
+
+.dropOption {
+    color: #303030;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+}
+
+.frm {
+    width: 100%;
+    height: auto;
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+}
+
+.frm img {
+    object-fit: none;
+    margin: auto;
+    margin-left: .2em;
+    margin-right: .2em;
+}
+
+.frm h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+
+.entry {
+    width: auto;
+    min-height: 140px;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 6px;
+    margin-top: 0.5em;
+    background: rgba(0, 0, 0, 0.05);
+    padding-bottom: .5em;
+}
+
+.entryHeader {
+    display: flex;
+    width: 98%;
+    height: auto;
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    justify-content: space-between;
+}
+
+
+.bannerLine {
+    width: 98%;
+    height: 1px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: .3;
+}
+
+.textbox {
+    margin: auto;
+    width: 94%;
+    height: 40px;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    background-color: transparent;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    padding-left: .4em;
+    padding-right: .4em;
+    padding-top: auto;
+    padding-bottom: auto;
+    color: white;
+    outline: none;
+    margin-left: .2em;
+    margin-right: .2em;
+}
+
+
+.resourcesEntry {
+    display: flex;
+    width: 98%;
+    height: 40px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+.resourcesEntry h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+}
+
+
+.resourcesDesc {
+    width: 50%;
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+    word-break:keep-all;
+}
+
+
+.trainingVideoEntry {
+    display: flex;
+    width: 98%;
+    height: 40px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+.trainingVideoEntry h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+    cursor: pointer;
+}
+
+.trainingVideoTitle {
+    width: 50%;
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+    word-break:keep-all;
+}
+
+.trainingVideoViews {
+    width: 45%;
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+    word-break:keep-all;
+}
+
+.otherVideosEntry {
+    display: flex;
+    width: 98%;
+    height: 40px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+.otherVideosEntry h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+.otherVideosTitle {
+    width: 50%;
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+}
+
+
+.otherVideosViews {
+    width: 45%;
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+}
+
+.basicFilesEntry {
+    display: flex;
+    width: 98%;
+    height: 40px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+.basicFilesEntry h1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: left;
+    cursor: pointer;
+}
+
+.basicFilesTitle {
+    width: 50%;
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+    word-break:keep-all;
+}
+
+.basicFilesDownloads {
+    width: 45%;
+    height: 40px;
+    display: flex;
+    overflow: hidden;
+    word-break:keep-all;
+}
+
+
+.imgResources {
+    margin: auto;
+    margin-left: .2em;
+    margin-right: .2em;
+}
+
+.btnPlayTrainingVideo {
+    margin: auto;
+    margin-left: .2em;
+    margin-right: .2em;
+    
+}
+
+.btnDelTrainingVideo {
+    margin: auto;
+    margin-left: .2em;
+    margin-right: .2em;
+}
+
+.btnPlayOtherVideos {
+    margin: auto;
+    margin-left: .2em;
+    margin-right: .2em;
+}
+
+.btnDelOtherVideos {
+    margin: auto;
+    margin-left: .2em;
+    margin-right: .2em;
+}
+
+.btnDownloadBasicFiles {
+    margin: auto;
+    margin-left: .2em;
+    margin-right: .2em;
+}
+
+.btnDelBasicFiles {
+    margin: auto;
+    margin-left: .2em;
+    margin-right: .2em;
+}
+
+

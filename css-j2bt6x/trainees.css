@@ -1,0 +1,555 @@
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 0.5; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(255, 255, 255, 0.5)
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(255, 255, 255, 0.5)
+  }
+
+#trainees {
+    min-width: 320px;
+    width: 800px;
+    height: auto;
+    margin-top: 16vh;
+    margin-bottom: 10vh;
+    margin-right: auto;
+    margin-left: auto;
+    display: inline-flex;
+    flex-direction: column;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+#dropCourse {
+    width: 100%;
+    height: 50px;
+    outline: none;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px white solid;
+    border-radius: 6px;
+
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: white;
+    text-align: center;
+}
+
+.dropOption {
+    color: #303030;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.frm {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin-top: 3em;
+}
+
+#trainees h1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+}
+
+.entry {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #FFFFFF;
+    border-radius: 6px;
+    display: inline-flex;
+    flex-direction: column;
+    min-height: 50px;
+    height: auto;
+    margin-top: 0.5em;
+    padding-left: .1em;
+    padding-right: .1em;
+}
+
+.nextHeader {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#dropBatch {
+    width: 50%;
+    height: 40px;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 1px white solid;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#dropBatch option {
+    text-align: left;
+}
+
+.textbox {
+    width: 88%;
+    height: 40px;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    background-color: transparent;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    padding-left: .4em;
+    padding-right: .4em;
+    padding-top: auto;
+    padding-bottom: auto;
+    color: white;
+    outline: none;
+    
+}
+
+#txtSearch {
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px white solid;
+    background-color: transparent;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.1em;
+    padding-left: .4em;
+    padding-right: .4em;
+    padding-top: auto;
+    padding-bottom: auto;
+    color: white;
+    outline: none;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#btnSearch {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.btnRound {
+    margin: auto;
+    margin-left: .2em;
+    margin-right: .2em;
+    cursor: pointer;
+}
+
+.btnDelete {
+    margin: auto;
+    margin-left: .2em;
+    margin-right: .2em;
+    cursor: pointer;
+}
+
+.btnStatus {
+    margin: auto;
+    margin-left: .2em;
+    margin-right: .2em;
+    cursor: pointer;
+}
+
+#tblData {
+    display: inline-flex;
+    flex-direction: column;
+    width: auto;
+    min-height: 200px;
+    height: auto;
+    margin-top: 3em;
+    border: 1px solid white;
+    border-radius: 6px;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+#tblHScroll {
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+}
+
+#tblHScroll::-webkit-scrollbar {
+    height: 1px;
+  }
+  
+  /* Track */
+#tblHScroll::-webkit-scrollbar-track {
+	background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+#tblHScroll::-webkit-scrollbar-thumb {
+	background: white;
+    opacity: .2;
+	border-radius: 10px;
+  }
+  
+#tblHScroll::-webkit-scrollbar-thumb:hover {
+	background: white;
+	border-radius: 10px;
+    opacity: 1;
+  }
+
+#tblContainer {
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+}
+
+
+#tblHeader {
+    display: flex;
+    width: 98%;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    justify-content: space-between;
+}
+
+#tblHeader h1{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.txtHeaderID {
+    display: flex;
+    cursor: pointer;
+    width: 120px;
+    height: 100%;
+    justify-content: center;
+}
+
+.txtHeaderID img {
+    object-fit:none;
+    margin-top: auto;
+    margin-bottom: auto;
+    scale: 1;
+}
+
+.txtHeader {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 100%;
+    justify-content: center;
+}
+
+.txtHeader img {
+    object-fit:none;
+    margin-top: auto;
+    margin-bottom: auto;
+    scale: 1;
+}
+
+.txtHeaderShort {
+    display: flex;
+    cursor: pointer;
+    width: 74px;
+    height: 100%;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.tblLineTop {
+    width: 98%;
+    height: 1px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: .3;
+}
+
+.tblLine {
+    width: 98%;
+    height: 1px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: .3;
+}
+
+#tblEntries {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    min-height:32vh;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.tblEntry {
+    display: flex;
+    width: 98%;
+    height: 40px;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+
+.divEntryID {
+    display: flex;
+    cursor: pointer;
+    width: 120px;
+    height: 20px;
+    overflow: hidden;
+    justify-content:left;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.divEntryName {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+    justify-content:left;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.divEntryEmail {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+    justify-content:left;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: left;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.divEntrySocial {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+    justify-content:left;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: center;
+
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.divEntryContact {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+    justify-content:left;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.divEntryCourse {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+    justify-content:left;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: center;
+
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.divEntryBatch {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: center;
+
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.divEntryTimestamp {
+    display: flex;
+    cursor: pointer;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+    justify-content:left;
+    outline: none;
+    border: none;
+    background-color: transparent;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.imgEntry {
+    display: flex;
+    cursor: pointer;
+    width: 74px;
+    height: 100%;
+    overflow: hidden;
+    justify-content:space-between;
+}
+
+#tblFooter {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+    height: 4vh;
+}
+
+#lblRecords {
+    display: flex;
+    height: 100%;
+}
+
+#lblRecords h1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: .6em;
+    margin-left: auto;
+}

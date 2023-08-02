@@ -161,13 +161,3 @@ body::-webkit-scrollbar-thumb:hover {
     letter-spacing: 2px;
 }
 
-#black {
-  width: 100vw;
-  height: 100vh;
-  background-color: black;
-  opacity: .2;
-  position: fixed;
-  z-index: 7;
-  transition: opacity .5s;
-  visibility: hidden;
-}

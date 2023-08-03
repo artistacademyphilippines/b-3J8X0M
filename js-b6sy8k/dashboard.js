@@ -257,3 +257,11 @@ function checkAuth() {
 }
 
 setInterval(checkAuth, 500);
+
+//-----------------------Before Unload-------------------------
+
+function sessExpired(){
+    var sessEmail = sessionStorage.getItem("sessEmail");
+    alert(sessEmail);
+}
+window.addEventListener("beforeunload", sessExpired);

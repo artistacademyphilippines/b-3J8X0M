@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
 import { getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
-import { getDatabase, ref, onValue, update, child, get } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+import { getDatabase, ref, onValue, update, child, get, onDisconnect } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
@@ -260,10 +260,16 @@ setInterval(checkAuth, 500);
 
 //-----------------------Before Unload-------------------------
 
-function sessExpired(e){
-    e.preventDefault();
-    var sessEmail = sessionStorage.getItem("sessEmail");
-    alert(sessEmail);
-    return null;
+function checkOffline() {
+    var path = ref(db, ".info/connected");
+    onValue(path, (snap) => {
+        if (snap.val() === true) {
+          console.log("connected");
+        } else {
+          console.log("not connected");
+        }
+      });
 }
-window.onbeforeunload = sessExpired;
+checkOffline();
+
+

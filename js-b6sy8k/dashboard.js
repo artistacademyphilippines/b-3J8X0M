@@ -260,7 +260,8 @@ setInterval(checkAuth, 500);
 
 //-----------------------Before Unload-------------------------
 
-function sessExpired(){
+function sessExpired(e){
+    e.preventDefault();
     var sessEmail = sessionStorage.getItem("sessEmail");
     alert(sessEmail);
 }

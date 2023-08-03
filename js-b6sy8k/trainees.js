@@ -1,1 +1,895 @@
-var _0x52787a=_0x1e1f;(function(_0x230955,_0x3a505a){var _0x4cd0ad=_0x1e1f,_0xd2a5b=_0x230955();while(!![]){try{var _0x1cc541=-parseInt(_0x4cd0ad(0x12a))/0x1+-parseInt(_0x4cd0ad(0x13b))/0x2+parseInt(_0x4cd0ad(0x12e))/0x3*(parseInt(_0x4cd0ad(0x13e))/0x4)+parseInt(_0x4cd0ad(0x16b))/0x5+parseInt(_0x4cd0ad(0x115))/0x6*(-parseInt(_0x4cd0ad(0x154))/0x7)+-parseInt(_0x4cd0ad(0x144))/0x8+parseInt(_0x4cd0ad(0x17a))/0x9;if(_0x1cc541===_0x3a505a)break;else _0xd2a5b['push'](_0xd2a5b['shift']());}catch(_0x33d469){_0xd2a5b['push'](_0xd2a5b['shift']());}}}(_0x15c5,0x69100));import{initializeApp}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';import{getAuth,signOut,onAuthStateChanged}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';import{getDatabase,ref,onValue,update,get,remove,query,orderByChild,orderByKey}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js';const firebaseConfig={'apiKey':_0x52787a(0x109),'authDomain':_0x52787a(0x156),'databaseURL':_0x52787a(0xff),'projectId':_0x52787a(0x16d),'storageBucket':_0x52787a(0x162),'messagingSenderId':'651674935886','appId':_0x52787a(0x117)},app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase();var bodyBlue=document['getElementById']('bodyBlue');onAuthStateChanged(auth,_0x495aca=>{var _0x371960=_0x52787a;if(_0x495aca){var _0x347a07=sessionStorage[_0x371960(0x14a)](_0x371960(0x170));_0x347a07=='XribZIy3mORl28B3A7S3qOdv2Bs1'?bodyBlue[_0x371960(0x180)]['visibility']=_0x371960(0x114):window[_0x371960(0x17f)][_0x371960(0x10a)](_0x371960(0x13f));}else window[_0x371960(0x17f)][_0x371960(0x10a)](_0x371960(0x152));});var t=0.002*window[_0x52787a(0x175)],c=window['innerWidth'],scrollingBannerText=document[_0x52787a(0x111)](_0x52787a(0x128));const scrollingBanner=document[_0x52787a(0x111)]('divBanner');var bannerContainer=document[_0x52787a(0x111)](_0x52787a(0x171));bannerContainer[_0x52787a(0x180)]['transform']=_0x52787a(0x165)+window['innerWidth']+'px)';function checkBanner(){var _0x186afa=_0x52787a;const _0x2bfc65=ref(db,_0x186afa(0x163));onValue(_0x2bfc65,_0x41a6f2=>{var _0x3508a9=_0x186afa;_0x41a6f2[_0x3508a9(0x142)]()&&(scrollingBannerText[_0x3508a9(0x108)]=_0x41a6f2[_0x3508a9(0x127)]()['message'],_0x41a6f2[_0x3508a9(0x127)]()['status']===!![]?scrollingBanner[_0x3508a9(0x180)]['visibility']=_0x3508a9(0x114):scrollingBanner[_0x3508a9(0x180)]['visibility']=_0x3508a9(0xf7));});}checkBanner();function bannerAnimation(){var _0x1472d8=_0x52787a;c-=0.5,bannerContainer[_0x1472d8(0x180)]['transform']='translateX('+c+_0x1472d8(0x15a),c<bannerContainer['offsetWidth']*-0x1&&(c=window[_0x1472d8(0x175)],bannerContainer[_0x1472d8(0x180)][_0x1472d8(0x113)]=_0x1472d8(0x165)+window[_0x1472d8(0x175)]+_0x1472d8(0x15a));}setInterval(bannerAnimation,t);var orderBy=_0x52787a(0x137),getEmail='',deleteID='',newID=[],dropCourse=document[_0x52787a(0x111)](_0x52787a(0x13d)),dropBatch=document[_0x52787a(0x111)](_0x52787a(0x11e)),divEntryID=document[_0x52787a(0xfc)](_0x52787a(0x12f)),divEntryName=document[_0x52787a(0xfc)](_0x52787a(0x103)),divEntryEmail=document[_0x52787a(0xfc)](_0x52787a(0x101)),divEntryContact=document[_0x52787a(0xfc)]('divEntryContact'),tblEntries=document[_0x52787a(0x111)](_0x52787a(0x147)),txtSearch=document[_0x52787a(0x111)]('txtSearch');const btnDelete=document['getElementsByClassName'](_0x52787a(0x140)),btnStatus=document[_0x52787a(0xfc)](_0x52787a(0x141)),lblRecords=document['getElementById']('lblRecords'),tblEntry=document['getElementsByClassName']('tblEntry'),headerID=document[_0x52787a(0x111)](_0x52787a(0x105)),headerName=document[_0x52787a(0x111)]('headerName'),headerEmail=document[_0x52787a(0x111)](_0x52787a(0x123));function loadCourse(){const _0x51f2e8=ref(db,'courses/');get(_0x51f2e8)['then'](_0x1425e5=>{var _0x3514a9=_0x1e1f,_0x3415b2='<option\x20value=\x22Select\x20Course\x22\x20class=\x22dropOption\x22>Select\x20Course</option>';_0x1425e5[_0x3514a9(0x142)]()&&(_0x1425e5[_0x3514a9(0xf8)](_0x2a2fe0=>{var _0x283c7b=_0x3514a9;_0x3415b2+=_0x283c7b(0x17c)+_0x2a2fe0[_0x283c7b(0x137)]+'\x22\x20class=\x22dropOption\x22>'+_0x2a2fe0[_0x283c7b(0x137)]+_0x283c7b(0x132);}),dropCourse[_0x3514a9(0x168)]=_0x3415b2);});}loadCourse();function copyMe(){var _0x406b55=_0x52787a,_0x1ef1de=this;_0x1ef1de['focus'](),_0x1ef1de[_0x406b55(0x14e)](),_0x1ef1de['setSelectionRange'](0x0,0x1869f),document[_0x406b55(0x157)](_0x406b55(0xf9));}function newTraineeStatus(){var _0x3b1a07=_0x52787a;const _0x59c515=ref(db,_0x3b1a07(0x11a));onValue(_0x59c515,_0x409514=>{var _0x463d90=_0x3b1a07;_0x409514[_0x463d90(0xf8)](_0xa3cf0c=>{var _0x212d6c=_0x463d90;for(var _0x4be22f=0x0;_0x4be22f<tblEntries[_0x212d6c(0x13a)];_0x4be22f++){if(tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x0][_0x212d6c(0x179)]==_0xa3cf0c[_0x212d6c(0x137)]){if(_0xa3cf0c[_0x212d6c(0x127)]()[_0x212d6c(0x11d)]=='suspended')tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x0]['style'][_0x212d6c(0x131)]=_0x212d6c(0x158),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x1][_0x212d6c(0x180)]['color']='salmon',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x2]['style']['color']=_0x212d6c(0x158),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x3]['style']['color']=_0x212d6c(0x158),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x4]['style'][_0x212d6c(0x131)]='salmon',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x5][_0x212d6c(0x180)][_0x212d6c(0x131)]=_0x212d6c(0x158),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x6][_0x212d6c(0x180)][_0x212d6c(0x131)]=_0x212d6c(0x158),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x7][_0x212d6c(0x180)][_0x212d6c(0x131)]='salmon',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x0][_0x212d6c(0x180)][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f]['children'][0x1][_0x212d6c(0x180)][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x2][_0x212d6c(0x180)]['opacity']='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x3][_0x212d6c(0x180)]['opacity']='1',tblEntry[_0x4be22f]['children'][0x4][_0x212d6c(0x180)][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x5][_0x212d6c(0x180)][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f]['children'][0x6][_0x212d6c(0x180)][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x7][_0x212d6c(0x180)][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f]['children'][0x8][_0x212d6c(0x16e)][0x0]['style']['opacity']='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x8][_0x212d6c(0x16e)][0x0]['src']='../img-h6rv2c/btnSuspended.png',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x8][_0x212d6c(0x16e)][0x1]['style'][_0x212d6c(0x151)]='1';else{if(_0xa3cf0c[_0x212d6c(0x127)]()[_0x212d6c(0x11d)]=='offline')tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x0][_0x212d6c(0x180)]['color']=_0x212d6c(0x173),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x1][_0x212d6c(0x180)]['color']=_0x212d6c(0x173),tblEntry[_0x4be22f]['children'][0x2][_0x212d6c(0x180)]['color']=_0x212d6c(0x173),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x3]['style'][_0x212d6c(0x131)]=_0x212d6c(0x173),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x4][_0x212d6c(0x180)]['color']=_0x212d6c(0x173),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x5][_0x212d6c(0x180)][_0x212d6c(0x131)]='white',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x6][_0x212d6c(0x180)]['color']=_0x212d6c(0x173),tblEntry[_0x4be22f]['children'][0x7]['style'][_0x212d6c(0x131)]=_0x212d6c(0x173),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x0][_0x212d6c(0x180)][_0x212d6c(0x151)]=_0x212d6c(0x122),tblEntry[_0x4be22f]['children'][0x1][_0x212d6c(0x180)][_0x212d6c(0x151)]='.25',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x2][_0x212d6c(0x180)][_0x212d6c(0x151)]=_0x212d6c(0x122),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x3][_0x212d6c(0x180)][_0x212d6c(0x151)]=_0x212d6c(0x122),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x4][_0x212d6c(0x180)][_0x212d6c(0x151)]='.25',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x5]['style']['opacity']=_0x212d6c(0x122),tblEntry[_0x4be22f]['children'][0x6][_0x212d6c(0x180)][_0x212d6c(0x151)]=_0x212d6c(0x122),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x7][_0x212d6c(0x180)]['opacity']=_0x212d6c(0x122),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x8][_0x212d6c(0x16e)][0x0][_0x212d6c(0x180)][_0x212d6c(0x151)]=_0x212d6c(0x122),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x8][_0x212d6c(0x16e)][0x0][_0x212d6c(0x166)]=_0x212d6c(0xfa),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x8][_0x212d6c(0x16e)][0x1][_0x212d6c(0x180)]['opacity']='1';else{if(_0xa3cf0c['val']()[_0x212d6c(0x11d)]==_0x212d6c(0x15f))tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x0][_0x212d6c(0x180)][_0x212d6c(0x131)]=_0x212d6c(0x173),tblEntry[_0x4be22f]['children'][0x1][_0x212d6c(0x180)][_0x212d6c(0x131)]=_0x212d6c(0x173),tblEntry[_0x4be22f]['children'][0x2][_0x212d6c(0x180)]['color']='white',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x3][_0x212d6c(0x180)][_0x212d6c(0x131)]='white',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x4][_0x212d6c(0x180)][_0x212d6c(0x131)]=_0x212d6c(0x173),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x5]['style'][_0x212d6c(0x131)]='white',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x6][_0x212d6c(0x180)][_0x212d6c(0x131)]=_0x212d6c(0x173),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x7][_0x212d6c(0x180)][_0x212d6c(0x131)]=_0x212d6c(0x173),tblEntry[_0x4be22f]['children'][0x0][_0x212d6c(0x180)]['opacity']='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x1][_0x212d6c(0x180)][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x2][_0x212d6c(0x180)][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f]['children'][0x3][_0x212d6c(0x180)][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x4][_0x212d6c(0x180)][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x5][_0x212d6c(0x180)][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x6][_0x212d6c(0x180)][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x7]['style'][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f]['children'][0x8][_0x212d6c(0x16e)][0x0]['style'][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x8][_0x212d6c(0x16e)][0x0][_0x212d6c(0x166)]=_0x212d6c(0xfa),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x8][_0x212d6c(0x16e)][0x1]['style'][_0x212d6c(0x151)]='1';else _0xa3cf0c[_0x212d6c(0x127)]()['status']==_0x212d6c(0x15b)&&(tblEntry[_0x4be22f]['children'][0x0][_0x212d6c(0x180)]['color']=_0x212d6c(0x158),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x1][_0x212d6c(0x180)][_0x212d6c(0x131)]=_0x212d6c(0x158),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x2][_0x212d6c(0x180)]['color']='salmon',tblEntry[_0x4be22f]['children'][0x3][_0x212d6c(0x180)][_0x212d6c(0x131)]=_0x212d6c(0x158),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x4][_0x212d6c(0x180)]['color']='salmon',tblEntry[_0x4be22f]['children'][0x5][_0x212d6c(0x180)]['color']=_0x212d6c(0x158),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x6][_0x212d6c(0x180)]['color']='salmon',tblEntry[_0x4be22f]['children'][0x7]['style']['color']=_0x212d6c(0x158),tblEntry[_0x4be22f]['children'][0x0][_0x212d6c(0x180)][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x1][_0x212d6c(0x180)]['opacity']='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x2]['style'][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x3][_0x212d6c(0x180)][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x4][_0x212d6c(0x180)]['opacity']='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x5][_0x212d6c(0x180)]['opacity']='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x6][_0x212d6c(0x180)]['opacity']='1',tblEntry[_0x4be22f]['children'][0x7][_0x212d6c(0x180)][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x8]['children'][0x0][_0x212d6c(0x180)][_0x212d6c(0x151)]='1',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x8][_0x212d6c(0x16e)][0x0][_0x212d6c(0x166)]=_0x212d6c(0x10f),tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x8][_0x212d6c(0x16e)][0x1][_0x212d6c(0x180)][_0x212d6c(0x151)]='0',tblEntry[_0x4be22f][_0x212d6c(0x16e)][0x8][_0x212d6c(0x16e)][0x0]['removeEventListener']('click',changeTraineeStatus));}}}}});});}newTraineeStatus();function deleteTrainee(){var _0x319669=_0x52787a;deleteID=this[_0x319669(0x107)][_0x319669(0x107)]['children'][0x0]['value'];const _0x2ab321=ref(db,_0x319669(0x11a)+deleteID+_0x319669(0x12c));onValue(_0x2ab321,_0x5f1578=>{var _0x1e0471=_0x319669;_0x5f1578['size']>0x0&&_0x5f1578[_0x1e0471(0xf8)](_0x323c92=>{var _0x346355=_0x1e0471,_0x514775=_0x323c92['key'];const _0x300fa7=ref(db,_0x346355(0x11a)+deleteID+_0x346355(0x12c)+_0x514775+_0x346355(0x16a));onValue(_0x300fa7,_0x3b12bb=>{var _0x343bb8=_0x346355;_0x3b12bb[_0x343bb8(0xf8)](_0x28c269=>{var _0x4f6596=_0x343bb8,_0x4302ab=_0x28c269['key'];remove(ref(db,_0x4f6596(0x148)+_0x514775+'/batch/'+_0x4302ab+_0x4f6596(0x17d)+deleteID))['then'](()=>{var _0x2e7ecd=_0x4f6596;remove(ref(db,_0x2e7ecd(0x11a)+deleteID+_0x2e7ecd(0x12c)+_0x514775+_0x2e7ecd(0x16a)+_0x4302ab))[_0x2e7ecd(0x172)](()=>{});});});});}),update(ref(db,_0x1e0471(0x11a)+deleteID),{'status':'deletion'});});}function changeTraineeStatus(){var _0x2d0526=_0x52787a;getEmail=this['parentElement']['parentElement']['children'][0x2][_0x2d0526(0x179)],get(ref(db,_0x2d0526(0x14c)))[_0x2d0526(0x172)](_0x105b08=>{var _0x1b89fb=_0x2d0526;_0x105b08[_0x1b89fb(0xf8)](_0x37423f=>{var _0x1a5618=_0x1b89fb;getEmail==_0x37423f['val']()[_0x1a5618(0xfb)]&&(_0x37423f[_0x1a5618(0x127)]()[_0x1a5618(0x11d)]==_0x1a5618(0x150)?(update(ref(db,_0x1a5618(0x11a)+_0x37423f['key']),{'status':_0x1a5618(0x177)}),newTraineeStatus()):(update(ref(db,_0x1a5618(0x11a)+_0x37423f[_0x1a5618(0x137)]),{'status':_0x1a5618(0x150)}),newTraineeStatus()));});});}function showBatch(){var _0x14d441=_0x52787a;if(dropCourse[_0x14d441(0x179)]!=_0x14d441(0x14b)&&dropBatch[_0x14d441(0x179)]!=_0x14d441(0x106)){var _0x216245=null;const _0x3f8b68=ref(db,_0x14d441(0x148)+dropCourse[_0x14d441(0x179)]+_0x14d441(0x16a)+dropBatch[_0x14d441(0x179)]+_0x14d441(0x17d));orderBy=='key'?_0x216245=query(_0x3f8b68,orderByKey()):_0x216245=query(_0x3f8b68,orderByChild(orderBy)),onValue(_0x216245,_0x268636=>{var _0x5c2cf9=_0x14d441,_0x143bc4='';tblEntries[_0x5c2cf9(0x168)]='',_0x268636[_0x5c2cf9(0xf8)](_0x316a33=>{var _0x2b56f3=_0x5c2cf9,_0x54f8e1=_0x316a33[_0x2b56f3(0x137)],_0x1bfaa2=_0x316a33[_0x2b56f3(0x127)]()[_0x2b56f3(0x135)],_0x77350b=_0x316a33[_0x2b56f3(0x127)]()['email'],_0x1d21d3=_0x316a33[_0x2b56f3(0x127)]()[_0x2b56f3(0x110)];get(ref(db,_0x2b56f3(0x11a)+_0x54f8e1))[_0x2b56f3(0x172)](_0x3fc3a5=>{var _0x44e3d5=_0x2b56f3,_0x3d2ab9=_0x3fc3a5[_0x44e3d5(0x127)]()['lastOnline'],_0x2ad187=_0x3fc3a5[_0x44e3d5(0x127)]()[_0x44e3d5(0x139)];_0x143bc4+=_0x44e3d5(0x167)+_0x54f8e1+'\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryName\x22\x20value=\x22'+_0x1bfaa2+_0x44e3d5(0x176)+_0x77350b+_0x44e3d5(0x149)+_0x1d21d3+_0x44e3d5(0xf5)+_0x2ad187+_0x44e3d5(0x100)+dropCourse[_0x44e3d5(0x179)]+_0x44e3d5(0x164)+dropBatch[_0x44e3d5(0x179)]+'\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryTimestamp\x22\x20value=\x22'+_0x3d2ab9+_0x44e3d5(0xfe),tblEntries[_0x44e3d5(0x168)]=_0x143bc4,lblRecords['innerHTML']=_0x44e3d5(0x14f)+tblEntries['childElementCount']+'\x20records\x20found</h1>';for(var _0x30ac4f=0x0;_0x30ac4f<tblEntries['childElementCount'];_0x30ac4f++){divEntryID[_0x30ac4f][_0x44e3d5(0x146)](_0x44e3d5(0x11c),copyMe),divEntryName[_0x30ac4f]['addEventListener']('click',copyMe),divEntryEmail[_0x30ac4f][_0x44e3d5(0x146)](_0x44e3d5(0x11c),copyMe),divEntryContact[_0x30ac4f]['addEventListener']('click',copyMe),btnDelete[_0x30ac4f][_0x44e3d5(0x146)]('click',deleteTrainee),btnStatus[_0x30ac4f][_0x44e3d5(0x146)](_0x44e3d5(0x11c),changeTraineeStatus);}newTraineeStatus();});});});}else tblEntries['innerHTML']='',lblRecords[_0x14d441(0x168)]='';}function loadBatch(){var _0x4a93b6=_0x52787a;if(dropBatch[_0x4a93b6(0x179)]!='Select\x20Course'){const _0x5eeaa3=ref(db,_0x4a93b6(0x148)+dropCourse[_0x4a93b6(0x179)]+'/batch/');get(_0x5eeaa3)[_0x4a93b6(0x172)](_0x3a746f=>{var _0x82592e=_0x4a93b6,_0x2faafe='<option\x20value=\x22Batch\x20No.\x22\x20class=\x22dropOption\x22>Batch\x20No.</option>';dropBatch=document[_0x82592e(0x111)]('dropBatch'),_0x3a746f[_0x82592e(0xf8)](_0x460ddd=>{var _0x1080a9=_0x82592e;_0x2faafe+=_0x1080a9(0x17c)+_0x460ddd[_0x1080a9(0x137)]+_0x1080a9(0xf4)+_0x460ddd[_0x1080a9(0x137)]+_0x1080a9(0x132);}),dropBatch[_0x82592e(0x168)]=_0x2faafe,dropBatch[_0x82592e(0x179)]=dropBatch[_0x82592e(0x124)][_0x82592e(0x179)],showBatch();});}else txtCerti[_0x4a93b6(0x179)]='';}function clickBatch(){var _0x27f8ed=_0x52787a;txtSearch[_0x27f8ed(0x179)]='',showBatch();}function searchOrLoadBatch(){var _0x51a46f=_0x52787a;if(txtSearch['value']=='*'&&dropCourse['value']==_0x51a46f(0x14b))findAll();else txtSearch[_0x51a46f(0x179)]=='*'&&dropCourse['value']!=_0x51a46f(0x14b)?(txtSearch[_0x51a46f(0x179)]='',loadBatch()):loadBatch();}dropCourse[_0x52787a(0x146)]('change',searchOrLoadBatch),dropBatch[_0x52787a(0x146)](_0x52787a(0x130),clickBatch);function filterBy(){var _0x1040f1=_0x52787a;if(txtSearch['value']==''){if(this['id']==_0x1040f1(0x169))orderBy='name';else this['id']=='headerEmail'?orderBy=_0x1040f1(0xfb):orderBy='key';showBatch();}else alert(_0x1040f1(0x143));}headerID[_0x52787a(0x146)](_0x52787a(0x11c),filterBy),headerName[_0x52787a(0x146)](_0x52787a(0x11c),filterBy),headerEmail[_0x52787a(0x146)]('click',filterBy);function findAll(){var _0x2e72ad=_0x52787a;const _0x7925b6=ref(db,_0x2e72ad(0x11a));onValue(_0x7925b6,_0x377d74=>{var _0x4d9de8=_0x2e72ad,_0x40d87d='',_0x49082b='';_0x377d74['forEach'](_0x272a59=>{var _0x1c8cb9=_0x1e1f,_0x23b895=_0x272a59['key'],_0x1ab82b=_0x272a59[_0x1c8cb9(0x127)]()['name'],_0x4405fb=_0x272a59[_0x1c8cb9(0x127)]()[_0x1c8cb9(0xfb)],_0x1a903f=_0x272a59['val']()[_0x1c8cb9(0x110)],_0x57665d=_0x272a59[_0x1c8cb9(0x127)]()[_0x1c8cb9(0x119)],_0x434860=_0x272a59['val']()['contact'];const _0x2f98f1=ref(db,_0x1c8cb9(0x11a)+_0x23b895+_0x1c8cb9(0x12c));onValue(_0x2f98f1,_0x37f438=>{var _0x50cc3b=_0x1c8cb9;_0x37f438['size']>0x0?_0x37f438[_0x50cc3b(0xf8)](_0x541740=>{var _0x39a231=_0x50cc3b,_0x1b5f00=_0x541740[_0x39a231(0x137)];const _0x11f0f2=ref(db,_0x39a231(0x11a)+_0x23b895+_0x39a231(0x12c)+_0x1b5f00+'/batch/');onValue(_0x11f0f2,_0x2804d4=>{var _0x3791c6=_0x39a231;_0x2804d4[_0x3791c6(0xf8)](_0x43d899=>{var _0x296487=_0x3791c6,_0x3d4bd3=_0x43d899[_0x296487(0x137)];_0x40d87d+='<div\x20class=\x22tblEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryID\x22\x20value=\x22'+_0x23b895+_0x296487(0x161)+_0x1ab82b+'\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryEmail\x22\x20value=\x22'+_0x4405fb+'\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntrySocial\x22\x20onclick=\x22window.open(\x27'+_0x1a903f+_0x296487(0x13c)+_0x434860+_0x296487(0x138)+_0x1b5f00+_0x296487(0x145)+_0x3d4bd3+_0x296487(0x16c)+_0x57665d+'\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22imgEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnConfirm.png\x22\x20class=\x22btnStatus\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDelete.png\x22\x20class=\x22btnDelete\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>';});});}):_0x40d87d+=_0x50cc3b(0x10e)+_0x23b895+_0x50cc3b(0x118)+_0x1ab82b+_0x50cc3b(0x12d)+_0x4405fb+_0x50cc3b(0xf3)+_0x1a903f+_0x50cc3b(0x159)+_0x434860+_0x50cc3b(0x10c)+_0x57665d+'\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22imgEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnConfirm.png\x22\x20class=\x22btnStatus\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDelete.png\x22\x20class=\x22btnDelete\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>';});}),_0x49082b=_0x49082b+_0x40d87d,tblEntries[_0x4d9de8(0x168)]=_0x49082b,lblRecords[_0x4d9de8(0x168)]=_0x4d9de8(0x14f)+tblEntries[_0x4d9de8(0x13a)]+_0x4d9de8(0xf6);for(var _0xc50595=0x0;_0xc50595<tblEntries[_0x4d9de8(0x13a)];_0xc50595++){divEntryID[_0xc50595][_0x4d9de8(0x146)](_0x4d9de8(0x11c),copyMe),divEntryName[_0xc50595][_0x4d9de8(0x146)](_0x4d9de8(0x11c),copyMe),divEntryEmail[_0xc50595][_0x4d9de8(0x146)]('click',copyMe),divEntryContact[_0xc50595]['addEventListener'](_0x4d9de8(0x11c),copyMe),btnDelete[_0xc50595][_0x4d9de8(0x146)]('click',deleteTrainee),btnStatus[_0xc50595][_0x4d9de8(0x146)](_0x4d9de8(0x11c),changeTraineeStatus);}newTraineeStatus();});}function findAllBatch(){var _0x23bebe=_0x52787a;const _0x18a8cb=ref(db,_0x23bebe(0x148)+dropCourse['value']+'/batch/');onValue(_0x18a8cb,_0x3d087f=>{var _0x121419=_0x23bebe,_0x439a99='',_0xa57332='',_0x5289e7=[],_0x502157=0x0;_0x3d087f['forEach'](_0x2fa87f=>{var _0x4ce532=_0x1e1f,_0x135021=dropCourse['value'];_0x5289e7[_0x502157]=_0x2fa87f['key'];const _0x90d99c=ref(db,'courses/'+dropCourse['value']+_0x4ce532(0x16a)+_0x5289e7[_0x502157]+_0x4ce532(0x17d));onValue(_0x90d99c,_0x5e8a70=>{var _0x4a203b=_0x4ce532;_0x5e8a70[_0x4a203b(0xf8)](_0x1033c5=>{var _0x145ee0=_0x4a203b,_0x348232=_0x1033c5[_0x145ee0(0x137)];const _0x55396e=ref(db,_0x145ee0(0x11a)+_0x348232);onValue(_0x55396e,_0x56ff2b=>{var _0x5c2307=_0x145ee0,_0x2df54e=_0x56ff2b[_0x5c2307(0x127)]()[_0x5c2307(0x135)],_0x5916bf=_0x56ff2b[_0x5c2307(0x127)]()[_0x5c2307(0xfb)],_0x3fc460=_0x56ff2b['val']()['contact'],_0x200ee4=_0x56ff2b[_0x5c2307(0x127)]()[_0x5c2307(0x110)],_0x9f35cc=_0x56ff2b[_0x5c2307(0x127)]()[_0x5c2307(0x119)];_0x439a99+=_0x5c2307(0x126)+_0x348232+_0x5c2307(0x161)+_0x2df54e+_0x5c2307(0x10b)+_0x5916bf+'\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntrySocial\x22\x20onclick=\x22window.open(\x27'+_0x200ee4+_0x5c2307(0x13c)+_0x3fc460+_0x5c2307(0x138)+_0x135021+_0x5c2307(0x145)+_0x5289e7[_0x502157]+_0x5c2307(0x16c)+_0x9f35cc+_0x5c2307(0x17e);});});}),_0x502157++;}),_0xa57332=_0xa57332+_0x439a99,tblEntries['innerHTML']=_0xa57332,lblRecords[_0x121419(0x168)]=_0x121419(0x14f)+tblEntries[_0x121419(0x13a)]+_0x121419(0xf6);for(var _0x1bd880=0x0;_0x1bd880<tblEntries[_0x121419(0x13a)];_0x1bd880++){divEntryID[_0x1bd880][_0x121419(0x146)](_0x121419(0x11c),copyMe),divEntryName[_0x1bd880][_0x121419(0x146)](_0x121419(0x11c),copyMe),divEntryEmail[_0x1bd880]['addEventListener']('click',copyMe),divEntryContact[_0x1bd880][_0x121419(0x146)]('click',copyMe),btnDelete[_0x1bd880]['addEventListener'](_0x121419(0x11c),deleteTrainee),btnStatus[_0x1bd880]['addEventListener'](_0x121419(0x11c),changeTraineeStatus);}newTraineeStatus();});}function findEmail(){var _0x1feef5=_0x52787a;const _0x434115=ref(db,_0x1feef5(0x11a));onValue(_0x434115,_0x11bd98=>{var _0x3340a='',_0x9d48c8='';_0x11bd98['forEach'](_0x3246a2=>{var _0x307dcb=_0x1e1f,_0xb47f01=_0x3246a2['key'],_0x3b9da4=_0x3246a2[_0x307dcb(0x127)]()[_0x307dcb(0x135)],_0xc24847=_0x3246a2[_0x307dcb(0x127)]()[_0x307dcb(0xfb)],_0x4ea529=_0x3246a2[_0x307dcb(0x127)]()[_0x307dcb(0x110)],_0x74422c=_0x3246a2['val']()[_0x307dcb(0x139)],_0xe30d23=_0x3246a2[_0x307dcb(0x127)]()[_0x307dcb(0x119)];if(txtSearch[_0x307dcb(0x179)]==_0xc24847){const _0x589d05=ref(db,'accounts/trainees/'+_0xb47f01+_0x307dcb(0x12c));onValue(_0x589d05,_0x1a3de4=>{var _0x32350e=_0x307dcb;if(_0x1a3de4[_0x32350e(0x120)]>0x0)_0x1a3de4[_0x32350e(0xf8)](_0x4def0c=>{var _0x5cb0ef=_0x32350e,_0x1f39f3=_0x4def0c[_0x5cb0ef(0x137)];const _0x474278=ref(db,_0x5cb0ef(0x11a)+_0xb47f01+_0x5cb0ef(0x12c)+_0x1f39f3+_0x5cb0ef(0x16a));onValue(_0x474278,_0x3d3514=>{var _0x252d9b=_0x5cb0ef;_0x3d3514[_0x252d9b(0xf8)](_0x1cc7bc=>{var _0x1c908e=_0x252d9b,_0x279fbc=_0x1cc7bc[_0x1c908e(0x137)];_0x9d48c8+=_0x1c908e(0x125)+_0xb47f01+_0x1c908e(0x11f)+_0x3b9da4+_0x1c908e(0x16f)+_0xc24847+_0x1c908e(0x136)+_0x4ea529+_0x1c908e(0x133)+_0x74422c+_0x1c908e(0x10d)+_0x1f39f3+_0x1c908e(0x116)+_0x279fbc+'\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryTimestamp\x22\x20value=\x22'+_0xe30d23+_0x1c908e(0x153);});});});else{var _0x2ff0f3=_0x32350e(0x121),_0x3536b7=_0x32350e(0x121);_0x9d48c8+='<div\x20class=\x22tblEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryID\x22\x20value=\x22'+_0xb47f01+'\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryName\x22\x20value=\x22'+_0x3b9da4+_0x32350e(0x160)+_0xc24847+_0x32350e(0x12b)+_0x4ea529+_0x32350e(0xfd)+_0x74422c+_0x32350e(0x15c)+_0x2ff0f3+_0x32350e(0x178)+_0x3536b7+'\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryTimestamp\x22\x20value=\x22'+_0xe30d23+_0x32350e(0x14d);}_0x3340a=_0x3340a+_0x9d48c8;});}tblEntries[_0x307dcb(0x168)]=_0x3340a,lblRecords['innerHTML']=_0x307dcb(0x14f)+tblEntries['childElementCount']+'\x20records\x20found</h1>';for(var _0x14e4f3=0x0;_0x14e4f3<tblEntries[_0x307dcb(0x13a)];_0x14e4f3++){divEntryID[_0x14e4f3][_0x307dcb(0x146)](_0x307dcb(0x11c),copyMe),divEntryName[_0x14e4f3][_0x307dcb(0x146)](_0x307dcb(0x11c),copyMe),divEntryEmail[_0x14e4f3]['addEventListener']('click',copyMe),divEntryContact[_0x14e4f3][_0x307dcb(0x146)](_0x307dcb(0x11c),copyMe),btnDelete[_0x14e4f3][_0x307dcb(0x146)](_0x307dcb(0x11c),deleteTrainee),btnStatus[_0x14e4f3][_0x307dcb(0x146)](_0x307dcb(0x11c),changeTraineeStatus);}newTraineeStatus();});});}function findID(){const _0x54bd91=ref(db,'accounts/trainees/');onValue(_0x54bd91,_0x392f3d=>{var _0x4fe2d8='',_0x58d1d3='';_0x392f3d['forEach'](_0x55b064=>{var _0x54998d=_0x1e1f,_0x3b5a42=_0x55b064[_0x54998d(0x137)],_0x5673fa=_0x55b064[_0x54998d(0x127)]()['name'],_0x5ee7fe=_0x55b064[_0x54998d(0x127)]()[_0x54998d(0xfb)],_0x5ddf90=_0x55b064['val']()[_0x54998d(0x110)],_0x3eda16=_0x55b064['val']()[_0x54998d(0x139)],_0x3468af=_0x55b064[_0x54998d(0x127)]()[_0x54998d(0x119)];if(txtSearch['value']==_0x3b5a42){const _0x3b46cb=ref(db,_0x54998d(0x11a)+_0x3b5a42+'/courses/');onValue(_0x3b46cb,_0xad1131=>{var _0x4bdf32=_0x54998d;if(_0xad1131[_0x4bdf32(0x120)]>0x0)_0xad1131[_0x4bdf32(0xf8)](_0x333ea7=>{var _0x39648c=_0x4bdf32,_0x3c4898=_0x333ea7['key'];const _0x48651b=ref(db,'accounts/trainees/'+_0x3b5a42+'/courses/'+_0x3c4898+_0x39648c(0x16a));onValue(_0x48651b,_0x2c5900=>{var _0xc46574=_0x39648c;_0x2c5900[_0xc46574(0xf8)](_0x5b6acf=>{var _0x409520=_0xc46574,_0x4c0594=_0x5b6acf[_0x409520(0x137)];_0x58d1d3+=_0x409520(0x125)+_0x3b5a42+_0x409520(0x11f)+_0x5673fa+_0x409520(0x16f)+_0x5ee7fe+'\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntrySocial\x22\x20onclick=\x22window.open(\x27'+_0x5ddf90+_0x409520(0x133)+_0x3eda16+_0x409520(0x10d)+_0x3c4898+_0x409520(0x116)+_0x4c0594+_0x409520(0x112)+_0x3468af+'\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22imgEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnConfirm.png\x22\x20class=\x22btnStatus\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDelete.png\x22\x20class=\x22btnDelete\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>';});});});else{var _0xa5b31c=_0x4bdf32(0x121),_0x4340f9='------';_0x58d1d3+=_0x4bdf32(0x15d)+_0x3b5a42+_0x4bdf32(0x155)+_0x5673fa+_0x4bdf32(0x160)+_0x5ee7fe+_0x4bdf32(0x12b)+_0x5ddf90+_0x4bdf32(0xfd)+_0x3eda16+_0x4bdf32(0x15c)+_0xa5b31c+_0x4bdf32(0x178)+_0x4340f9+_0x4bdf32(0x104)+_0x3468af+_0x4bdf32(0x14d);}_0x4fe2d8=_0x4fe2d8+_0x58d1d3;});}tblEntries['innerHTML']=_0x4fe2d8,lblRecords[_0x54998d(0x168)]=_0x54998d(0x14f)+tblEntries[_0x54998d(0x13a)]+_0x54998d(0xf6);for(var _0x51aaa3=0x0;_0x51aaa3<tblEntries[_0x54998d(0x13a)];_0x51aaa3++){divEntryID[_0x51aaa3]['addEventListener']('click',copyMe),divEntryName[_0x51aaa3][_0x54998d(0x146)]('click',copyMe),divEntryEmail[_0x51aaa3]['addEventListener'](_0x54998d(0x11c),copyMe),divEntryContact[_0x51aaa3][_0x54998d(0x146)]('click',copyMe),btnDelete[_0x51aaa3][_0x54998d(0x146)](_0x54998d(0x11c),deleteTrainee),btnStatus[_0x51aaa3][_0x54998d(0x146)](_0x54998d(0x11c),changeTraineeStatus);}newTraineeStatus();});});}function search(){var _0x39e637=_0x52787a;if(txtSearch['value']=='*')dropCourse['value']!=_0x39e637(0x14b)?findAllBatch():findAll();else{if(txtSearch[_0x39e637(0x179)][_0x39e637(0x11b)]('@'))findEmail();else txtSearch[_0x39e637(0x179)]==''?dropCourse[_0x39e637(0x179)]!=_0x39e637(0x14b)&&dropBatch[_0x39e637(0x179)]!='Batch\x20No.'?showBatch():tblEntries[_0x39e637(0x168)]='':findID();}}function _0x1e1f(_0x527b02,_0x6ad5aa){var _0x15c59a=_0x15c5();return _0x1e1f=function(_0x1e1f70,_0x150cee){_0x1e1f70=_0x1e1f70-0xf3;var _0x47ed15=_0x15c59a[_0x1e1f70];return _0x47ed15;},_0x1e1f(_0x527b02,_0x6ad5aa);}txtSearch[_0x52787a(0x146)](_0x52787a(0x102),search);function checkAuth(){var _0x3796d3=_0x52787a,_0x10a15d=sessionStorage[_0x3796d3(0x14a)](_0x3796d3(0x129));_0x10a15d==_0x3796d3(0x17b)&&signOut(auth)[_0x3796d3(0x172)](()=>{var _0x4e138e=_0x3796d3;sessionStorage[_0x4e138e(0x134)]();})[_0x3796d3(0x174)](_0x52e630=>{var _0x3f169f=_0x3796d3;alert(_0x52e630[_0x3f169f(0x15e)]);});}setInterval(checkAuth,0x1f4);function _0x15c5(){var _0x3e3993=['pBanner','oAuth','782620bKeViw','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntrySocial\x22\x20onclick=\x22window.open(\x27','/courses/','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryEmail\x22\x20value=\x22','6rvIdae','divEntryID','change','color','</option>','\x27,\x27_blank\x27)\x22\x20value\x20=\x20\x22Link\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryContact\x22\x20value=\x22','clear','name','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntrySocial\x22\x20onclick=\x22window.open(\x27','key','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryCourse\x22\x20value=\x22','contact','childElementCount','1227764zQjtWf','\x27,\x27_blank\x27)\x22\x20value\x20=\x20\x22Link\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryContact\x22\x20value=\x22','dropCourse','208856cTslWO','https://artcademy.ph/404','btnDelete','btnStatus','exists','Cannot\x20use\x20filter\x20on\x20search','2590952vuLYAp','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryBatch\x22\x20value=\x22','addEventListener','tblEntries','courses/','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntrySocial\x22\x20onclick=\x22window.open(\x27','getItem','Select\x20Course','accounts/trainees','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22imgEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnConfirm.png\x22\x20class=\x22btnStatus\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDelete.png\x22\x20class=\x22btnDelete\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','select','<h1>','suspended','opacity','https://creator.artcademy.ph','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22imgEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnConfirm.png\x22\x20class=\x22btnStatus\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDelete.png\x22\x20class=\x22btnDelete\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','7poAmDe','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryName\x22\x20value=\x22','projartcademyph-29663.firebaseapp.com','execCommand','salmon','\x27,\x27_blank\x27)\x22\x20value\x20=\x20\x22Link\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryContact\x22\x20value=\x22','px)','deletion','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryCourse\x22\x20value=\x22','<div\x20class=\x22tblEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryID\x22\x20value=\x22','code','online','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryEmail\x22\x20value=\x22','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryName\x22\x20value=\x22','projartcademyph-29663.appspot.com','settings/banner','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryBatch\x22\x20value=\x22','translateX(','src','<div\x20class=\x22tblEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryID\x22\x20value=\x22','innerHTML','headerName','/batch/','1955160bgUxNS','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryTimestamp\x22\x20value=\x22','projartcademyph-29663','children','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryEmail\x22\x20value=\x22','sessID','bannerContainer','then','white','catch','innerWidth','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryEmail\x22\x20value=\x22','offline','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryBatch\x22\x20value=\x22','value','21358746rHosgr','out','<option\x20value=\x22','/trainees/','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22imgEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnConfirm.png\x22\x20class=\x22btnStatus\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDelete.png\x22\x20class=\x22btnDelete\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','location','style','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntrySocial\x22\x20onclick=\x22window.open(\x27','\x22\x20class=\x22dropOption\x22>','\x27),\x27_blank\x27\x22\x20value\x20=\x20\x22Link\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryContact\x22\x20value=\x22','\x20records\x20found</h1>','hidden','forEach','copy','../img-h6rv2c/btnConfirm.png','email','getElementsByClassName','\x27,\x27_blank\x27)\x22\x20value\x20=\x20\x22Link\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryContact\x22\x20value=\x22','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22imgEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnConfirm.png\x22\x20class=\x22btnStatus\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDelete.png\x22\x20class=\x22btnDelete\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryCourse\x22\x20value=\x22','divEntryEmail','input','divEntryName','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryTimestamp\x22\x20value=\x22','headerID','Batch\x20No.','parentElement','innerText','AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk','replace','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryEmail\x22\x20value=\x22','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryCourse\x22\x20value=\x22------\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryBatch\x22\x20value=\x22------\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryTimestamp\x22\x20value=\x22','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryCourse\x22\x20value=\x22','<div\x20class=\x22tblEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryID\x22\x20value=\x22','../img-h6rv2c/btnRemove.png','social','getElementById','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryTimestamp\x22\x20value=\x22','transform','visible','4307682sdfJMT','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryBatch\x22\x20value=\x22','1:651674935886:web:629aefbab24dd2a154991f','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryName\x22\x20value=\x22','lastOnline','accounts/trainees/','includes','click','status','dropBatch','\x22\x20readonly>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryName\x22\x20value=\x22','size','------','.25','headerEmail','lastElementChild','<div\x20class=\x22tblEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryID\x22\x20value=\x22','<div\x20class=\x22tblEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type=\x22text\x22\x20class=\x22divEntryID\x22\x20value=\x22','val'];_0x15c5=function(){return _0x3e3993;};return _0x15c5();}
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getDatabase, ref, onValue, update, get, remove, query, orderByChild, orderByKey } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
+  authDomain: "projartcademyph-29663.firebaseapp.com",
+  databaseURL: "https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "projartcademyph-29663",
+  storageBucket: "projartcademyph-29663.appspot.com",
+  messagingSenderId: "651674935886",
+  appId: "1:651674935886:web:629aefbab24dd2a154991f"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase();
+
+ //--check first if user is currently logged in
+
+ var bodyBlue = document.getElementById('bodyBlue');
+
+  
+ onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+        if(user.uid == "XribZIy3mORl28B3A7S3qOdv2Bs1") {
+
+            var sessEmail = sessionStorage.getItem("sessEmail");
+
+            if((sessEmail != null) && (sessEmail != "")) {
+                bodyBlue.style.visibility = "visible";
+            }
+
+            else {
+                signOut(auth);
+            }
+        }
+
+        else {
+
+            window.location.replace('https://artcademy.ph/404');
+            
+        }
+    }
+
+    else {
+      
+        window.location.replace('https://creator.artcademy.ph');
+
+    } 
+
+});
+
+//--------------------------------Banner--------------------------------------
+
+var t = .002*window.innerWidth;
+var c = window.innerWidth;
+var scrollingBannerText = document.getElementById('pBanner');
+const scrollingBanner = document.getElementById('divBanner');
+var bannerContainer = document.getElementById('bannerContainer');
+bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+
+//----------------------------Common Banner codes---------------------
+function checkBanner() {
+    
+    const path = ref(db, 'settings/banner');
+    onValue(path, (snapshot) => {
+        if(snapshot.exists()) {
+
+            scrollingBannerText.innerText = snapshot.val().message;
+            if(snapshot.val().status === true) {
+                scrollingBanner.style.visibility = "visible";
+            }
+            else {
+                scrollingBanner.style.visibility = "hidden";
+            }
+        }
+    });
+}
+checkBanner();
+
+function bannerAnimation() {
+    c -= .5;
+    bannerContainer.style.transform = "translateX(" + c +"px)";
+    if(c < (bannerContainer.offsetWidth*-1)) {
+        c = window.innerWidth;
+        bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+    }
+}
+setInterval(bannerAnimation, t);
+
+var orderBy = "key";
+var getEmail = "";
+var deleteID = "";
+var newID = [];
+var dropCourse = document.getElementById('dropCourse');
+var dropBatch = document.getElementById('dropBatch');
+var divEntryID = document.getElementsByClassName('divEntryID');
+var divEntryName = document.getElementsByClassName('divEntryName');
+var divEntryEmail = document.getElementsByClassName('divEntryEmail');
+var divEntryContact = document.getElementsByClassName('divEntryContact');
+var tblEntries = document.getElementById('tblEntries');
+var txtSearch = document.getElementById('txtSearch');
+
+const btnDelete = document.getElementsByClassName('btnDelete');
+const btnStatus = document.getElementsByClassName('btnStatus');
+const lblRecords = document.getElementById('lblRecords');
+const tblEntry = document.getElementsByClassName('tblEntry');
+
+const headerID = document.getElementById('headerID');
+const headerName = document.getElementById('headerName');
+const headerEmail = document.getElementById('headerEmail');
+
+//-----------------------------Select Course--------------------------
+
+function loadCourse() {
+    const path = ref(db, 'courses/');
+    get(path).then((snapshot) => {
+        
+        var append = `<option value="Select Course" class="dropOption">Select Course</option>`;
+
+        if(snapshot.exists()) {
+            snapshot.forEach((childSnapshot) => {
+                append+= `<option value="${childSnapshot.key}" class="dropOption">${childSnapshot.key}</option>`;
+            })
+            dropCourse.innerHTML = append;
+        }
+    })
+}
+loadCourse();
+
+function copyMe() {
+    var copyText = this;
+
+    copyText.focus();
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+    document.execCommand('copy');
+}
+
+function newTraineeStatus() {
+    const path = ref(db, 'accounts/trainees/');
+    onValue(path, (snapshot)=> {
+        
+        snapshot.forEach((childSnapshot)=> {
+            for(var i = 0; i < tblEntries.childElementCount; i++) {
+                
+                if(tblEntry[i].children[0].value == childSnapshot.key) {
+                    if(childSnapshot.val().status == 'suspended') {
+                        tblEntry[i].children[0].style.color = "salmon";
+                        tblEntry[i].children[1].style.color = "salmon";
+                        tblEntry[i].children[2].style.color = "salmon";
+                        tblEntry[i].children[3].style.color = "salmon";
+                        tblEntry[i].children[4].style.color = "salmon";
+                        tblEntry[i].children[5].style.color = "salmon";
+                        tblEntry[i].children[6].style.color = "salmon";
+                        tblEntry[i].children[7].style.color = "salmon";
+
+                        tblEntry[i].children[0].style.opacity = "1";
+                        tblEntry[i].children[1].style.opacity = "1";
+                        tblEntry[i].children[2].style.opacity = "1";
+                        tblEntry[i].children[3].style.opacity = "1";
+                        tblEntry[i].children[4].style.opacity = "1";
+                        tblEntry[i].children[5].style.opacity = "1";
+                        tblEntry[i].children[6].style.opacity = "1";
+                        tblEntry[i].children[7].style.opacity = "1";
+
+                        tblEntry[i].children[8].children[0].style.opacity = "1";   
+                        tblEntry[i].children[8].children[0].src = "../img-h6rv2c/btnSuspended.png";
+                        
+                        tblEntry[i].children[8].children[1].style.opacity = "1";
+                    }
+                    else if(childSnapshot.val().status == 'offline') {
+
+                        tblEntry[i].children[0].style.color = "white";
+                        tblEntry[i].children[1].style.color = "white";
+                        tblEntry[i].children[2].style.color = "white";
+                        tblEntry[i].children[3].style.color = "white";
+                        tblEntry[i].children[4].style.color = "white";
+                        tblEntry[i].children[5].style.color = "white";
+                        tblEntry[i].children[6].style.color = "white";
+                        tblEntry[i].children[7].style.color = "white";
+    
+                        tblEntry[i].children[0].style.opacity = ".25";
+                        tblEntry[i].children[1].style.opacity = ".25";
+                        tblEntry[i].children[2].style.opacity = ".25";
+                        tblEntry[i].children[3].style.opacity = ".25";
+                        tblEntry[i].children[4].style.opacity = ".25";
+                        tblEntry[i].children[5].style.opacity = ".25";
+                        tblEntry[i].children[6].style.opacity = ".25";
+                        tblEntry[i].children[7].style.opacity = ".25";
+
+                        tblEntry[i].children[8].children[0].style.opacity = ".25";    
+                        tblEntry[i].children[8].children[0].src = "../img-h6rv2c/btnConfirm.png"; 
+                    
+                        tblEntry[i].children[8].children[1].style.opacity = "1";
+                    }
+
+                    else if (childSnapshot.val().status == 'online') {
+                        tblEntry[i].children[0].style.color = "white";
+                        tblEntry[i].children[1].style.color = "white";
+                        tblEntry[i].children[2].style.color = "white";
+                        tblEntry[i].children[3].style.color = "white";
+                        tblEntry[i].children[4].style.color = "white";
+                        tblEntry[i].children[5].style.color = "white";
+                        tblEntry[i].children[6].style.color = "white";
+                        tblEntry[i].children[7].style.color = "white";
+    
+                        tblEntry[i].children[0].style.opacity = "1";
+                        tblEntry[i].children[1].style.opacity = "1";
+                        tblEntry[i].children[2].style.opacity = "1";
+                        tblEntry[i].children[3].style.opacity = "1";
+                        tblEntry[i].children[4].style.opacity = "1";
+                        tblEntry[i].children[5].style.opacity = "1";
+                        tblEntry[i].children[6].style.opacity = "1";
+                        tblEntry[i].children[7].style.opacity = "1";
+
+                        tblEntry[i].children[8].children[0].style.opacity = "1";    
+                        tblEntry[i].children[8].children[0].src = "../img-h6rv2c/btnConfirm.png";   
+                        tblEntry[i].children[8].children[1].style.opacity = "1";
+                    }
+
+                    else if (childSnapshot.val().status == 'deletion') {
+                        tblEntry[i].children[0].style.color = "salmon";
+                        tblEntry[i].children[1].style.color = "salmon";
+                        tblEntry[i].children[2].style.color = "salmon";
+                        tblEntry[i].children[3].style.color = "salmon";
+                        tblEntry[i].children[4].style.color = "salmon";
+                        tblEntry[i].children[5].style.color = "salmon";
+                        tblEntry[i].children[6].style.color = "salmon";
+                        tblEntry[i].children[7].style.color = "salmon";
+
+                        tblEntry[i].children[0].style.opacity = "1";
+                        tblEntry[i].children[1].style.opacity = "1";
+                        tblEntry[i].children[2].style.opacity = "1";
+                        tblEntry[i].children[3].style.opacity = "1";
+                        tblEntry[i].children[4].style.opacity = "1";
+                        tblEntry[i].children[5].style.opacity = "1";
+                        tblEntry[i].children[6].style.opacity = "1";
+                        tblEntry[i].children[7].style.opacity = "1";
+
+                        tblEntry[i].children[8].children[0].style.opacity = "1";
+                        tblEntry[i].children[8].children[0].src = "../img-h6rv2c/btnRemove.png";      
+                        tblEntry[i].children[8].children[1].style.opacity = "0";
+
+    
+                        tblEntry[i].children[8].children[0].removeEventListener('click', changeTraineeStatus);
+              
+                    }
+                }
+            }
+        }) 
+    })
+}
+newTraineeStatus();
+
+function deleteTrainee() {
+
+    deleteID = this.parentElement.parentElement.children[0].value;
+    
+    //get if there are courses
+    const path1 = ref(db, 'accounts/trainees/' + deleteID + '/courses/');
+    onValue(path1, (snapshot)=> {
+        if(snapshot.size > 0) {
+            snapshot.forEach((childSnapshot)=> {
+                var arrCourses = childSnapshot.key; //got Courses
+                
+                const path2 = ref(db, 'accounts/trainees/' + deleteID + '/courses/' + arrCourses + '/batch/');
+                onValue(path2, (snapshot)=>{
+                    snapshot.forEach((childSnapshot)=> {
+                        var arrBatch = childSnapshot.key; //got Batches
+
+                        remove(ref(db, 'courses/' + arrCourses + '/batch/' + arrBatch + '/trainees/' + deleteID))
+                        .then(()=> {
+                            remove(ref(db, 'accounts/trainees/' + deleteID + '/courses/' + arrCourses + '/batch/' + arrBatch))
+                            .then(()=>{
+                                //showBatch();
+                            })
+                        })
+                       
+                    })
+                })
+            })
+        }
+        
+        update(ref(db, 'accounts/trainees/' + deleteID), {
+            status: "deletion"
+        })
+    })
+
+
+
+    /*
+    remove(ref(db, 'accounts/trainees/' + deleteID + '/courses/' + dropCourse.value + '/batch/' + dropBatch.value))
+    .then(()=> {
+        remove(ref(db, 'courses/' + dropCourse.value + "/batch/" + dropBatch.value + "/trainees/" + deleteID))
+        .then(() => {
+            showBatch();
+        })
+        .catch((error)=> {
+            alert(error.code);
+        })
+    })
+    .catch((error)=>{
+        alert(error.code);
+    }) */
+}
+
+function changeTraineeStatus() {
+
+    getEmail = this.parentElement.parentElement.children[2].value;
+
+    get(ref(db, 'accounts/trainees')).then((snapshot)=> {
+        snapshot.forEach((childSnapshot) => {
+            if(getEmail == childSnapshot.val().email) {
+                if(childSnapshot.val().status == "suspended") {
+                    update(ref(db, 'accounts/trainees/' + childSnapshot.key), {
+                        status: "offline"
+                    })
+                    newTraineeStatus();
+                }
+                else {
+                    update(ref(db, 'accounts/trainees/' + childSnapshot.key), {
+                        status: "suspended"
+                    })
+                    newTraineeStatus();   
+                }
+            }
+        })
+    })       
+}
+
+function showBatch() {
+
+    if((dropCourse.value != "Select Course")&&(dropBatch.value != "Batch No.")) {
+
+        var newQuery = null;
+        
+        const path = ref(db, 'courses/' + dropCourse.value + '/batch/' + dropBatch.value + '/trainees/');
+        
+        if(orderBy == 'key') {
+            newQuery = query(path, orderByKey());
+        }
+        else {
+            newQuery = query(path, orderByChild(orderBy));
+        }
+        
+        onValue(newQuery, (snapshot) => {
+
+            var append = "";
+            tblEntries.innerHTML = "";
+
+            snapshot.forEach((childSnapshot)=> {
+        
+                var arrID = childSnapshot.key;
+                var arrName = childSnapshot.val().name;
+                var arrEmail = childSnapshot.val().email;
+                var arrSocial = childSnapshot.val().social;
+            
+                get(ref(db, 'accounts/trainees/' + arrID)).then((snapshot)=> {
+                    var arrTimestamp = snapshot.val().lastOnline;
+                    var arrContact = snapshot.val().contact;
+                    
+                    append += 
+                    `<div class="tblEntry">
+                        <input type="text" class="divEntryID" value="${arrID}" readonly>
+                        <input type="text" class="divEntryName" value="${arrName}" readonly>
+                        <input type="text" class="divEntryEmail" value="${arrEmail}" readonly>
+                        <input type="text" class="divEntrySocial" onclick="window.open('${arrSocial}'),'_blank'" value = "Link" readonly>
+                        <input type="text" class="divEntryContact" value="${arrContact}" readonly>
+                        <input type="text" class="divEntryCourse" value="${dropCourse.value}" readonly>
+                        <input type="text" class="divEntryBatch" value="${dropBatch.value}" readonly>
+                        <input type="text" class="divEntryTimestamp" value="${arrTimestamp}" readonly>
+                        <div class="imgEntry">
+                            <img src="img-h6rv2c/btnConfirm.png" class="btnStatus">
+                            <img src="img-h6rv2c/btnDelete.png" class="btnDelete">
+                        </div>
+                    </div>`;
+
+                    tblEntries.innerHTML = append;
+                    lblRecords.innerHTML = `<h1>${tblEntries.childElementCount} records found</h1>`;
+            
+                    //add event listeners for each clickables---------
+                    for(var a=0; a < tblEntries.childElementCount; a++) {
+                        divEntryID[a].addEventListener('click', copyMe);
+                        divEntryName[a].addEventListener('click', copyMe);
+                        divEntryEmail[a].addEventListener('click', copyMe);
+                        divEntryContact[a].addEventListener('click', copyMe);
+                        btnDelete[a].addEventListener('click', deleteTrainee);
+                        btnStatus[a].addEventListener('click', changeTraineeStatus);
+                    }
+                    newTraineeStatus();
+                })
+            })
+        })
+    }
+    else {
+        tblEntries.innerHTML = "";
+        lblRecords.innerHTML = "";    
+    }
+}
+
+function loadBatch() {
+    if(dropBatch.value != "Select Course") {
+
+    const path = ref(db, 'courses/' + dropCourse.value + "/batch/")
+    get(path).then((snapshot) => {
+        var append = `<option value="Batch No." class="dropOption">Batch No.</option>`;
+        dropBatch = document.getElementById('dropBatch');
+
+            snapshot.forEach((childSnapshot) => {
+            
+            append += `<option value="${childSnapshot.key}" class="dropOption">${childSnapshot.key}</option>`;
+            
+        })
+        dropBatch.innerHTML = append;
+        dropBatch.value = dropBatch.lastElementChild.value;
+        showBatch();
+    })
+    }
+    else {
+        txtCerti.value = "";
+    }
+}
+
+function clickBatch() {
+    txtSearch.value = "";
+    showBatch();
+}
+
+function searchOrLoadBatch() {
+    if((txtSearch.value == '*')&&(dropCourse.value == "Select Course")) {
+        findAll();
+    }
+    else if((txtSearch.value == '*')&&(dropCourse.value != "Select Course")) {
+        txtSearch.value = "";
+        loadBatch();
+    }
+    else {
+        loadBatch();
+    }
+}
+
+dropCourse.addEventListener('change', searchOrLoadBatch);
+dropBatch.addEventListener('change', clickBatch);
+
+function filterBy() {
+
+    if(txtSearch.value == "") {
+        if(this.id == 'headerName') {
+            orderBy = 'name';  
+        }
+        else if(this.id == "headerEmail") {
+            orderBy = 'email';  
+        }
+        else {
+            orderBy = 'key';
+        }
+        showBatch();
+    }
+
+    else {
+        alert('Cannot use filter on search');
+    }
+    
+}
+headerID.addEventListener('click', filterBy);
+headerName.addEventListener('click', filterBy);
+headerEmail.addEventListener('click', filterBy)
+
+
+//--------------------------Search box------------------------
+
+
+function findAll() {
+    const path1 = ref(db, 'accounts/trainees/'); //get basic data
+    onValue(path1, (snapshot)=> {
+        var child = "";
+        var append = "";
+
+        snapshot.forEach((childSnapshot)=> {
+            var arrID = childSnapshot.key;
+            var arrName = childSnapshot.val().name;
+            var arrEmail = childSnapshot.val().email;
+            var arrSocial = childSnapshot.val().social;
+            var arrTimestamp = childSnapshot.val().lastOnline;
+            var arrContact = childSnapshot.val().contact;
+
+            const path2 = ref(db, 'accounts/trainees/' + arrID + '/courses/'); // get courses
+            onValue(path2, (snapshot)=> {
+                if(snapshot.size > 0) { //if there's any courses
+                    snapshot.forEach((childSnapshot)=> {
+                        var arrCourse = childSnapshot.key;
+
+                        const path3 = ref(db, 'accounts/trainees/' + arrID + '/courses/' + arrCourse + '/batch/'); // get batches
+                        onValue(path3, (snapshot)=> {
+                            snapshot.forEach((childSnapshot)=> {
+                                var arrBatch = childSnapshot.key;
+
+                                child+=
+                                `<div class="tblEntry">
+                                    <input type="text" class="divEntryID" value="${arrID}" readonly>
+                                    <input type="text" class="divEntryName" value="${arrName}" readonly>
+                                    <input type="text" class="divEntryEmail" value="${arrEmail}" readonly>
+                                    <input type="text" class="divEntrySocial" onclick="window.open('${arrSocial}','_blank')" value = "Link" readonly>
+                                    <input type="text" class="divEntryContact" value="${arrContact}" readonly>
+                                    <input type="text" class="divEntryCourse" value="${arrCourse}" readonly>
+                                    <input type="text" class="divEntryBatch" value="${arrBatch}" readonly>
+                                    <input type="text" class="divEntryTimestamp" value="${arrTimestamp}" readonly>
+                                    <div class="imgEntry">
+                                        <img src="img-h6rv2c/btnConfirm.png" class="btnStatus">
+                                        <img src="img-h6rv2c/btnDelete.png" class="btnDelete">
+                                    </div>
+                                </div>`;
+                                
+                            })
+                            
+                        })        
+                    })   
+                }
+                else {
+                    child+=
+                        `<div class="tblEntry">
+                            <input type="text" class="divEntryID" value="${arrID}" readonly>
+                            <input type="text" class="divEntryName" value="${arrName}" readonly>
+                            <input type="text" class="divEntryEmail" value="${arrEmail}" readonly>
+                            <input type="text" class="divEntrySocial" onclick="window.open('${arrSocial}','_blank')" value = "Link" readonly>
+                            <input type="text" class="divEntryContact" value="${arrContact}" readonly>
+                            <input type="text" class="divEntryCourse" value="------" readonly>
+                            <input type="text" class="divEntryBatch" value="------" readonly>
+                            <input type="text" class="divEntryTimestamp" value="${arrTimestamp}" readonly>
+                            <div class="imgEntry">
+                                <img src="img-h6rv2c/btnConfirm.png" class="btnStatus">
+                                <img src="img-h6rv2c/btnDelete.png" class="btnDelete">
+                            </div>
+                        </div>`;
+                }
+            })
+        })
+
+        append = append + child;
+        tblEntries.innerHTML = append;
+        lblRecords.innerHTML = `<h1>${tblEntries.childElementCount} records found</h1>`;
+            
+        //add event listeners for each clickables---------
+        for(var a=0; a < tblEntries.childElementCount; a++) {
+            divEntryID[a].addEventListener('click', copyMe);
+            divEntryName[a].addEventListener('click', copyMe);
+            divEntryEmail[a].addEventListener('click', copyMe);
+            divEntryContact[a].addEventListener('click', copyMe);
+            btnDelete[a].addEventListener('click', deleteTrainee);
+            btnStatus[a].addEventListener('click', changeTraineeStatus);
+        }
+
+        newTraineeStatus();
+            
+    })
+
+}
+
+function findAllBatch() {
+        
+        const path1 = ref(db, 'courses/' + dropCourse.value + '/batch/'); //get batches
+        onValue(path1, (snapshot) => {
+
+            var child = "";
+            var append = "";
+            var arrBatch = [];
+            var x = 0;
+            
+            snapshot.forEach((childSnapshot)=> {
+
+                var arrCourse = dropCourse.value;
+                arrBatch[x] = childSnapshot.key; //got the batch no.
+                
+                const path2 = ref(db, 'courses/' + dropCourse.value + '/batch/' + arrBatch[x] + '/trainees/'); // go to specific batch no.
+                onValue(path2, (snapshot)=> {
+                    
+                    
+                    snapshot.forEach((childSnapshot)=> { //get IDs
+                        
+                        var arrID = childSnapshot.key;
+                        
+                        const path3 = ref(db, 'accounts/trainees/' + arrID); //get accounts via ID
+                        onValue(path3, (snapshot)=> {
+                            
+                            var arrName = snapshot.val().name;
+                            var arrEmail = snapshot.val().email;
+                            var arrContact = snapshot.val().contact;
+                            var arrSocial = snapshot.val().social;
+                            var arrTimestamp = snapshot.val().lastOnline;
+
+                            child += 
+                                `<div class="tblEntry">
+                                    <input type="text" class="divEntryID" value="${arrID}" readonly>
+                                    <input type="text" class="divEntryName" value="${arrName}" readonly>
+                                    <input type="text" class="divEntryEmail" value="${arrEmail}" readonly>
+                                    <input type="text" class="divEntrySocial" onclick="window.open('${arrSocial}','_blank')" value = "Link" readonly>
+                                    <input type="text" class="divEntryContact" value="${arrContact}" readonly>
+                                    <input type="text" class="divEntryCourse" value="${arrCourse}" readonly>
+                                    <input type="text" class="divEntryBatch" value="${arrBatch[x]}" readonly>
+                                    <input type="text" class="divEntryTimestamp" value="${arrTimestamp}" readonly>
+                                    <div class="imgEntry">
+                                        <img src="img-h6rv2c/btnConfirm.png" class="btnStatus">
+                                        <img src="img-h6rv2c/btnDelete.png" class="btnDelete">
+                                    </div>
+                                </div>`;                   
+                        })
+                        
+                    })
+                    
+                })
+                 
+                x++;
+            })
+            append = append + child;
+
+            tblEntries.innerHTML = append;
+            lblRecords.innerHTML = `<h1>${tblEntries.childElementCount} records found</h1>`;
+
+            //add event listeners for each clickables---------
+            for(var a=0; a < tblEntries.childElementCount; a++) {
+                divEntryID[a].addEventListener('click', copyMe);
+                divEntryName[a].addEventListener('click', copyMe);
+                divEntryEmail[a].addEventListener('click', copyMe);
+                divEntryContact[a].addEventListener('click', copyMe);
+                btnDelete[a].addEventListener('click', deleteTrainee);
+                btnStatus[a].addEventListener('click', changeTraineeStatus);
+            }
+           
+            newTraineeStatus();
+        })
+        
+}
+
+function findEmail() {
+
+    const path1 = ref(db, 'accounts/trainees/');
+    onValue(path1, (snapshot)=> {
+        var append = "";
+        var child = "";
+        snapshot.forEach((childSnapshot)=> { //get each trainee info on the accounts
+            var arrID = childSnapshot.key;
+            var arrName = childSnapshot.val().name;
+            var arrEmail = childSnapshot.val().email;
+            var arrSocial = childSnapshot.val().social;
+            var arrContact = childSnapshot.val().contact;
+            var arrTimestamp = childSnapshot.val().lastOnline;
+
+            if(txtSearch.value == arrEmail) {
+
+                const path2 = ref(db, 'accounts/trainees/' + arrID + '/courses/'); // get courses for each ID
+                onValue(path2, (snapshot)=> {
+                    if(snapshot.size > 0) { //check if there is course taken
+
+                        snapshot.forEach((childSnapshot)=> {
+                            var arrCourse = childSnapshot.key;
+                            
+                            const path3 = ref(db, 'accounts/trainees/' + arrID + '/courses/' + arrCourse + '/batch/');
+                            onValue(path3, (snapshot)=> {
+                                snapshot.forEach((childSnapshot)=> {
+                                    var arrBatch = childSnapshot.key;
+        
+                                    child+=
+                                    `<div class="tblEntry">
+                                        <input type="text" class="divEntryID" value="${arrID}" readonly>
+                                        <input type="text" class="divEntryName" value="${arrName}" readonly>
+                                        <input type="text" class="divEntryEmail" value="${arrEmail}" readonly>
+                                        <input type="text" class="divEntrySocial" onclick="window.open('${arrSocial}','_blank')" value = "Link" readonly>
+                                        <input type="text" class="divEntryContact" value="${arrContact}" readonly>
+                                        <input type="text" class="divEntryCourse" value="${arrCourse}" readonly>
+                                        <input type="text" class="divEntryBatch" value="${arrBatch}" readonly>
+                                        <input type="text" class="divEntryTimestamp" value="${arrTimestamp}" readonly>
+                                        <div class="imgEntry">
+                                            <img src="img-h6rv2c/btnConfirm.png" class="btnStatus">
+                                            <img src="img-h6rv2c/btnDelete.png" class="btnDelete">
+                                        </div>
+                                    </div>`;
+                                    
+                                })
+                            })
+                            
+                            
+                        })
+                    
+                    }
+                    else {
+                        var arrCourse = "------";
+                        var arrBatch = "------";
+
+                        child+=
+                            `<div class="tblEntry">
+                                <input type="text" class="divEntryID" value="${arrID}" readonly>
+                                <input type="text" class="divEntryName" value="${arrName}" readonly>
+                                <input type="text" class="divEntryEmail" value="${arrEmail}" readonly>
+                                <input type="text" class="divEntrySocial" onclick="window.open('${arrSocial}','_blank')" value = "Link" readonly>
+                                <input type="text" class="divEntryContact" value="${arrContact}" readonly>
+                                <input type="text" class="divEntryCourse" value="${arrCourse}" readonly>
+                                <input type="text" class="divEntryBatch" value="${arrBatch}" readonly>
+                                <input type="text" class="divEntryTimestamp" value="${arrTimestamp}" readonly>
+                                <div class="imgEntry">
+                                    <img src="img-h6rv2c/btnConfirm.png" class="btnStatus">
+                                    <img src="img-h6rv2c/btnDelete.png" class="btnDelete">
+                                </div>
+                            </div>`;
+                        
+                    }
+
+                    append = append + child;
+                })
+                
+            }
+            tblEntries.innerHTML = append;
+            lblRecords.innerHTML = `<h1>${tblEntries.childElementCount} records found</h1>`;
+
+            //add event listeners for each clickables---------
+            for(var a=0; a < tblEntries.childElementCount; a++) {
+                divEntryID[a].addEventListener('click', copyMe);
+                divEntryName[a].addEventListener('click', copyMe);
+                divEntryEmail[a].addEventListener('click', copyMe);
+                divEntryContact[a].addEventListener('click', copyMe);
+                btnDelete[a].addEventListener('click', deleteTrainee);
+                btnStatus[a].addEventListener('click', changeTraineeStatus);
+            }
+
+            newTraineeStatus();
+        })
+        
+    })
+}
+
+function findID() {
+
+    const path1 = ref(db, 'accounts/trainees/');
+    onValue(path1, (snapshot)=> {
+        var append = "";
+        var child = "";
+        snapshot.forEach((childSnapshot)=> { //get each trainee info on the accounts
+            var arrID = childSnapshot.key;
+            var arrName = childSnapshot.val().name;
+            var arrEmail = childSnapshot.val().email;
+            var arrSocial = childSnapshot.val().social;
+            var arrContact = childSnapshot.val().contact;
+            var arrTimestamp = childSnapshot.val().lastOnline;
+
+            if(txtSearch.value == arrID) {
+
+                const path2 = ref(db, 'accounts/trainees/' + arrID + '/courses/'); // get courses for each ID
+                onValue(path2, (snapshot)=> {
+                    if(snapshot.size > 0) { //check if there is course taken
+
+                        snapshot.forEach((childSnapshot)=> {
+                            var arrCourse = childSnapshot.key;
+                            
+                            const path3 = ref(db, 'accounts/trainees/' + arrID + '/courses/' + arrCourse + '/batch/');
+                            onValue(path3, (snapshot)=> {
+                                snapshot.forEach((childSnapshot)=> {
+                                    var arrBatch = childSnapshot.key;
+        
+                                    child+=
+                                    `<div class="tblEntry">
+                                        <input type="text" class="divEntryID" value="${arrID}" readonly>
+                                        <input type="text" class="divEntryName" value="${arrName}" readonly>
+                                        <input type="text" class="divEntryEmail" value="${arrEmail}" readonly>
+                                        <input type="text" class="divEntrySocial" onclick="window.open('${arrSocial}','_blank')" value = "Link" readonly>
+                                        <input type="text" class="divEntryContact" value="${arrContact}" readonly>
+                                        <input type="text" class="divEntryCourse" value="${arrCourse}" readonly>
+                                        <input type="text" class="divEntryBatch" value="${arrBatch}" readonly>
+                                        <input type="text" class="divEntryTimestamp" value="${arrTimestamp}" readonly>
+                                        <div class="imgEntry">
+                                            <img src="img-h6rv2c/btnConfirm.png" class="btnStatus">
+                                            <img src="img-h6rv2c/btnDelete.png" class="btnDelete">
+                                        </div>
+                                    </div>`;
+                                    
+                                })
+                            })
+                            
+                            
+                        })
+                    
+                    }
+                    else {
+                        var arrCourse = "------";
+                        var arrBatch = "------";
+
+                        child+=
+                            `<div class="tblEntry">
+                                <input type="text" class="divEntryID" value="${arrID}" readonly>
+                                <input type="text" class="divEntryName" value="${arrName}" readonly>
+                                <input type="text" class="divEntryEmail" value="${arrEmail}" readonly>
+                                <input type="text" class="divEntrySocial" onclick="window.open('${arrSocial}','_blank')" value = "Link" readonly>
+                                <input type="text" class="divEntryContact" value="${arrContact}" readonly>
+                                <input type="text" class="divEntryCourse" value="${arrCourse}" readonly>
+                                <input type="text" class="divEntryBatch" value="${arrBatch}" readonly>
+                                <input type="text" class="divEntryTimestamp" value="${arrTimestamp}" readonly>
+                                <div class="imgEntry">
+                                    <img src="img-h6rv2c/btnConfirm.png" class="btnStatus">
+                                    <img src="img-h6rv2c/btnDelete.png" class="btnDelete">
+                                </div>
+                            </div>`;
+                        
+                    }
+
+                    append = append + child;
+                })
+                
+            }
+            tblEntries.innerHTML = append;
+            lblRecords.innerHTML = `<h1>${tblEntries.childElementCount} records found</h1>`;
+
+            //add event listeners for each clickables---------
+            for(var a=0; a < tblEntries.childElementCount; a++) {
+                divEntryID[a].addEventListener('click', copyMe);
+                divEntryName[a].addEventListener('click', copyMe);
+                divEntryEmail[a].addEventListener('click', copyMe);
+                divEntryContact[a].addEventListener('click', copyMe);
+                btnDelete[a].addEventListener('click', deleteTrainee);
+                btnStatus[a].addEventListener('click', changeTraineeStatus);
+            }
+
+            newTraineeStatus();
+        })
+        
+    })
+}
+
+function search() {
+
+    if(txtSearch.value == '*') {
+        if(dropCourse.value != "Select Course") {
+            
+            findAllBatch();
+        }
+        else {
+            
+            findAll();
+        }
+        
+    }
+
+    else if(txtSearch.value.includes('@')) {
+        
+        findEmail();
+        
+    }
+
+    else if(txtSearch.value == "") {
+        if((dropCourse.value != "Select Course")&&(dropBatch.value != "Batch No.")) {
+            showBatch();
+        }
+        else {
+
+            tblEntries.innerHTML = "";
+        }
+    }
+
+    else {
+          
+        findID();
+        
+    }
+    
+}
+txtSearch.addEventListener('input', search);
+
+//-----------------------Monitor Logout------------------------
+
+function checkAuth() {
+    var oAuth = sessionStorage.getItem("oAuth");
+    if(oAuth == "out") {
+        signOut(auth)
+        .then(()=> {
+            sessionStorage.clear();
+        })
+        .catch((error)=> {
+            alert(error.code);
+        })
+    }
+}
+
+setInterval(checkAuth, 500);
+
+
+
+
+
+
+
+
+

@@ -1,1 +1,85 @@
-var _0x2e1db2=_0x4ba5;(function(_0x2ed9d5,_0x150a27){var _0x4f8e6e=_0x4ba5,_0x13f699=_0x2ed9d5();while(!![]){try{var _0x3044c4=-parseInt(_0x4f8e6e(0x19e))/0x1+parseInt(_0x4f8e6e(0x188))/0x2+parseInt(_0x4f8e6e(0x192))/0x3+-parseInt(_0x4f8e6e(0x185))/0x4+-parseInt(_0x4f8e6e(0x1a3))/0x5*(parseInt(_0x4f8e6e(0x18c))/0x6)+-parseInt(_0x4f8e6e(0x189))/0x7*(-parseInt(_0x4f8e6e(0x191))/0x8)+-parseInt(_0x4f8e6e(0x193))/0x9*(-parseInt(_0x4f8e6e(0x1a7))/0xa);if(_0x3044c4===_0x150a27)break;else _0x13f699['push'](_0x13f699['shift']());}catch(_0x55708f){_0x13f699['push'](_0x13f699['shift']());}}}(_0x7831,0x8edb7));function _0x7831(){var _0x554a1a=['translateX(','rgba(0,0,0,0.3)','transform\x20.5s','innerWidth','72936wRrLgI','2013513BMDHpP','448362eFPVZS','visible','background','innerHTML','hidden','toLowerCase','location','style','visibility','opacity','getElementById','584586ormtoC','black','childElementCount','oAuth','offsetWidth','134515BWkkFK','transform','innerText','rgba(0,0,0,0)','70fQsiOC','transition','btnLogout','resize','out','3761464MttXYy','opacity\x20.5s','menu','446374IMqNkM','707spXozy','addEventListener','click','12cLntRQ'];_0x7831=function(){return _0x554a1a;};return _0x7831();}var boolSwitch=![];const black=document[_0x2e1db2(0x19d)](_0x2e1db2(0x19f)),menu=document['getElementById'](_0x2e1db2(0x187)),btnMenu=document[_0x2e1db2(0x19d)]('btnMenu');function showMenu(){var _0x5aa625=_0x2e1db2,_0x19ef2c=window['innerWidth']-menu[_0x5aa625(0x1a2)];menu['style']['transform']='translateX('+_0x19ef2c+'px)',menu[_0x5aa625(0x19a)][_0x5aa625(0x1a8)]='transform\x20.5s',black[_0x5aa625(0x19a)][_0x5aa625(0x19c)]=0x1,black[_0x5aa625(0x19a)][_0x5aa625(0x195)]=_0x5aa625(0x18e),black[_0x5aa625(0x19a)][_0x5aa625(0x19b)]=_0x5aa625(0x194),black[_0x5aa625(0x19a)][_0x5aa625(0x1a8)]=_0x5aa625(0x186);}function hideMenu(){var _0x46b11e=_0x2e1db2,_0x3b10df=window[_0x46b11e(0x190)];menu['style'][_0x46b11e(0x1a4)]='translateX('+_0x3b10df+'px)',menu[_0x46b11e(0x19a)][_0x46b11e(0x1a8)]=_0x46b11e(0x18f),black[_0x46b11e(0x1a0)]==0x0&&(black[_0x46b11e(0x19a)]['opacity']=0x0,black[_0x46b11e(0x19a)]['visibility']=_0x46b11e(0x197),black[_0x46b11e(0x19a)][_0x46b11e(0x195)]=_0x46b11e(0x1a6),black[_0x46b11e(0x19a)][_0x46b11e(0x1a8)]=_0x46b11e(0x186));}function switchMenu(){boolSwitch==![]?(showMenu(),boolSwitch=!![]):(hideMenu(),boolSwitch=![]);}btnMenu[_0x2e1db2(0x18a)](_0x2e1db2(0x18b),switchMenu);function adjustMenu(){var _0x59a5a3=_0x2e1db2;if(boolSwitch==!![]){var _0x79903a=window[_0x59a5a3(0x190)]-menu[_0x59a5a3(0x1a2)];menu[_0x59a5a3(0x19a)][_0x59a5a3(0x1a4)]=_0x59a5a3(0x18d)+_0x79903a+'px)',menu[_0x59a5a3(0x19a)][_0x59a5a3(0x1a8)]=null;}else{var _0x79903a=window[_0x59a5a3(0x190)];menu[_0x59a5a3(0x19a)]['transform']=_0x59a5a3(0x18d)+_0x79903a+'px)',menu[_0x59a5a3(0x19a)][_0x59a5a3(0x1a8)]=null;}}window[_0x2e1db2(0x18a)](_0x2e1db2(0x1aa),adjustMenu);function checkVideoOrMenu(){var _0x39421a=_0x2e1db2;black['childElementCount']>0x0?(black[_0x39421a(0x19a)][_0x39421a(0x19c)]=0x0,black[_0x39421a(0x19a)][_0x39421a(0x195)]=_0x39421a(0x1a6),black[_0x39421a(0x19a)]['visibility']=_0x39421a(0x197),black[_0x39421a(0x19a)]['transition']=_0x39421a(0x186),black[_0x39421a(0x196)]=''):switchMenu();}function _0x4ba5(_0x5ed0d3,_0x4d0355){var _0x783196=_0x7831();return _0x4ba5=function(_0x4ba532,_0x103c5e){_0x4ba532=_0x4ba532-0x185;var _0x1a93a3=_0x783196[_0x4ba532];return _0x1a93a3;},_0x4ba5(_0x5ed0d3,_0x4d0355);}black['addEventListener']('click',checkVideoOrMenu);function navigateMenu(_0x117f7c){var _0x13d2d6=_0x2e1db2;if(_0x117f7c!=_0x13d2d6(0x1a9)){var _0x4cc96a=document[_0x13d2d6(0x19d)](_0x117f7c)[_0x13d2d6(0x1a5)][_0x13d2d6(0x198)]();window[_0x13d2d6(0x199)]['replace'](_0x4cc96a);}else sessionStorage['setItem'](_0x13d2d6(0x1a1),_0x13d2d6(0x1ab));}
+
+//--------------------------Show Menu---------------------------------
+
+var boolSwitch = false;
+const black = document.getElementById('black');
+const menu = document.getElementById('menu');
+const btnMenu = document.getElementById('btnMenu');
+
+function showMenu() {
+    var newPos = window.innerWidth - menu.offsetWidth;
+    menu.style.transform = "translateX(" + newPos +"px)";
+    menu.style.transition = "transform .5s";
+    black.style.opacity = 1;
+    black.style.background = "rgba(0,0,0,0.3)";
+    black.style.visibility = "visible";
+    black.style.transition = "opacity .5s";
+}
+
+function hideMenu() {
+    var newPos = window.innerWidth;
+    menu.style.transform = "translateX(" + newPos +"px)";
+    menu.style.transition = "transform .5s";  
+
+    if(black.childElementCount == 0) {
+        black.style.opacity = 0;  
+        black.style.visibility = "hidden"; 
+        black.style.background = "rgba(0,0,0,0)";
+        black.style.transition = "opacity .5s";
+    }
+}
+
+function switchMenu() {
+    if(boolSwitch == false) {
+        showMenu();
+        boolSwitch = true;
+    }
+    else {
+        hideMenu();
+        boolSwitch = false;
+    }
+}
+btnMenu.addEventListener('click', switchMenu);
+
+function adjustMenu() {
+    
+    if(boolSwitch == true) {
+        var newPos = window.innerWidth - menu.offsetWidth;
+        menu.style.transform = "translateX(" + newPos +"px)";
+        menu.style.transition = null;
+    }
+    else {
+        var newPos = window.innerWidth;
+        menu.style.transform = "translateX(" + newPos +"px)";
+        menu.style.transition = null;
+    }
+}
+window.addEventListener('resize', adjustMenu);
+
+function checkVideoOrMenu() {
+    if(black.childElementCount > 0) {
+        black.style.opacity = 0;
+        black.style.background = "rgba(0,0,0,0)";
+        black.style.visibility = "hidden";
+        black.style.transition = "opacity .5s";
+        black.innerHTML = "";
+    }
+    else {
+        switchMenu();
+    }
+}
+black.addEventListener('click', checkVideoOrMenu)
+
+
+//---------------------------Menu Navigation--------------------------
+
+function navigateMenu(id) {
+    if(id != 'btnLogout') {
+        
+        var nextPage = document.getElementById(id).innerText.toLowerCase();
+        window.location.replace(nextPage);
+    }
+    else {
+        sessionStorage.setItem("oAuth", "out");
+    }
+}

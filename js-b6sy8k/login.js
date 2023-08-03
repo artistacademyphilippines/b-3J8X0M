@@ -1,1 +1,221 @@
-var _0x240dc9=_0x2906;(function(_0x5d6ca6,_0x1a3c96){var _0x556191=_0x2906,_0x1673b1=_0x5d6ca6();while(!![]){try{var _0x4cba20=-parseInt(_0x556191(0x141))/0x1+parseInt(_0x556191(0x13c))/0x2*(-parseInt(_0x556191(0x149))/0x3)+-parseInt(_0x556191(0x133))/0x4*(parseInt(_0x556191(0x135))/0x5)+-parseInt(_0x556191(0x155))/0x6*(-parseInt(_0x556191(0x178))/0x7)+-parseInt(_0x556191(0x14e))/0x8*(parseInt(_0x556191(0x13e))/0x9)+parseInt(_0x556191(0x15a))/0xa*(parseInt(_0x556191(0x161))/0xb)+parseInt(_0x556191(0x156))/0xc;if(_0x4cba20===_0x1a3c96)break;else _0x1673b1['push'](_0x1673b1['shift']());}catch(_0xeba2f9){_0x1673b1['push'](_0x1673b1['shift']());}}}(_0x2fe0,0x1ed6a),sessionStorage['setItem']('sessEmail',''),sessionStorage[_0x240dc9(0x171)]('sessPw',''));import{initializeApp}from'https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js';import{getAuth,signInWithEmailAndPassword,onAuthStateChanged,signOut}from'https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js';import{getDatabase,ref,onValue,set}from'https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js';const firebaseConfig={'apiKey':'AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk','authDomain':_0x240dc9(0x16c),'databaseURL':_0x240dc9(0x14d),'projectId':_0x240dc9(0x151),'storageBucket':_0x240dc9(0x176),'messagingSenderId':_0x240dc9(0x152),'appId':_0x240dc9(0x137)},app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase();var t=0.002*window[_0x240dc9(0x14a)],c=window[_0x240dc9(0x14a)],scrollingBannerText=document['getElementById'](_0x240dc9(0x159));const scrollingBanner=document[_0x240dc9(0x163)]('divBanner');var bannerContainer=document[_0x240dc9(0x163)]('bannerContainer');bannerContainer['style']['transform']=_0x240dc9(0x162)+window[_0x240dc9(0x14a)]+_0x240dc9(0x15c);function checkBanner(){var _0x44e098=_0x240dc9;const _0x2d2ed2=ref(db,_0x44e098(0x144));onValue(_0x2d2ed2,_0xee286f=>{var _0x6973ff=_0x44e098;_0xee286f[_0x6973ff(0x167)]()&&(scrollingBannerText['innerText']=_0xee286f[_0x6973ff(0x169)]()[_0x6973ff(0x153)],_0xee286f['val']()[_0x6973ff(0x172)]===!![]?scrollingBanner[_0x6973ff(0x138)][_0x6973ff(0x13f)]=_0x6973ff(0x16f):scrollingBanner[_0x6973ff(0x138)][_0x6973ff(0x13f)]=_0x6973ff(0x160));});}checkBanner();function _0x2906(_0x590655,_0x11c1ba){var _0x2fe094=_0x2fe0();return _0x2906=function(_0x2906f4,_0x5a93c4){_0x2906f4=_0x2906f4-0x133;var _0xd47580=_0x2fe094[_0x2906f4];return _0xd47580;},_0x2906(_0x590655,_0x11c1ba);}function bannerAnimation(){var _0x1028c1=_0x240dc9;c-=0.5,bannerContainer[_0x1028c1(0x138)][_0x1028c1(0x15e)]=_0x1028c1(0x162)+c+_0x1028c1(0x15c),c<bannerContainer[_0x1028c1(0x142)]*-0x1&&(c=window[_0x1028c1(0x14a)],bannerContainer[_0x1028c1(0x138)][_0x1028c1(0x15e)]='translateX('+window['innerWidth']+_0x1028c1(0x15c));}setInterval(bannerAnimation,t);var loginEmail=document['querySelector'](_0x240dc9(0x16b)),loginPw=document[_0x240dc9(0x15f)](_0x240dc9(0x136));const btnLogin=document[_0x240dc9(0x163)](_0x240dc9(0x15b));var alertMsg=document[_0x240dc9(0x15f)](_0x240dc9(0x13b)),bodyBlue=document[_0x240dc9(0x163)]('bodyBlue');onAuthStateChanged(auth,_0x15b49a=>{var _0x1fee5e=_0x240dc9;if(_0x15b49a){sessionStorage['setItem'](_0x1fee5e(0x166),_0x15b49a[_0x1fee5e(0x148)]);if(_0x15b49a[_0x1fee5e(0x148)]=='XribZIy3mORl28B3A7S3qOdv2Bs1')window[_0x1fee5e(0x147)]['replace'](_0x1fee5e(0x150));else{var _0x4197be,_0x1c6621,_0x34bc25,_0x55ddd2,_0x10b7dd,_0x8ceff7,_0x33563e='';fetch(_0x1fee5e(0x174))[_0x1fee5e(0x175)](_0x5a7c50=>_0x5a7c50[_0x1fee5e(0x154)]())['then'](_0x52fd67=>_0x54dd26(_0x52fd67));function _0x54dd26(_0x3dc7b6){var _0x49dc7a=_0x1fee5e;const _0x20295f=new Date();var _0x14c662=_0x20295f[_0x49dc7a(0x164)](),_0x3091a3=_0x20295f['getMonth']()+0x1,_0x5d62ea=_0x20295f[_0x49dc7a(0x170)](),_0x28decd=_0x20295f[_0x49dc7a(0x16a)](),_0x34cf84=_0x20295f[_0x49dc7a(0x16e)](),_0x287b57=_0x20295f[_0x49dc7a(0x14c)]();_0x33563e=_0x3091a3+'-'+_0x5d62ea+'-'+_0x14c662,_0x8ceff7=_0x28decd+':'+_0x34cf84+':'+_0x287b57,_0x4197be=_0x3dc7b6['ip'],_0x1c6621=_0x3dc7b6[_0x49dc7a(0x173)],_0x34bc25=_0x3dc7b6[_0x49dc7a(0x15d)],_0x55ddd2=loginEmail,_0x10b7dd=_0x15b49a['uid'],set(ref(db,'unauthorizedAccess/'+_0x14c662+_0x3091a3+_0x5d62ea+_0x28decd+_0x34cf84+_0x287b57),{'ip':_0x4197be,'country':_0x1c6621,'network':_0x34bc25,'email':_0x55ddd2,'uid':_0x10b7dd,'date':_0x33563e,'time':_0x8ceff7})[_0x49dc7a(0x175)](()=>{var _0x2e1d47=_0x49dc7a;window[_0x2e1d47(0x147)][_0x2e1d47(0x146)](_0x2e1d47(0x13d));});}}}else bodyBlue['style'][_0x1fee5e(0x13f)]=_0x1fee5e(0x16f);});function _0x2fe0(){var _0x39afe7=['offsetWidth','opacity','settings/banner','sessEmail','replace','location','uid','12pvGNIh','innerWidth','keydown','getSeconds','https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app','390872hgukaQ','getMonth','https://creator.artcademy.ph/dashboard','projartcademyph-29663','651674935886','message','json','1002IVkcHY','4553580ToPUHI','pageshow','Unauthorized\x20access','pBanner','2208610uBPFDd','btnLogin','px)','org','transform','querySelector','hidden','11bpgVgv','translateX(','getElementById','getFullYear','sessPw','sessID','exists','Email\x20or\x20password\x20is\x20incorrect','val','getHours','#txtEmail','projartcademyph-29663.firebaseapp.com','match','getMinutes','visible','getDate','setItem','status','country','https://ipapi.co/json','then','projartcademyph-29663.appspot.com','innerText','1162lwvrjY','catch','79908uPVHuB','------','30mfgShh','#txtPw','1:651674935886:web:629aefbab24dd2a154991f','style','unauthorizedAccess/','addEventListener','#alertMessage','59660ZwbrgW','https://artcademy.ph/404','9qCdmeH','visibility','value','213693BOhWCC'];_0x2fe0=function(){return _0x39afe7;};return _0x2fe0();}function validateLogin(){var _0x1156a4=_0x240dc9,_0x36d40c=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;loginEmail[_0x1156a4(0x140)][_0x1156a4(0x16d)](_0x36d40c)&&loginPw[_0x1156a4(0x140)]!=''?signInWithEmailAndPassword(auth,loginEmail['value'],loginPw[_0x1156a4(0x140)])[_0x1156a4(0x175)](()=>{var _0x54e826=_0x1156a4;sessionStorage['setItem'](_0x54e826(0x145),loginEmail[_0x54e826(0x140)]),sessionStorage['setItem'](_0x54e826(0x165),loginPw[_0x54e826(0x140)]);})[_0x1156a4(0x179)](_0xb305af=>{var _0x50ed12=_0x1156a4,_0x4f8b72,_0x3428d6,_0x53e8a3,_0x41d3b9,_0x18c93b,_0x28c3fd='';fetch('https://ipapi.co/json')[_0x50ed12(0x175)](_0x1d4daf=>_0x1d4daf[_0x50ed12(0x154)]())[_0x50ed12(0x175)](_0x5c3d13=>_0x2baa2c(_0x5c3d13));function _0x2baa2c(_0x3dae8c){var _0x54a265=_0x50ed12;const _0x4f2408=new Date();var _0x266d28=_0x4f2408['getFullYear'](),_0x4a16ec=_0x4f2408[_0x54a265(0x14f)]()+0x1,_0x57e891=_0x4f2408[_0x54a265(0x170)](),_0x32e2ab=_0x4f2408[_0x54a265(0x16a)](),_0x576487=_0x4f2408['getMinutes'](),_0x2c031b=_0x4f2408[_0x54a265(0x14c)]();_0x28c3fd=_0x4a16ec+'-'+_0x57e891+'-'+_0x266d28,_0x18c93b=_0x32e2ab+':'+_0x576487+':'+_0x2c031b,_0x4f8b72=_0x3dae8c['ip'],_0x3428d6=_0x3dae8c[_0x54a265(0x173)],_0x53e8a3=_0x3dae8c['org'],_0x41d3b9=loginEmail,set(ref(db,_0x54a265(0x139)+_0x266d28+_0x4a16ec+_0x57e891+_0x32e2ab+_0x576487+_0x2c031b),{'ip':_0x4f8b72,'country':_0x3428d6,'network':_0x53e8a3,'email':_0x41d3b9,'uid':_0x54a265(0x134),'date':_0x28c3fd,'time':_0x18c93b})['then'](()=>{var _0x2376c2=_0x54a265;alertMsg[_0x2376c2(0x177)]=_0x2376c2(0x158),alertMsg[_0x2376c2(0x138)][_0x2376c2(0x143)]='1',loginEmail['value']='',loginPw['value']='';});}}):(alertMsg[_0x1156a4(0x177)]=_0x1156a4(0x168),alertMsg['style']['opacity']='1');}function pressEnter(_0x59a3ac){_0x59a3ac['code']==='Enter'&&validateLogin();}btnLogin[_0x240dc9(0x13a)]('click',validateLogin),document[_0x240dc9(0x15f)](_0x240dc9(0x16b))[_0x240dc9(0x13a)]('keydown',pressEnter),document['querySelector'](_0x240dc9(0x136))[_0x240dc9(0x13a)](_0x240dc9(0x14b),pressEnter);function clearText(){var _0x1f4f27=_0x240dc9;document[_0x1f4f27(0x15f)]('#txtEmail')['value']='',document[_0x1f4f27(0x15f)]('#txtPw')[_0x1f4f27(0x140)]='';}window[_0x240dc9(0x13a)](_0x240dc9(0x157),clearText);
+sessionStorage.setItem("sessEmail", "");
+sessionStorage.setItem("sessPw", "");
+
+//------------------------Firebase--------------------
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+  import { getDatabase, ref, onValue, set} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
+    authDomain: "projartcademyph-29663.firebaseapp.com",
+    databaseURL: "https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "projartcademyph-29663",
+    storageBucket: "projartcademyph-29663.appspot.com",
+    messagingSenderId: "651674935886",
+    appId: "1:651674935886:web:629aefbab24dd2a154991f"
+};
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getDatabase();
+
+//--------------------------------Banner--------------------------------------
+
+var t = .002*window.innerWidth;
+var c = window.innerWidth;
+var scrollingBannerText = document.getElementById('pBanner');
+const scrollingBanner = document.getElementById('divBanner');
+var bannerContainer = document.getElementById('bannerContainer');
+bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+
+//----------------------------Common Banner codes---------------------
+function checkBanner() {
+    
+    const path = ref(db, 'settings/banner');
+    onValue(path, (snapshot) => {
+        if(snapshot.exists()) {
+
+            scrollingBannerText.innerText = snapshot.val().message;
+            if(snapshot.val().status === true) {
+                scrollingBanner.style.visibility = "visible";
+            }
+            else {
+                scrollingBanner.style.visibility = "hidden";
+            }
+        }
+    });
+}
+checkBanner();
+
+function bannerAnimation() {
+    c -= .5;
+    bannerContainer.style.transform = "translateX(" + c +"px)";
+    if(c < (bannerContainer.offsetWidth*-1)) {
+        c = window.innerWidth;
+        bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+    }
+}
+setInterval(bannerAnimation, t);
+
+  //---------------------Functions---------------------
+  var loginEmail = document.querySelector('#txtEmail');
+  var loginPw = document.querySelector('#txtPw');
+  const btnLogin = document.getElementById('btnLogin');
+  var alertMsg = document.querySelector('#alertMessage');
+  
+  //--check first if user is currently logged in
+
+var bodyBlue = document.getElementById('bodyBlue');
+
+onAuthStateChanged(auth, (user) => {
+
+  if (user) {
+
+    if(user.uid == "XribZIy3mORl28B3A7S3qOdv2Bs1") {
+
+      window.location.replace('https://creator.artcademy.ph/dashboard');
+
+    }
+
+    else {
+
+        var getIP, getCountry, getISP, getEmail, getUID, getTime, getDate = "";
+
+        fetch("https://ipapi.co/json")
+        .then(respo => respo.json())
+        .then(data => getData(data));
+
+        function getData(data) {
+              
+          const d = new Date();
+          var year = d.getFullYear();
+          var month = d.getMonth() + 1;
+          var date = d.getDate();
+          var hour = d.getHours();
+          var mins = d.getMinutes();
+          var secs = d.getSeconds();
+
+          getDate = month + "-" + date + "-" + year;
+          getTime = hour + ":" + mins + ":" + secs;
+          getIP = data.ip;
+          getCountry = data.country;
+          getISP = data.org;
+
+          getEmail = loginEmail;
+          getUID = user.uid;
+
+          set(ref(db, 'unauthorizedAccess/' + year + month + date + hour + mins + secs), {
+            ip: getIP,
+            country: getCountry,
+            network: getISP,
+            email: getEmail,
+            uid: getUID,
+            date: getDate,
+            time: getTime
+          })
+          .then(()=> {
+
+            window.location.replace('https://artcademy.ph/404');
+
+            })
+          }
+      }
+      
+    }
+    
+    else {
+      
+      bodyBlue.style.visibility = "visible";
+      
+    } 
+  });
+
+
+
+  //---------------------validate login--------------------
+
+  function validateLogin() {
+
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if ((loginEmail.value.match(validRegex)) && (loginPw.value != "")) { //check if login fields valid
+
+      signInWithEmailAndPassword(auth, loginEmail.value, loginPw.value)
+      .then(()=> {
+        sessionStorage.setItem("sessEmail", loginEmail.value);
+        sessionStorage.setItem("sessPw", loginPw.value);
+      })
+      .catch((error)=> {
+
+        var getIP, getCountry, getISP, getEmail, getTime, getDate = "";
+
+        fetch("https://ipapi.co/json")
+          .then(respo => respo.json())
+            .then(data => getData(data));
+
+              function getData(data) {
+                
+                const d = new Date();
+                var year = d.getFullYear();
+                var month = d.getMonth() + 1;
+                var date = d.getDate();
+                var hour = d.getHours();
+                var mins = d.getMinutes();
+                var secs = d.getSeconds();
+
+                getDate = month + "-" + date + "-" + year;
+                getTime = hour + ":" + mins + ":" + secs;
+                getIP = data.ip;
+                getCountry = data.country;
+                getISP = data.org;
+
+                getEmail = loginEmail;
+                
+
+                set(ref(db, 'unauthorizedAccess/' + year + month + date + hour + mins + secs), {
+                  ip: getIP,
+                  country: getCountry,
+                  network: getISP,
+                  email: getEmail,
+                  uid: "------",
+                  date: getDate,
+                  time: getTime
+                })
+                .then(()=> {
+                  alertMsg.innerText = "Unauthorized access";
+                  alertMsg.style.opacity = "1";
+                  loginEmail.value = "";
+                  loginPw.value = "";
+
+                  
+                })
+              }
+      })
+
+    }
+    else {
+      alertMsg.innerText = "Email or password is incorrect";
+      alertMsg.style.opacity = "1";
+    }
+  }
+
+
+  //-------------on enter, use function login---------------
+  function pressEnter(e) {
+    if(e.code === "Enter") {
+      validateLogin();
+    }
+  }
+
+  btnLogin.addEventListener("click", validateLogin);
+  document.querySelector('#txtEmail').addEventListener("keydown", pressEnter);
+  document.querySelector('#txtPw').addEventListener("keydown", pressEnter);
+
+//-------------------------Reset Texts---------------------
+
+function clearText() {
+  document.querySelector('#txtEmail').value = "";
+  document.querySelector('#txtPw').value = "";
+}
+window.addEventListener("pageshow", clearText);
+

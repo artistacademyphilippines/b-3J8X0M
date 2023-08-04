@@ -381,7 +381,10 @@ function showBatch() {
                         </div>
                     </div>`;
 
-                    tblEntries.innerHTML = append;
+                    
+                })
+            })
+            tblEntries.innerHTML = append;
                     lblRecords.innerHTML = `<h1>${tblEntries.childElementCount} records found</h1>`;
             
                     //add event listeners for each clickables---------
@@ -394,8 +397,6 @@ function showBatch() {
                         btnStatus[a].addEventListener('click', changeTraineeStatus);
                     }
                     newTraineeStatus();
-                })
-            })
         })
     }
     else {

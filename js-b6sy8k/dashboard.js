@@ -167,10 +167,9 @@ function copyMe() {
 
 
 function editCard() {
-    
-    document.getElementById('txtCardNo').firstElementChild.innerText = this.parentElement.childNodes[1].innerText;
+    document.getElementById('txtCardNo').firstElementChild.innerText = this.parentElement.children[0].innerText;
     document.getElementById('txtCardTitle').value = this.parentElement.children[1].innerText;
-    document.getElementById('txtCardLink').value = this.parentElement.children[2].innerText;
+    document.getElementById('txtCardLink').value = this.parentElement.children[2].value;
 }
 
 function displayCard() {

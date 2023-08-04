@@ -361,7 +361,7 @@ function showBatch() {
                 var arrEmail = childSnapshot.val().email;
                 var arrSocial = childSnapshot.val().social;
             
-                get(ref(db, 'accounts/trainees/' + arrID)).then((snapshot)=> {
+                onValue(ref(db, 'accounts/trainees/' + arrID), (snapshot)=> {
                     var arrTimestamp = snapshot.val().lastOnline;
                     var arrContact = snapshot.val().contact;
                     

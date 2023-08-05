@@ -115,10 +115,7 @@ onAuthStateChanged(auth, (user) => {
           })
           .then(()=> {
 
-            signOut(auth).then(()=> {
-              window.location.replace('https://artcademy.ph/404');
-              
-              })
+            window.location.replace('https://artcademy.ph/404');
           
             })
           }

@@ -70,10 +70,9 @@ onAuthStateChanged(auth, (user) => {
 
   if (user) {
 
-    var sessID = sessionStorage.getItem("sessID");
-    
-    if(sessID == "XribZIy3mORl28B3A7S3qOdv2Bs1") {
+    if(user.uid == "XribZIy3mORl28B3A7S3qOdv2Bs1") {
 
+      sessionStorage.setItem("sessID", user.uid);
       window.location.replace('https://creator.artcademy.ph/dashboard');
 
     }
@@ -116,9 +115,11 @@ onAuthStateChanged(auth, (user) => {
           })
           .then(()=> {
 
-
-            window.location.replace('https://artcademy.ph/404');
-
+            signOut(auth).then(()=> {
+              window.location.replace('https://artcademy.ph/404');
+              
+              })
+          
             })
           }
       }
@@ -143,7 +144,7 @@ onAuthStateChanged(auth, (user) => {
 
       signInWithEmailAndPassword(auth, loginEmail.value, loginPw.value)
       .then(()=> {
-        sessionStorage.setItem("sessID", "XribZIy3mORl28B3A7S3qOdv2Bs1");
+       
         sessionStorage.setItem("sessEmail", loginEmail.value);
         sessionStorage.setItem("sessPw", loginPw.value);
       })

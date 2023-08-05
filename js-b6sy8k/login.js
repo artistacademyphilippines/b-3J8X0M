@@ -1,1 +1,223 @@
-var _0x6c47a2=_0x8a15;(function(_0x3e9387,_0x1726a9){var _0xab360a=_0x8a15,_0x489f04=_0x3e9387();while(!![]){try{var _0x5687ca=parseInt(_0xab360a(0x1e1))/0x1+-parseInt(_0xab360a(0x20d))/0x2+parseInt(_0xab360a(0x206))/0x3+parseInt(_0xab360a(0x203))/0x4+-parseInt(_0xab360a(0x1f2))/0x5*(parseInt(_0xab360a(0x1eb))/0x6)+parseInt(_0xab360a(0x1e7))/0x7+-parseInt(_0xab360a(0x1e3))/0x8;if(_0x5687ca===_0x1726a9)break;else _0x489f04['push'](_0x489f04['shift']());}catch(_0x1987aa){_0x489f04['push'](_0x489f04['shift']());}}}(_0xdc29,0x6c2fc));import{initializeApp}from'https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js';import{getAuth,signInWithEmailAndPassword,onAuthStateChanged,signOut}from'https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js';import{getDatabase,ref,onValue,set}from'https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js';const firebaseConfig={'apiKey':_0x6c47a2(0x1f1),'authDomain':_0x6c47a2(0x1e5),'databaseURL':'https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app','projectId':_0x6c47a2(0x214),'storageBucket':_0x6c47a2(0x219),'messagingSenderId':_0x6c47a2(0x1fc),'appId':_0x6c47a2(0x20c)},app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase();var t=0.002*window['innerWidth'],c=window['innerWidth'],scrollingBannerText=document[_0x6c47a2(0x218)](_0x6c47a2(0x1ed));const scrollingBanner=document[_0x6c47a2(0x218)](_0x6c47a2(0x1e8));var bannerContainer=document[_0x6c47a2(0x218)](_0x6c47a2(0x1da));bannerContainer['style'][_0x6c47a2(0x201)]=_0x6c47a2(0x1de)+window[_0x6c47a2(0x213)]+_0x6c47a2(0x1f4);function checkBanner(){var _0x369069=_0x6c47a2;const _0xbd7d6=ref(db,_0x369069(0x1ff));onValue(_0xbd7d6,_0x58175f=>{var _0x31db77=_0x369069;_0x58175f['exists']()&&(scrollingBannerText[_0x31db77(0x1ee)]=_0x58175f[_0x31db77(0x20b)]()['message'],_0x58175f[_0x31db77(0x20b)]()[_0x31db77(0x208)]===!![]?scrollingBanner[_0x31db77(0x1fa)][_0x31db77(0x216)]='visible':scrollingBanner[_0x31db77(0x1fa)][_0x31db77(0x216)]=_0x31db77(0x200));});}checkBanner();function bannerAnimation(){var _0x4d90dc=_0x6c47a2;c-=0.5,bannerContainer['style'][_0x4d90dc(0x201)]=_0x4d90dc(0x1de)+c+_0x4d90dc(0x1f4),c<bannerContainer[_0x4d90dc(0x1fd)]*-0x1&&(c=window['innerWidth'],bannerContainer[_0x4d90dc(0x1fa)][_0x4d90dc(0x201)]=_0x4d90dc(0x1de)+window[_0x4d90dc(0x213)]+_0x4d90dc(0x1f4));}setInterval(bannerAnimation,t);var loginEmail=document[_0x6c47a2(0x210)](_0x6c47a2(0x1f8)),loginPw=document[_0x6c47a2(0x210)](_0x6c47a2(0x202));const btnLogin=document[_0x6c47a2(0x218)](_0x6c47a2(0x1e0));function _0x8a15(_0x43bdeb,_0x204123){var _0xdc2960=_0xdc29();return _0x8a15=function(_0x8a155,_0x18e7d7){_0x8a155=_0x8a155-0x1da;var _0x44da74=_0xdc2960[_0x8a155];return _0x44da74;},_0x8a15(_0x43bdeb,_0x204123);}var alertMsg=document[_0x6c47a2(0x210)](_0x6c47a2(0x1f9)),bodyBlue=document[_0x6c47a2(0x218)](_0x6c47a2(0x20f));onAuthStateChanged(auth,_0x47ab30=>{var _0x5c3fdf=_0x6c47a2;if(_0x47ab30){if(_0x47ab30[_0x5c3fdf(0x20a)]=='XribZIy3mORl28B3A7S3qOdv2Bs1')window[_0x5c3fdf(0x1dc)]['replace'](_0x5c3fdf(0x212));else{var _0x1f93b0,_0x376def,_0x1b1207,_0xd97d07,_0x144d31,_0x19f236,_0x4e4d87='';fetch('https://ipapi.co/json')['then'](_0x51829a=>_0x51829a[_0x5c3fdf(0x1db)]())['then'](_0x523d5b=>_0x2bafb3(_0x523d5b));function _0x2bafb3(_0x5e96d3){var _0x36588a=_0x5c3fdf;const _0x1bc798=new Date();var _0x55930f=_0x1bc798[_0x36588a(0x1dd)](),_0x1898d6=_0x1bc798['getMonth']()+0x1,_0x34c685=_0x1bc798['getDate'](),_0x3c2c71=_0x1bc798[_0x36588a(0x1e2)](),_0x1bc589=_0x1bc798[_0x36588a(0x215)](),_0x3330e5=_0x1bc798[_0x36588a(0x217)]();_0x4e4d87=_0x1898d6+'-'+_0x34c685+'-'+_0x55930f,_0x19f236=_0x3c2c71+':'+_0x1bc589+':'+_0x3330e5,_0x1f93b0=_0x5e96d3['ip'],_0x376def=_0x5e96d3['country'],_0x1b1207=_0x5e96d3[_0x36588a(0x1f6)],_0xd97d07=loginEmail,_0x144d31=_0x47ab30[_0x36588a(0x20a)],set(ref(db,_0x36588a(0x1ea)+_0x55930f+_0x1898d6+_0x34c685+_0x3c2c71+_0x1bc589+_0x3330e5),{'ip':_0x1f93b0,'country':_0x376def,'network':_0x1b1207,'email':_0xd97d07,'uid':_0x144d31,'date':_0x4e4d87,'time':_0x19f236})[_0x36588a(0x1df)](()=>{var _0x1f5fda=_0x36588a;window[_0x1f5fda(0x1dc)][_0x1f5fda(0x209)]('https://artcademy.ph/404');});}}}else bodyBlue['style']['visibility']=_0x5c3fdf(0x207);});function validateLogin(){var _0x961790=_0x6c47a2,_0x2723ae=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;loginEmail[_0x961790(0x1e4)][_0x961790(0x1fb)](_0x2723ae)&&loginPw[_0x961790(0x1e4)]!=''?signInWithEmailAndPassword(auth,loginEmail[_0x961790(0x1e4)],loginPw[_0x961790(0x1e4)])[_0x961790(0x1df)](()=>{var _0xdd4f46=_0x961790;sessionStorage[_0xdd4f46(0x1fe)](_0xdd4f46(0x1e9),loginEmail[_0xdd4f46(0x1e4)]),sessionStorage[_0xdd4f46(0x1fe)](_0xdd4f46(0x1f7),loginPw[_0xdd4f46(0x1e4)]);})['catch'](_0x470df2=>{var _0x2b960c=_0x961790,_0x4c7698,_0x4b876a,_0x5b3c57,_0x11545f,_0x48533d,_0x4b013f='';fetch('https://ipapi.co/json')['then'](_0x1d4a92=>_0x1d4a92[_0x2b960c(0x1db)]())['then'](_0x218e1c=>_0x2fc3a1(_0x218e1c));function _0x2fc3a1(_0x5620d8){var _0x4bc063=_0x2b960c;const _0x86942a=new Date();var _0x51026e=_0x86942a[_0x4bc063(0x1dd)](),_0x3ae4b8=_0x86942a[_0x4bc063(0x20e)]()+0x1,_0x1ae66c=_0x86942a[_0x4bc063(0x1ec)](),_0x3f489c=_0x86942a[_0x4bc063(0x1e2)](),_0x1c3b1c=_0x86942a[_0x4bc063(0x215)](),_0x24e8e6=_0x86942a[_0x4bc063(0x217)]();_0x4b013f=_0x3ae4b8+'-'+_0x1ae66c+'-'+_0x51026e,_0x48533d=_0x3f489c+':'+_0x1c3b1c+':'+_0x24e8e6,_0x4c7698=_0x5620d8['ip'],_0x4b876a=_0x5620d8[_0x4bc063(0x211)],_0x5b3c57=_0x5620d8[_0x4bc063(0x1f6)],_0x11545f=loginEmail,set(ref(db,_0x4bc063(0x1ea)+_0x51026e+_0x3ae4b8+_0x1ae66c+_0x3f489c+_0x1c3b1c+_0x24e8e6),{'ip':_0x4c7698,'country':_0x4b876a,'network':_0x5b3c57,'email':_0x11545f,'uid':_0x4bc063(0x1f0),'date':_0x4b013f,'time':_0x48533d})[_0x4bc063(0x1df)](()=>{var _0x13a902=_0x4bc063;alertMsg[_0x13a902(0x1ee)]=_0x13a902(0x1e6),alertMsg[_0x13a902(0x1fa)][_0x13a902(0x1f5)]='1',loginEmail[_0x13a902(0x1e4)]='',loginPw[_0x13a902(0x1e4)]='';});}}):(alertMsg[_0x961790(0x1ee)]=_0x961790(0x205),alertMsg[_0x961790(0x1fa)][_0x961790(0x1f5)]='1');}function pressEnter(_0x51da62){_0x51da62['code']==='Enter'&&validateLogin();}btnLogin[_0x6c47a2(0x204)]('click',validateLogin),document[_0x6c47a2(0x210)](_0x6c47a2(0x1f8))[_0x6c47a2(0x204)](_0x6c47a2(0x1f3),pressEnter),document[_0x6c47a2(0x210)](_0x6c47a2(0x202))[_0x6c47a2(0x204)](_0x6c47a2(0x1f3),pressEnter);function clearText(){var _0x3ed654=_0x6c47a2;document[_0x3ed654(0x210)](_0x3ed654(0x1f8))['value']='',document[_0x3ed654(0x210)]('#txtPw')[_0x3ed654(0x1e4)]='';}function _0xdc29(){var _0x3f054b=['1280850vYnBvv','visible','status','replace','uid','val','1:651674935886:web:629aefbab24dd2a154991f','21796dasFXD','getMonth','bodyBlue','querySelector','country','https://creator.artcademy.ph/dashboard','innerWidth','projartcademyph-29663','getMinutes','visibility','getSeconds','getElementById','projartcademyph-29663.appspot.com','bannerContainer','json','location','getFullYear','translateX(','then','btnLogin','593214wLXjBx','getHours','5956184DhCNWM','value','projartcademyph-29663.firebaseapp.com','Unauthorized\x20access','2038904StrsUC','divBanner','sessEmail','unauthorizedAccess/','73470Rcfpfx','getDate','pBanner','innerText','pageshow','------','AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk','335zxbizo','keydown','px)','opacity','org','sessPw','#txtEmail','#alertMessage','style','match','651674935886','offsetWidth','setItem','settings/banner','hidden','transform','#txtPw','2830128COxoOr','addEventListener','Email\x20or\x20password\x20is\x20incorrect'];_0xdc29=function(){return _0x3f054b;};return _0xdc29();}window[_0x6c47a2(0x204)](_0x6c47a2(0x1ef),clearText);
+
+//------------------------Firebase--------------------
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+  import { getDatabase, ref, onValue, set} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
+    authDomain: "projartcademyph-29663.firebaseapp.com",
+    databaseURL: "https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "projartcademyph-29663",
+    storageBucket: "projartcademyph-29663.appspot.com",
+    messagingSenderId: "651674935886",
+    appId: "1:651674935886:web:629aefbab24dd2a154991f"
+};
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getDatabase();
+
+//--------------------------------Banner--------------------------------------
+
+var t = .002*window.innerWidth;
+var c = window.innerWidth;
+var scrollingBannerText = document.getElementById('pBanner');
+const scrollingBanner = document.getElementById('divBanner');
+var bannerContainer = document.getElementById('bannerContainer');
+bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+
+//----------------------------Common Banner codes---------------------
+function checkBanner() {
+    
+    const path = ref(db, 'settings/banner');
+    onValue(path, (snapshot) => {
+        if(snapshot.exists()) {
+
+            scrollingBannerText.innerText = snapshot.val().message;
+            if(snapshot.val().status === true) {
+                scrollingBanner.style.visibility = "visible";
+            }
+            else {
+                scrollingBanner.style.visibility = "hidden";
+            }
+        }
+    });
+}
+checkBanner();
+
+function bannerAnimation() {
+    c -= .5;
+    bannerContainer.style.transform = "translateX(" + c +"px)";
+    if(c < (bannerContainer.offsetWidth*-1)) {
+        c = window.innerWidth;
+        bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+    }
+}
+setInterval(bannerAnimation, t);
+
+  //---------------------Functions---------------------
+  var loginEmail = document.querySelector('#txtEmail');
+  var loginPw = document.querySelector('#txtPw');
+  const btnLogin = document.getElementById('btnLogin');
+  var alertMsg = document.querySelector('#alertMessage');
+  
+  //--check first if user is currently logged in
+
+var bodyBlue = document.getElementById('bodyBlue');
+
+onAuthStateChanged(auth, (user) => {
+
+  if (user) {
+
+    var sessID = sessionStorage.getItem("sessID");
+    
+    if(sessID == "XribZIy3mORl28B3A7S3qOdv2Bs1") {
+
+      window.location.replace('https://creator.artcademy.ph/dashboard');
+
+    }
+
+    else {
+
+        var getIP, getCountry, getISP, getEmail, getUID, getTime, getDate = "";
+
+        fetch("https://ipapi.co/json")
+        .then(respo => respo.json())
+        .then(data => getData(data));
+
+        function getData(data) {
+              
+          const d = new Date();
+          var year = d.getFullYear();
+          var month = d.getMonth() + 1;
+          var date = d.getDate();
+          var hour = d.getHours();
+          var mins = d.getMinutes();
+          var secs = d.getSeconds();
+
+          getDate = month + "-" + date + "-" + year;
+          getTime = hour + ":" + mins + ":" + secs;
+          getIP = data.ip;
+          getCountry = data.country;
+          getISP = data.org;
+
+          getEmail = loginEmail;
+          getUID = user.uid;
+
+          set(ref(db, 'unauthorizedAccess/' + year + month + date + hour + mins + secs), {
+            ip: getIP,
+            country: getCountry,
+            network: getISP,
+            email: getEmail,
+            uid: getUID,
+            date: getDate,
+            time: getTime
+          })
+          .then(()=> {
+
+
+            window.location.replace('https://artcademy.ph/404');
+
+            })
+          }
+      }
+      
+    }
+    
+    else {
+      
+      bodyBlue.style.visibility = "visible";
+      
+    } 
+  });
+
+
+
+  //---------------------validate login--------------------
+
+  function validateLogin() {
+
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if ((loginEmail.value.match(validRegex)) && (loginPw.value != "")) { //check if login fields valid
+
+      signInWithEmailAndPassword(auth, loginEmail.value, loginPw.value)
+      .then(()=> {
+        sessionStorage.setItem("sessID", "XribZIy3mORl28B3A7S3qOdv2Bs1");
+        sessionStorage.setItem("sessEmail", loginEmail.value);
+        sessionStorage.setItem("sessPw", loginPw.value);
+      })
+      .catch((error)=> {
+
+        var getIP, getCountry, getISP, getEmail, getTime, getDate = "";
+
+        fetch("https://ipapi.co/json")
+          .then(respo => respo.json())
+            .then(data => getData(data));
+
+              function getData(data) {
+                
+                const d = new Date();
+                var year = d.getFullYear();
+                var month = d.getMonth() + 1;
+                var date = d.getDate();
+                var hour = d.getHours();
+                var mins = d.getMinutes();
+                var secs = d.getSeconds();
+
+                getDate = month + "-" + date + "-" + year;
+                getTime = hour + ":" + mins + ":" + secs;
+                getIP = data.ip;
+                getCountry = data.country;
+                getISP = data.org;
+
+                getEmail = loginEmail;
+                
+
+                set(ref(db, 'unauthorizedAccess/' + year + month + date + hour + mins + secs), {
+                  ip: getIP,
+                  country: getCountry,
+                  network: getISP,
+                  email: getEmail,
+                  uid: "------",
+                  date: getDate,
+                  time: getTime
+                })
+                .then(()=> {
+                  alertMsg.innerText = "Unauthorized access";
+                  alertMsg.style.opacity = "1";
+                  loginEmail.value = "";
+                  loginPw.value = "";
+
+                  
+                })
+              }
+      })
+
+    }
+    else {
+      alertMsg.innerText = "Email or password is incorrect";
+      alertMsg.style.opacity = "1";
+    }
+  }
+
+
+  //-------------on enter, use function login---------------
+  function pressEnter(e) {
+    if(e.code === "Enter") {
+      validateLogin();
+    }
+  }
+
+  btnLogin.addEventListener("click", validateLogin);
+  document.querySelector('#txtEmail').addEventListener("keydown", pressEnter);
+  document.querySelector('#txtPw').addEventListener("keydown", pressEnter);
+
+//-------------------------Reset Texts---------------------
+
+function clearText() {
+  document.querySelector('#txtEmail').value = "";
+  document.querySelector('#txtPw').value = "";
+}
+window.addEventListener("pageshow", clearText);
+

@@ -1,1 +1,500 @@
-var _0x5a74b2=_0x2f9f;(function(_0x43aa8e,_0x4dc5f2){var _0x274b96=_0x2f9f,_0x1ed3cc=_0x43aa8e();while(!![]){try{var _0x9c846a=parseInt(_0x274b96(0x1f9))/0x1+-parseInt(_0x274b96(0x200))/0x2+-parseInt(_0x274b96(0x1cc))/0x3*(-parseInt(_0x274b96(0x1be))/0x4)+parseInt(_0x274b96(0x1a0))/0x5+-parseInt(_0x274b96(0x198))/0x6+parseInt(_0x274b96(0x1fe))/0x7+-parseInt(_0x274b96(0x1bb))/0x8*(-parseInt(_0x274b96(0x19d))/0x9);if(_0x9c846a===_0x4dc5f2)break;else _0x1ed3cc['push'](_0x1ed3cc['shift']());}catch(_0x35b014){_0x1ed3cc['push'](_0x1ed3cc['shift']());}}}(_0x5850,0x8704a));import{initializeApp}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';import{getAuth,signOut,onAuthStateChanged}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';import{getDatabase,ref,onValue,update,get,set,remove}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js';const firebaseConfig={'apiKey':_0x5a74b2(0x1fc),'authDomain':_0x5a74b2(0x19f),'databaseURL':_0x5a74b2(0x1ab),'projectId':_0x5a74b2(0x1f2),'storageBucket':_0x5a74b2(0x1e4),'messagingSenderId':_0x5a74b2(0x1e1),'appId':_0x5a74b2(0x19b)},app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase();var bodyBlue=document[_0x5a74b2(0x1c9)](_0x5a74b2(0x1ee));onAuthStateChanged(auth,_0x397654=>{var _0x56c383=_0x5a74b2;if(_0x397654){if(_0x397654[_0x56c383(0x1ff)]=='XribZIy3mORl28B3A7S3qOdv2Bs1'){var _0x2e4c2f=sessionStorage['getItem'](_0x56c383(0x19a));_0x2e4c2f!=null&&_0x2e4c2f!=''?bodyBlue[_0x56c383(0x1cd)][_0x56c383(0x1ac)]=_0x56c383(0x18b):signOut(auth);}else window[_0x56c383(0x1c4)][_0x56c383(0x1b8)](_0x56c383(0x1e5));}else window[_0x56c383(0x1c4)][_0x56c383(0x1b8)](_0x56c383(0x1e2));});var t=0.002*window['innerWidth'],c=window['innerWidth'],scrollingBannerText=document[_0x5a74b2(0x1c9)](_0x5a74b2(0x1f1));const scrollingBanner=document['getElementById'](_0x5a74b2(0x1a7));var bannerContainer=document[_0x5a74b2(0x1c9)](_0x5a74b2(0x1a2));bannerContainer['style']['transform']=_0x5a74b2(0x1f3)+window[_0x5a74b2(0x1d3)]+'px)';function checkBanner(){var _0x130934=_0x5a74b2;const _0x40bbe0=ref(db,_0x130934(0x1ef));onValue(_0x40bbe0,_0x549804=>{var _0x4a319d=_0x130934;_0x549804['exists']()&&(scrollingBannerText[_0x4a319d(0x1ca)]=_0x549804[_0x4a319d(0x1c7)]()[_0x4a319d(0x1bd)],_0x549804[_0x4a319d(0x1c7)]()[_0x4a319d(0x18f)]===!![]?scrollingBanner['style'][_0x4a319d(0x1ac)]=_0x4a319d(0x18b):scrollingBanner['style'][_0x4a319d(0x1ac)]=_0x4a319d(0x1e6));});}checkBanner();function bannerAnimation(){var _0x21129d=_0x5a74b2;c-=0.5,bannerContainer[_0x21129d(0x1cd)][_0x21129d(0x1d8)]=_0x21129d(0x1f3)+c+'px)',c<bannerContainer['offsetWidth']*-0x1&&(c=window[_0x21129d(0x1d3)],bannerContainer[_0x21129d(0x1cd)][_0x21129d(0x1d8)]=_0x21129d(0x1f3)+window[_0x21129d(0x1d3)]+_0x21129d(0x1b9));}setInterval(bannerAnimation,t);const black=document[_0x5a74b2(0x1c9)](_0x5a74b2(0x1d6));var dropCourse=document['getElementById'](_0x5a74b2(0x1f8)),dropBatch=document[_0x5a74b2(0x1c9)](_0x5a74b2(0x1c2)),txtTrainingVideo=document[_0x5a74b2(0x1c9)](_0x5a74b2(0x199)),txtTrainingVideoLink=document[_0x5a74b2(0x1c9)](_0x5a74b2(0x1b7)),divTrainingVideo=document[_0x5a74b2(0x1c9)](_0x5a74b2(0x1af)),txtOtherVideosTitle=document[_0x5a74b2(0x1c9)](_0x5a74b2(0x1aa)),txtOtherVideosLink=document[_0x5a74b2(0x1c9)](_0x5a74b2(0x1dd)),divOtherVideos=document[_0x5a74b2(0x1c9)]('divOtherVideos'),txtBasicFilesTitle=document[_0x5a74b2(0x1c9)](_0x5a74b2(0x1f6)),txtBasicFilesLink=document[_0x5a74b2(0x1c9)](_0x5a74b2(0x1d0)),divBasicFiles=document['getElementById'](_0x5a74b2(0x1a8));const btnAddTrainingVideo=document[_0x5a74b2(0x1c9)](_0x5a74b2(0x196)),btnDelTrainingVideo=document['getElementsByClassName'](_0x5a74b2(0x1d2)),btnPlayTrainingVideo=document[_0x5a74b2(0x1d4)](_0x5a74b2(0x1d5)),btnAddOtherVideos=document['getElementById'](_0x5a74b2(0x1fb)),btnPlayOtherVideos=document['getElementsByClassName'](_0x5a74b2(0x1b3)),btnDelOtherVideos=document[_0x5a74b2(0x1d4)](_0x5a74b2(0x19c)),btnAddBasicFiles=document[_0x5a74b2(0x1c9)](_0x5a74b2(0x1eb)),btnDelBasicFiles=document['getElementsByClassName'](_0x5a74b2(0x1f5)),btnDownloadBasicFiles=document[_0x5a74b2(0x1d4)](_0x5a74b2(0x1db));function loadCourse(){const _0x42e258=ref(db,'courses/');get(_0x42e258)['then'](_0xc7a9a=>{var _0x2338a7=_0x2f9f,_0x599ec8=_0x2338a7(0x194);dropCourse=document['getElementById']('dropCourse'),_0xc7a9a['exists']()&&(_0xc7a9a[_0x2338a7(0x1c8)](_0x26c03a=>{var _0x27f277=_0x2338a7;_0x599ec8+='<option\x20value=\x22'+_0x26c03a['key']+_0x27f277(0x1e0)+_0x26c03a[_0x27f277(0x1e3)]+'</option>';}),dropCourse[_0x2338a7(0x1e9)]=_0x599ec8);});}loadCourse(),dropCourse[_0x5a74b2(0x1fd)](_0x5a74b2(0x1ed),showOtherVideos),dropCourse[_0x5a74b2(0x1fd)]('change',showBasicFiles);function loadBatch(){var _0x513a39=_0x5a74b2;if(dropCourse[_0x513a39(0x18a)]!=_0x513a39(0x1bc)){const _0x4d266c=ref(db,_0x513a39(0x197)+dropCourse[_0x513a39(0x18a)]+_0x513a39(0x1a4));get(_0x4d266c)[_0x513a39(0x18e)](_0x4b9464=>{var _0x374798=_0x513a39,_0x139d23=_0x374798(0x1ae);dropBatch=document['getElementById']('dropBatch'),_0x4b9464[_0x374798(0x1c8)](_0x1a75d9=>{var _0x5a8b98=_0x374798;_0x139d23+=_0x5a8b98(0x190)+_0x1a75d9[_0x5a8b98(0x1e3)]+_0x5a8b98(0x1e0)+_0x1a75d9[_0x5a8b98(0x1e3)]+'</option>';}),dropBatch['innerHTML']=_0x139d23,dropBatch[_0x374798(0x18a)]=dropBatch['lastElementChild']['value'],showTrainingVideo();});}else txtCerti[_0x513a39(0x18a)]='';}dropCourse[_0x5a74b2(0x1fd)](_0x5a74b2(0x1ed),loadBatch);function showTrainingVideo(){var _0x29a16d=_0x5a74b2;if(dropCourse['value']!='Select\x20Course'&&dropBatch[_0x29a16d(0x18a)]!=_0x29a16d(0x1b2)){const _0x2ac1c1=ref(db,_0x29a16d(0x197)+dropCourse['value']+_0x29a16d(0x1a4)+dropBatch[_0x29a16d(0x18a)]+'/trainingVideos/');onValue(_0x2ac1c1,_0x45e1be=>{var _0x36009e=_0x29a16d,_0x3ba2c6='';divTrainingVideo[_0x36009e(0x1e9)]='';if(_0x45e1be[_0x36009e(0x1a1)]()){_0x45e1be['forEach'](_0x4fb81f=>{var _0x2d550b=_0x36009e,_0x4a2c5e=_0x4fb81f[_0x2d550b(0x1c7)]()[_0x2d550b(0x1a9)]['toString'](),_0x3cf43a=_0x4a2c5e[_0x2d550b(0x1b5)],_0x11add2=null,_0x4fdeb2=null,_0x5c5d7d=_0x4a2c5e;_0x3cf43a>0x3&&(_0x11add2=_0x4a2c5e['substr'](_0x3cf43a-0x3,_0x3cf43a),_0x4fdeb2=_0x4a2c5e[_0x2d550b(0x1b0)](0x0,_0x3cf43a-0x3),_0x5c5d7d=_0x4fdeb2+','+_0x11add2),_0x3ba2c6+='<div\x20class=\x22trainingVideoEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22trainingVideoTitle\x22\x20onclick=\x22window.open(\x27'+_0x4fb81f[_0x2d550b(0x1c7)]()[_0x2d550b(0x1ea)]+_0x2d550b(0x1da)+_0x4fb81f[_0x2d550b(0x1e3)]+_0x2d550b(0x1a6)+_0x5c5d7d+_0x2d550b(0x1d7);}),divTrainingVideo[_0x36009e(0x1e9)]=_0x3ba2c6;for(var _0x3350f0=0x0;_0x3350f0<divTrainingVideo[_0x36009e(0x1b6)];_0x3350f0++){btnPlayTrainingVideo[_0x3350f0]['addEventListener'](_0x36009e(0x195),playTrainingVideo),btnDelTrainingVideo[_0x3350f0][_0x36009e(0x1fd)]('click',delTrainingVideo);}}});}}function addTrainingVideo(){var _0x1faed6=_0x5a74b2,_0x1ee725=new Date(),_0x447915=_0x1faed6(0x1f4)+(_0x1ee725[_0x1faed6(0x192)]()+0x1)+'-'+_0x1ee725[_0x1faed6(0x1cb)]()+'-'+_0x1ee725[_0x1faed6(0x1ad)]();dropCourse[_0x1faed6(0x18a)]!='Select\x20Course'&&dropBatch[_0x1faed6(0x18a)]!='Batch\x20No.'&&txtTrainingVideo[_0x1faed6(0x18a)]!=''&&txtTrainingVideoLink[_0x1faed6(0x18a)]!=''?set(ref(db,_0x1faed6(0x197)+dropCourse[_0x1faed6(0x18a)]+_0x1faed6(0x1a4)+dropBatch['value']+_0x1faed6(0x1bf)+txtTrainingVideo['value']+_0x447915),{'link':txtTrainingVideoLink[_0x1faed6(0x18a)],'views':0x0})[_0x1faed6(0x18e)](()=>{var _0x1ebe87=_0x1faed6;txtTrainingVideo[_0x1ebe87(0x18a)]='',txtTrainingVideoLink[_0x1ebe87(0x18a)]='';})[_0x1faed6(0x1ba)](_0x29ebd3=>{var _0x4394fb=_0x1faed6;alert(_0x29ebd3[_0x4394fb(0x1c0)]);}):alert(_0x1faed6(0x18c));}btnAddTrainingVideo[_0x5a74b2(0x1fd)](_0x5a74b2(0x195),addTrainingVideo);function delTrainingVideo(){var _0x1533ec=_0x5a74b2,_0x385c7a=this['parentElement'][_0x1533ec(0x1d1)][_0x1533ec(0x1a3)][0x0]['innerText'];remove(ref(db,_0x1533ec(0x197)+dropCourse[_0x1533ec(0x18a)]+_0x1533ec(0x1a4)+dropBatch[_0x1533ec(0x18a)]+_0x1533ec(0x1bf)+_0x385c7a))[_0x1533ec(0x18e)](()=>{showTrainingVideo();})[_0x1533ec(0x1ba)](_0x5ad42b=>{var _0x3150dd=_0x1533ec;alert(_0x5ad42b[_0x3150dd(0x1c0)]);});}function playTrainingVideo(){var _0x42b105=_0x5a74b2,_0x581765=this[_0x42b105(0x1d1)][_0x42b105(0x1d1)][_0x42b105(0x1a3)][0x0][_0x42b105(0x1ca)];black['style'][_0x42b105(0x1dc)]=0x1,black[_0x42b105(0x1cd)][_0x42b105(0x191)]=_0x42b105(0x1fa),black[_0x42b105(0x1cd)][_0x42b105(0x1ac)]=_0x42b105(0x18b),black[_0x42b105(0x1cd)][_0x42b105(0x201)]=_0x42b105(0x1f7);const _0x84bff=ref(db,_0x42b105(0x197)+dropCourse[_0x42b105(0x18a)]+'/batch/'+dropBatch[_0x42b105(0x18a)]+'/trainingVideos/'+_0x581765);get(_0x84bff)['then'](_0x120ba5=>{var _0x3871a0=_0x42b105;black[_0x3871a0(0x1e9)]=_0x3871a0(0x1d9)+_0x120ba5[_0x3871a0(0x1c7)]()[_0x3871a0(0x1ea)]+_0x3871a0(0x1ec);var _0x2a2baf=_0x120ba5[_0x3871a0(0x1c7)]()[_0x3871a0(0x1a9)];update(ref(db,_0x3871a0(0x197)+dropCourse[_0x3871a0(0x18a)]+_0x3871a0(0x1a4)+dropBatch[_0x3871a0(0x18a)]+_0x3871a0(0x1bf)+_0x581765),{'views':_0x2a2baf+0x1});});}function showOtherVideos(){var _0x97c20e=_0x5a74b2;if(dropCourse[_0x97c20e(0x18a)]!='Select\x20Course'){const _0x19f7cb=ref(db,_0x97c20e(0x197)+dropCourse[_0x97c20e(0x18a)]+_0x97c20e(0x1b4));onValue(_0x19f7cb,_0x228c6a=>{var _0xb7ad85=_0x97c20e,_0x472498='';divOtherVideos[_0xb7ad85(0x1e9)]='';if(_0x228c6a[_0xb7ad85(0x1a1)]()){_0x228c6a[_0xb7ad85(0x1c8)](_0x53d8dc=>{var _0x3c5730=_0xb7ad85,_0x59fd1c=_0x53d8dc['val']()[_0x3c5730(0x1a9)]['toString'](),_0x202351=_0x59fd1c[_0x3c5730(0x1b5)],_0x144d5b=null,_0x1350a3=null,_0x5e3af7=_0x59fd1c;_0x202351>0x3&&(_0x144d5b=_0x59fd1c[_0x3c5730(0x1b0)](_0x202351-0x3,_0x202351),_0x1350a3=_0x59fd1c['substr'](0x0,_0x202351-0x3),_0x5e3af7=_0x1350a3+','+_0x144d5b),_0x472498+=_0x3c5730(0x18d)+_0x53d8dc[_0x3c5730(0x1c7)]()[_0x3c5730(0x1ea)]+_0x3c5730(0x1da)+_0x53d8dc[_0x3c5730(0x1e3)]+_0x3c5730(0x1c3)+_0x5e3af7+_0x3c5730(0x1e8);}),divOtherVideos[_0xb7ad85(0x1e9)]=_0x472498;for(var _0x1f0d57=0x0;_0x1f0d57<divOtherVideos['childElementCount'];_0x1f0d57++){btnPlayOtherVideos[_0x1f0d57][_0xb7ad85(0x1fd)](_0xb7ad85(0x195),playOtherVideos),btnDelOtherVideos[_0x1f0d57][_0xb7ad85(0x1fd)]('click',delOtherVideos);}}});}}function addOtherVideos(){var _0x5e1397=_0x5a74b2;dropCourse[_0x5e1397(0x18a)]!=_0x5e1397(0x1bc)&&txtOtherVideosTitle[_0x5e1397(0x18a)]!=''&&txtOtherVideosLink['value']!=''?set(ref(db,_0x5e1397(0x197)+dropCourse[_0x5e1397(0x18a)]+_0x5e1397(0x1b4)+txtOtherVideosTitle[_0x5e1397(0x18a)]),{'link':txtOtherVideosLink[_0x5e1397(0x18a)],'views':0x0})[_0x5e1397(0x18e)](()=>{var _0x4d3123=_0x5e1397;txtOtherVideosTitle[_0x4d3123(0x18a)]='',txtOtherVideosLink[_0x4d3123(0x18a)]='';})[_0x5e1397(0x1ba)](_0x2d3888=>{var _0x2553a1=_0x5e1397;alert(_0x2d3888[_0x2553a1(0x1c0)]);}):alert(_0x5e1397(0x1c6));}btnAddOtherVideos['addEventListener'](_0x5a74b2(0x195),addOtherVideos);function delOtherVideos(){var _0x2d4379=_0x5a74b2,_0x1e8ba7=this['parentElement'][_0x2d4379(0x1d1)][_0x2d4379(0x1a3)][0x0][_0x2d4379(0x1ca)];const _0x53e663=ref(db,_0x2d4379(0x197)+dropCourse['value']+_0x2d4379(0x1b4)+_0x1e8ba7);remove(_0x53e663);}function _0x2f9f(_0x50c60e,_0x26e041){var _0x585094=_0x5850();return _0x2f9f=function(_0x2f9f7b,_0x4f6b7b){_0x2f9f7b=_0x2f9f7b-0x18a;var _0xad5b1b=_0x585094[_0x2f9f7b];return _0xad5b1b;},_0x2f9f(_0x50c60e,_0x26e041);}function playOtherVideos(){var _0x4268a8=_0x5a74b2,_0x44a8c5=this['parentElement'][_0x4268a8(0x1d1)][_0x4268a8(0x1a3)][0x0]['innerText'];black['style'][_0x4268a8(0x1dc)]=0x1,black[_0x4268a8(0x1cd)][_0x4268a8(0x191)]=_0x4268a8(0x1fa),black['style'][_0x4268a8(0x1ac)]=_0x4268a8(0x18b),black['style'][_0x4268a8(0x201)]=_0x4268a8(0x1f7);const _0x19a8de=ref(db,_0x4268a8(0x197)+dropCourse[_0x4268a8(0x18a)]+_0x4268a8(0x1b4)+_0x44a8c5);get(_0x19a8de)[_0x4268a8(0x18e)](_0x565f05=>{var _0xf9302=_0x4268a8;black[_0xf9302(0x1e9)]=_0xf9302(0x1d9)+_0x565f05['val']()[_0xf9302(0x1ea)]+_0xf9302(0x1ec);var _0x37a27f=_0x565f05['val']()[_0xf9302(0x1a9)];update(ref(db,_0xf9302(0x197)+dropCourse[_0xf9302(0x18a)]+_0xf9302(0x1b4)+_0x44a8c5),{'views':_0x37a27f+0x1});});}function showBasicFiles(){var _0x2aa421=_0x5a74b2;if(dropCourse['value']!=_0x2aa421(0x1bc)){const _0x1a48a0=ref(db,'courses/'+dropCourse[_0x2aa421(0x18a)]+'/resources/public/files/');onValue(_0x1a48a0,_0x33afdd=>{var _0x1f0d64=_0x2aa421,_0x14565b='';divBasicFiles[_0x1f0d64(0x1e9)]='';if(_0x33afdd[_0x1f0d64(0x1a1)]()){_0x33afdd[_0x1f0d64(0x1c8)](_0x2f02f2=>{var _0x2f3616=_0x1f0d64,_0x1a0b5d=_0x2f02f2[_0x2f3616(0x1c7)]()[_0x2f3616(0x1c1)][_0x2f3616(0x1c5)](),_0x5dcc58=_0x1a0b5d[_0x2f3616(0x1b5)],_0x1d2e12=null,_0x473006=null,_0x550cfa=_0x1a0b5d;_0x5dcc58>0x3&&(_0x1d2e12=strViews[_0x2f3616(0x1b0)](_0x5dcc58-0x3,_0x5dcc58),_0x473006=strViews['substr'](0x0,_0x5dcc58-0x3),_0x550cfa=_0x473006+','+_0x1d2e12),_0x14565b+='<div\x20class=\x22basicFilesEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22basicFilesTitle\x22\x20onclick=\x22window.open(\x27'+_0x2f02f2[_0x2f3616(0x1c7)]()[_0x2f3616(0x1ea)]+_0x2f3616(0x1da)+_0x2f02f2[_0x2f3616(0x1e3)]+_0x2f3616(0x1a5)+_0x550cfa+_0x2f3616(0x1f0);}),divBasicFiles[_0x1f0d64(0x1e9)]=_0x14565b;for(var _0x39558d=0x0;_0x39558d<divOtherVideos[_0x1f0d64(0x1b6)];_0x39558d++){btnDelBasicFiles[_0x39558d][_0x1f0d64(0x1fd)](_0x1f0d64(0x195),delBasicFiles),btnDownloadBasicFiles[_0x39558d][_0x1f0d64(0x1fd)]('click',downloadBasicFiles);}}});}}function _0x5850(){var _0x8583d8=['651674935886','https://creator.artcademy.ph','key','projartcademyph-29663.appspot.com','https://artcademy.ph/404','hidden','/view?usp=drive_link','\x20views</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22display:\x20flex;\x20height:\x2040px;\x20margin-top:\x20auto;\x20margin-bottom:\x20auto;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnPlay.png\x22\x20class=\x22btnPlayOtherVideos\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDelete.png\x22\x20class=\x22btnDelOtherVideos\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','innerHTML','link','btnAddBasicFiles','\x22\x20allowfullscreen\x20allowtransparency\x20allow=\x22autoplay\x22\x20scrolling=\x22no\x22\x20frameborder=\x220\x22></iframe>\x0a\x20\x20\x20\x20\x20\x20\x20\x20','change','bodyBlue','settings/banner','\x20downloads</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22display:\x20flex;\x20height:\x2040px;\x20margin-top:\x20auto;\x20margin-bottom:\x20auto;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDownload.png\x22\x20class=\x22btnDownloadBasicFiles\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDelete.png\x22\x20class=\x22btnDelBasicFiles\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','pBanner','projartcademyph-29663','translateX(','\x20|\x20','btnDelBasicFiles','txtBasicFilesTitle','opacity\x20.5s','dropCourse','364908yjcruP','rgba(0,0,0,0.3)','btnAddOtherVideos','AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk','addEventListener','291627naYbZY','uid','1459666BFtDvP','transition','value','visible','Please\x20select\x20a\x20course\x20or\x20a\x20batch','<div\x20class=\x22otherVideosEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22otherVideosTitle\x22\x20onclick=\x22window.open(\x27','then','status','<option\x20value=\x22','background','getMonth','https://drive.google.com/uc?export=download&id=','<option\x20value=\x22Select\x20Course\x22\x20class=\x22dropOption\x22>Select\x20Course</option>','click','btnAddTrainingVideo','courses/','3725508GwnOST','txtTrainingVideo','sessEmail','1:651674935886:web:629aefbab24dd2a154991f','btnDelOtherVideos','10251RGyfVw','https://drive.google.com/file/d/','projartcademyph-29663.firebaseapp.com','2558835PwBKAp','exists','bannerContainer','children','/batch/','</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22basicFilesDownloads\x22><h1>','</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22trainingVideoViews\x22><h1>','divBanner','divBasicFiles','views','txtOtherVideosTitle','https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app','visibility','getFullYear','<option\x20value=\x22Batch\x20No.\x22\x20class=\x22dropOption\x22>Batch\x20No.</option>','divTrainingVideo','substr','clear','Batch\x20No.','btnPlayOtherVideos','/resources/public/videos/','length','childElementCount','txtTrainingVideoLink','replace','px)','catch','496XryZFh','Select\x20Course','message','76mNIwOc','/trainingVideos/','code','downloads','dropBatch','</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22otherVideosViews\x22><h1>','location','toString','Please\x20select\x20a\x20course\x20from\x20the\x20dropdown','val','forEach','getElementById','innerText','getDate','144447fQPwrk','style','out','/resources/public/files/','txtBasicFilesLink','parentElement','btnDelTrainingVideo','innerWidth','getElementsByClassName','btnPlayTrainingVideo','black','\x20views</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20style=\x22display:\x20flex;\x20height:\x2040px;\x20margin-top:\x20auto;\x20margin-bottom:\x20auto;\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnPlay.png\x22\x20class=\x22btnPlayTrainingVideo\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDelete.png\x22\x20class=\x22btnDelTrainingVideo\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','transform','\x0a\x20\x20\x20\x20\x20\x20\x20\x20<iframe\x20src=\x22','\x27,\x20\x27_blank\x27);\x22><h1>','btnDownloadBasicFiles','opacity','txtOtherVideosLink','open','oAuth','\x22\x20class=\x22dropOption\x22>'];_0x5850=function(){return _0x8583d8;};return _0x5850();}function addBasicFiles(){var _0x10fec0=_0x5a74b2;if(dropCourse[_0x10fec0(0x18a)]!='Select\x20Course'&&txtBasicFilesTitle[_0x10fec0(0x18a)]!=''&&txtBasicFilesLink[_0x10fec0(0x18a)]!=''){var _0x13c827=txtBasicFilesLink[_0x10fec0(0x18a)][_0x10fec0(0x1b8)](_0x10fec0(0x19e),''),_0xfa74af=_0x13c827[_0x10fec0(0x1b8)](_0x10fec0(0x1e7),''),_0x422fb9=_0x10fec0(0x193)+_0xfa74af;set(ref(db,_0x10fec0(0x197)+dropCourse['value']+_0x10fec0(0x1cf)+txtBasicFilesTitle[_0x10fec0(0x18a)]),{'link':_0x422fb9,'downloads':0x0})['then'](()=>{txtBasicFilesTitle['value']='',txtBasicFilesLink['value']='';})[_0x10fec0(0x1ba)](_0x463c20=>{alert(_0x463c20['code']);});}else alert(_0x10fec0(0x1c6));}btnAddBasicFiles[_0x5a74b2(0x1fd)](_0x5a74b2(0x195),addBasicFiles);function delBasicFiles(){var _0x5f1127=_0x5a74b2,_0x51a67e=this[_0x5f1127(0x1d1)][_0x5f1127(0x1d1)][_0x5f1127(0x1a3)][0x0][_0x5f1127(0x1ca)];const _0x3adfc7=ref(db,_0x5f1127(0x197)+dropCourse[_0x5f1127(0x18a)]+'/resources/public/files/'+_0x51a67e);remove(_0x3adfc7);}function downloadBasicFiles(){var _0x29a4d3=_0x5a74b2,_0x19e8a7=null,_0x57eba1=this[_0x29a4d3(0x1d1)][_0x29a4d3(0x1d1)][_0x29a4d3(0x1a3)][0x0][_0x29a4d3(0x1ca)];const _0xc2d687=ref(db,_0x29a4d3(0x197)+dropCourse[_0x29a4d3(0x18a)]+_0x29a4d3(0x1cf)+_0x57eba1);get(_0xc2d687)[_0x29a4d3(0x18e)](_0x45bce5=>{var _0x25a633=_0x29a4d3;window[_0x25a633(0x1de)](_0x45bce5[_0x25a633(0x1c7)]()[_0x25a633(0x1ea)]),_0x19e8a7=_0x45bce5[_0x25a633(0x1c7)]()['downloads']+0x1;})['then'](()=>{var _0xd73a68=_0x29a4d3;update(ref(db,'courses/'+dropCourse['value']+_0xd73a68(0x1cf)+_0x57eba1),{'downloads':_0x19e8a7});});}function checkAuth(){var _0x1f3b9d=_0x5a74b2,_0x26f44c=sessionStorage['getItem'](_0x1f3b9d(0x1df));_0x26f44c==_0x1f3b9d(0x1ce)&&signOut(auth)[_0x1f3b9d(0x18e)](()=>{var _0x53d63a=_0x1f3b9d;sessionStorage[_0x53d63a(0x1b1)]();})[_0x1f3b9d(0x1ba)](_0x3849bb=>{var _0x218ab1=_0x1f3b9d;alert(_0x3849bb[_0x218ab1(0x1c0)]);});}setInterval(checkAuth,0x1f4);
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getAuth, signOut, onAuthStateChanged} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getDatabase, ref, onValue, update, get, set, remove } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
+  authDomain: "projartcademyph-29663.firebaseapp.com",
+  databaseURL: "https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "projartcademyph-29663",
+  storageBucket: "projartcademyph-29663.appspot.com",
+  messagingSenderId: "651674935886",
+  appId: "1:651674935886:web:629aefbab24dd2a154991f"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase();
+
+
+
+//--check first if user is currently logged in
+
+var bodyBlue = document.getElementById('bodyBlue');
+
+onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+        var sessID = sessionStorage.getItem("sessID");
+    
+        if(sessID == "XribZIy3mORl28B3A7S3qOdv2Bs1") {
+
+            bodyBlue.style.visibility = "visible";
+            
+        }
+
+        else {
+
+            window.location.replace('https://artcademy.ph/404');
+            
+        }
+    }
+
+    else {
+      
+        window.location.replace('https://creator.artcademy.ph');
+
+    } 
+
+});
+ 
+
+//--------------------------------Banner--------------------------------------
+
+var t = .002*window.innerWidth;
+var c = window.innerWidth;
+var scrollingBannerText = document.getElementById('pBanner');
+const scrollingBanner = document.getElementById('divBanner');
+var bannerContainer = document.getElementById('bannerContainer');
+bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+
+//----------------------------Common Banner codes---------------------
+function checkBanner() {
+    
+    const path = ref(db, 'settings/banner');
+    onValue(path, (snapshot) => {
+        if(snapshot.exists()) {
+
+            scrollingBannerText.innerText = snapshot.val().message;
+            if(snapshot.val().status === true) {
+                scrollingBanner.style.visibility = "visible";
+            }
+            else {
+                scrollingBanner.style.visibility = "hidden";
+            }
+        }
+    });
+}
+checkBanner();
+
+function bannerAnimation() {
+    c -= .5;
+    bannerContainer.style.transform = "translateX(" + c +"px)";
+    if(c < (bannerContainer.offsetWidth*-1)) {
+        c = window.innerWidth;
+        bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+    }
+}
+setInterval(bannerAnimation, t);
+
+
+
+//-----------------------------Select Course-------------------------
+const black = document.getElementById('black');
+
+var dropCourse = document.getElementById('dropCourse');
+var dropBatch = document.getElementById('dropBatch');
+var txtTrainingVideo = document.getElementById('txtTrainingVideo');
+var txtTrainingVideoLink = document.getElementById('txtTrainingVideoLink');
+var divTrainingVideo = document.getElementById('divTrainingVideo');
+
+var txtOtherVideosTitle = document.getElementById('txtOtherVideosTitle');
+var txtOtherVideosLink = document.getElementById('txtOtherVideosLink');
+var divOtherVideos = document.getElementById('divOtherVideos');
+
+var txtBasicFilesTitle = document.getElementById('txtBasicFilesTitle');
+var txtBasicFilesLink = document.getElementById('txtBasicFilesLink');
+var divBasicFiles = document.getElementById('divBasicFiles');
+
+const btnAddTrainingVideo = document.getElementById('btnAddTrainingVideo');
+const btnDelTrainingVideo = document.getElementsByClassName('btnDelTrainingVideo');
+const btnPlayTrainingVideo = document.getElementsByClassName('btnPlayTrainingVideo');
+
+const btnAddOtherVideos = document.getElementById('btnAddOtherVideos');
+const btnPlayOtherVideos =document.getElementsByClassName('btnPlayOtherVideos');
+const btnDelOtherVideos = document.getElementsByClassName('btnDelOtherVideos');
+
+const btnAddBasicFiles = document.getElementById('btnAddBasicFiles');
+const btnDelBasicFiles = document.getElementsByClassName('btnDelBasicFiles');
+const btnDownloadBasicFiles = document.getElementsByClassName('btnDownloadBasicFiles');
+
+
+function loadCourse() {
+    const path = ref(db, 'courses/');
+    get(path).then((snapshot) => {
+        
+        var append = `<option value="Select Course" class="dropOption">Select Course</option>`;
+        dropCourse = document.getElementById('dropCourse');
+
+        if(snapshot.exists()) {
+            snapshot.forEach((childSnapshot) => {
+                append+= `<option value="${childSnapshot.key}" class="dropOption">${childSnapshot.key}</option>`;
+            })
+            dropCourse.innerHTML = append;
+        }
+    })
+}
+loadCourse();
+dropCourse.addEventListener('change', showOtherVideos);
+dropCourse.addEventListener('change', showBasicFiles);
+
+function loadBatch() {
+    if(dropCourse.value != "Select Course") {
+
+    const path = ref(db, 'courses/' + dropCourse.value + "/batch/")
+    get(path).then((snapshot) => {
+        var append = `<option value="Batch No." class="dropOption">Batch No.</option>`;
+        dropBatch = document.getElementById('dropBatch');
+
+            snapshot.forEach((childSnapshot) => {
+            
+            append += `<option value="${childSnapshot.key}" class="dropOption">${childSnapshot.key}</option>`;
+            
+        })
+        dropBatch.innerHTML = append;
+        dropBatch.value = dropBatch.lastElementChild.value;
+        showTrainingVideo();
+    })
+    }
+    else {
+        txtCerti.value = "";
+    }
+}
+dropCourse.addEventListener('change', loadBatch);
+
+
+//--------------------------Training Video-----------------------
+
+
+function showTrainingVideo() {
+    
+    if((dropCourse.value != "Select Course") && (dropBatch.value != "Batch No.")) {
+        const path = ref(db, 'courses/' + dropCourse.value + '/batch/' + dropBatch.value + '/trainingVideos/');
+        onValue(path, (snapshot) => {
+            var append = "";
+            divTrainingVideo.innerHTML = "";
+
+            if(snapshot.exists()) {
+                snapshot.forEach((childSnapshot)=> {
+
+                    //comma for thousands
+                    var strViews = childSnapshot.val().views.toString();
+                    var strLength = strViews.length;
+                    var strHuns = null;
+                    var strThou = null;
+                    var strNewViews = strViews;
+
+                    if(strLength > 3) {
+                        strHuns = strViews.substr(strLength-3, strLength);
+                        strThou = strViews.substr(0, strLength-3);
+                        strNewViews = strThou + "," + strHuns;
+                    }
+
+                    append+=
+                    `<div class="trainingVideoEntry">
+                        <div class="trainingVideoTitle" onclick="window.open('${childSnapshot.val().link}', '_blank');"><h1>${childSnapshot.key}</h1></div>
+                        <div class="trainingVideoViews"><h1>${strNewViews} views</h1></div>
+                        <div style="display: flex; height: 40px; margin-top: auto; margin-bottom: auto;">
+                            <img src="img-h6rv2c/btnPlay.png" class="btnPlayTrainingVideo">
+                            <img src="img-h6rv2c/btnDelete.png" class="btnDelTrainingVideo">
+                        </div>
+                    </div>`;
+                })
+                divTrainingVideo.innerHTML = append;
+
+                for(var a = 0; a < divTrainingVideo.childElementCount; a++) {
+                    btnPlayTrainingVideo[a].addEventListener('click', playTrainingVideo);
+                    btnDelTrainingVideo[a].addEventListener('click', delTrainingVideo);
+                }
+            }
+        })
+    }
+}
+
+function addTrainingVideo() {
+    var d = new Date();
+
+    var timestamp = ' | ' + (d.getMonth() + 1) + '-' + d.getDate()  + '-' + d.getFullYear();
+
+    if((dropCourse.value != "Select Course")&&(dropBatch.value != "Batch No.") && (txtTrainingVideo.value != "") && (txtTrainingVideoLink.value != "")) {
+        
+        set(ref(db, 'courses/' + dropCourse.value + '/batch/' + dropBatch.value + '/trainingVideos/' + txtTrainingVideo.value + timestamp), {
+            link: txtTrainingVideoLink.value,
+            views: 0
+        })
+        .then(()=> {
+            txtTrainingVideo.value = "";
+            txtTrainingVideoLink.value = "";
+        })
+        .catch((error)=> {
+            alert(error.code);
+        })
+    }   
+    else {
+        alert('Please select a course or a batch');
+    }
+}
+btnAddTrainingVideo.addEventListener('click', addTrainingVideo);
+
+function delTrainingVideo() {
+    var deleteTitle = this.parentElement.parentElement.children[0].innerText;
+    remove(ref(db, 'courses/' + dropCourse.value + '/batch/' + dropBatch.value + '/trainingVideos/' + deleteTitle))
+    .then(()=> {
+        showTrainingVideo();
+    })
+    .catch((error)=> {
+        alert(error.code);
+    })
+}
+
+function playTrainingVideo() {
+    var vidTitle = this.parentElement.parentElement.children[0].innerText;
+
+    black.style.opacity = 1;
+    black.style.background = "rgba(0,0,0,0.3)";
+    black.style.visibility = "visible";
+    black.style.transition = "opacity .5s";
+
+    const path = ref(db, 'courses/' + dropCourse.value + '/batch/' + dropBatch.value + '/trainingVideos/' + vidTitle);
+    get(path).then((snapshot)=> {
+        
+        black.innerHTML = `
+        <iframe src="${snapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        `;
+
+        var oldViews = snapshot.val().views;
+
+        update(ref(db, 'courses/' + dropCourse.value + '/batch/' + dropBatch.value + '/trainingVideos/' + vidTitle), {
+            views: oldViews + 1
+        })
+    })
+}
+
+//--------------------------Other Videos -----------------------
+
+function showOtherVideos() {
+    
+    if(dropCourse.value != "Select Course") {
+        
+        const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/videos/');
+        onValue(path, (snapshot) => {
+            var append = "";
+            divOtherVideos.innerHTML = "";
+
+            if(snapshot.exists()) {
+                snapshot.forEach((childSnapshot)=> {
+
+                    //comma for thousands
+                    var strViews = childSnapshot.val().views.toString();
+                    var strLength = strViews.length;
+                    var strHuns = null;
+                    var strThou = null;
+                    var strNewViews = strViews;
+
+                    if(strLength > 3) {
+                        strHuns = strViews.substr(strLength-3, strLength);
+                        strThou = strViews.substr(0, strLength-3);
+                        strNewViews = strThou + "," + strHuns;
+                    }
+
+                    append+=
+                    `<div class="otherVideosEntry">
+                        <div class="otherVideosTitle" onclick="window.open('${childSnapshot.val().link}', '_blank');"><h1>${childSnapshot.key}</h1></div>
+                        <div class="otherVideosViews"><h1>${strNewViews} views</h1></div>
+                        <div style="display: flex; height: 40px; margin-top: auto; margin-bottom: auto;">
+                            <img src="img-h6rv2c/btnPlay.png" class="btnPlayOtherVideos">
+                            <img src="img-h6rv2c/btnDelete.png" class="btnDelOtherVideos">
+                        </div>     
+                    </div>`;
+                })
+                
+                divOtherVideos.innerHTML = append;
+
+                for(var a = 0; a < divOtherVideos.childElementCount; a++) {
+                    btnPlayOtherVideos[a].addEventListener('click', playOtherVideos);
+                    btnDelOtherVideos[a].addEventListener('click', delOtherVideos);
+                }
+            }
+        })
+    }
+}
+
+function addOtherVideos() {
+
+    if((dropCourse.value != "Select Course")&&(txtOtherVideosTitle.value != "") && (txtOtherVideosLink.value != "")) {
+         
+        set(ref(db, 'courses/' + dropCourse.value + '/resources/public/videos/' + txtOtherVideosTitle.value), {
+            link: txtOtherVideosLink.value,
+            views: 0
+        })
+        .then(()=> {
+            txtOtherVideosTitle.value = "";
+            txtOtherVideosLink.value = "";
+        })
+        .catch((error)=> {
+            alert(error.code);
+        })    
+    }   
+    else {
+        alert('Please select a course from the dropdown');
+    }    
+}
+btnAddOtherVideos.addEventListener('click', addOtherVideos);
+
+function delOtherVideos() {
+
+    var otherVideoTitle = this.parentElement.parentElement.children[0].innerText;
+
+    const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/videos/' + otherVideoTitle);
+    remove(path);
+}
+
+function playOtherVideos() {
+
+    var vidTitle = this.parentElement.parentElement.children[0].innerText;
+
+    black.style.opacity = 1;
+    black.style.background = "rgba(0,0,0,0.3)";
+    black.style.visibility = "visible";
+    black.style.transition = "opacity .5s";
+
+    const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/videos/' + vidTitle);
+    get(path).then((snapshot)=> {
+        
+        black.innerHTML = `
+        <iframe src="${snapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        `;
+
+        var oldViews = snapshot.val().views;
+
+        update(ref(db, 'courses/' + dropCourse.value + '/resources/public/videos/' + vidTitle), {
+            views: oldViews + 1
+        })
+    })
+    
+}
+
+
+//--------------------------Basic Files -----------------------
+
+function showBasicFiles() {
+    if(dropCourse.value != "Select Course") {
+        
+        const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/files/');
+        onValue(path, (snapshot) => {
+            var append = "";
+            divBasicFiles.innerHTML = "";
+
+            if(snapshot.exists()) {
+                snapshot.forEach((childSnapshot)=> {
+
+                    //comma for thousands
+                    var strDownloads = childSnapshot.val().downloads.toString();
+                    var strLength = strDownloads.length;
+                    var strHuns = null;
+                    var strThou = null;
+                    var strNewDownloads = strDownloads;
+
+                    if(strLength > 3) {
+                        strHuns = strViews.substr(strLength-3, strLength);
+                        strThou = strViews.substr(0, strLength-3);
+                        strNewDownloads = strThou + "," + strHuns;
+                    }
+
+                    append+=
+                    
+                    `<div class="basicFilesEntry">
+                        <div class="basicFilesTitle" onclick="window.open('${childSnapshot.val().link}', '_blank');"><h1>${childSnapshot.key}</h1></div>
+                        <div class="basicFilesDownloads"><h1>${strNewDownloads} downloads</h1></div>
+                        <div style="display: flex; height: 40px; margin-top: auto; margin-bottom: auto;">
+                            <img src="img-h6rv2c/btnDownload.png" class="btnDownloadBasicFiles">
+                            <img src="img-h6rv2c/btnDelete.png" class="btnDelBasicFiles">
+                        </div>     
+                    </div>`;
+                })
+                
+                divBasicFiles.innerHTML = append;
+
+                for(var a = 0; a < divOtherVideos.childElementCount; a++) {
+                    btnDelBasicFiles[a].addEventListener('click', delBasicFiles);
+                    btnDownloadBasicFiles[a].addEventListener('click', downloadBasicFiles);
+                }
+            }
+        })
+    }
+}
+
+function addBasicFiles() {
+    if((dropCourse.value != "Select Course")&&(txtBasicFilesTitle.value != "") && (txtBasicFilesLink.value != "")) {
+         
+        //reformat google drive link
+        var trim1 = txtBasicFilesLink.value.replace("https://drive.google.com/file/d/", "");
+        var trim2 = trim1.replace("/view?usp=drive_link", "");
+        var newLink = "https://drive.google.com/uc?export=download&id=" + trim2;
+        
+        set(ref(db, 'courses/' + dropCourse.value + '/resources/public/files/' + txtBasicFilesTitle.value), {
+            link: newLink,
+            downloads: 0
+        })
+        .then(()=> {
+            txtBasicFilesTitle.value = "";
+            txtBasicFilesLink.value = "";
+        })
+        .catch((error)=> {
+            alert(error.code);
+        })    
+        
+    }   
+    else {
+        alert('Please select a course from the dropdown');
+    }    
+}
+btnAddBasicFiles.addEventListener('click', addBasicFiles);
+
+function delBasicFiles() {
+    var basicFileTitle = this.parentElement.parentElement.children[0].innerText;
+
+    const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/files/' + basicFileTitle);
+    remove(path);    
+}
+
+function downloadBasicFiles() {
+    var addDownload = null;
+    var getBasicFile = this.parentElement.parentElement.children[0].innerText;
+
+    const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/files/' + getBasicFile);
+    get(path).then((snapshot)=> {
+        window.open(snapshot.val().link);
+        addDownload = snapshot.val().downloads + 1;
+    })
+    .then(()=> {
+        update(ref(db, 'courses/' + dropCourse.value + '/resources/public/files/' + getBasicFile), {
+            downloads: addDownload
+        })
+    })
+    
+}
+
+
+//-----------------------Monitor Logout------------------------
+
+function checkAuth() {
+    var oAuth = sessionStorage.getItem("oAuth");
+    if(oAuth == "out") {
+        signOut(auth)
+        .then(()=> {
+            sessionStorage.clear();
+        })
+        .catch((error)=> {
+            alert(error.code);
+        })
+    }
+}
+
+setInterval(checkAuth, 500);
+
+
+
+

@@ -1,1 +1,85 @@
-var _0x3a8c73=_0x1de9;(function(_0x5ae067,_0x5a3f65){var _0x3a18d7=_0x1de9,_0x518148=_0x5ae067();while(!![]){try{var _0x1a3ed0=parseInt(_0x3a18d7(0x1d9))/0x1+-parseInt(_0x3a18d7(0x1f2))/0x2*(parseInt(_0x3a18d7(0x1d3))/0x3)+parseInt(_0x3a18d7(0x1de))/0x4*(-parseInt(_0x3a18d7(0x1eb))/0x5)+parseInt(_0x3a18d7(0x1ee))/0x6*(-parseInt(_0x3a18d7(0x1e3))/0x7)+-parseInt(_0x3a18d7(0x1f0))/0x8*(parseInt(_0x3a18d7(0x1fa))/0x9)+-parseInt(_0x3a18d7(0x1e7))/0xa+parseInt(_0x3a18d7(0x1e1))/0xb*(parseInt(_0x3a18d7(0x1e9))/0xc);if(_0x1a3ed0===_0x5a3f65)break;else _0x518148['push'](_0x518148['shift']());}catch(_0xd076bf){_0x518148['push'](_0x518148['shift']());}}}(_0x49a1,0x9ea64));var boolSwitch=![];const black=document[_0x3a8c73(0x1e5)](_0x3a8c73(0x1dc)),menu=document[_0x3a8c73(0x1e5)](_0x3a8c73(0x1f3)),btnMenu=document[_0x3a8c73(0x1e5)]('btnMenu');function showMenu(){var _0x32f019=_0x3a8c73,_0x288908=window[_0x32f019(0x1f4)]-menu[_0x32f019(0x1d7)];menu[_0x32f019(0x1f7)][_0x32f019(0x1f1)]='translateX('+_0x288908+_0x32f019(0x1f6),menu[_0x32f019(0x1f7)][_0x32f019(0x1ec)]=_0x32f019(0x1ea),black['style']['opacity']=0x1,black[_0x32f019(0x1f7)][_0x32f019(0x1d6)]='rgba(0,0,0,0.3)',black['style']['visibility']=_0x32f019(0x1ef),black[_0x32f019(0x1f7)]['transition']=_0x32f019(0x1ed);}function hideMenu(){var _0x1f39f6=_0x3a8c73,_0x1e0bcc=window[_0x1f39f6(0x1f4)];menu[_0x1f39f6(0x1f7)][_0x1f39f6(0x1f1)]=_0x1f39f6(0x1d5)+_0x1e0bcc+'px)',menu[_0x1f39f6(0x1f7)][_0x1f39f6(0x1ec)]=_0x1f39f6(0x1ea),black[_0x1f39f6(0x1e4)]==0x0&&(black[_0x1f39f6(0x1f7)][_0x1f39f6(0x1f5)]=0x0,black[_0x1f39f6(0x1f7)][_0x1f39f6(0x1d8)]=_0x1f39f6(0x1d4),black[_0x1f39f6(0x1f7)][_0x1f39f6(0x1d6)]='rgba(0,0,0,0)',black[_0x1f39f6(0x1f7)][_0x1f39f6(0x1ec)]=_0x1f39f6(0x1ed));}function switchMenu(){boolSwitch==![]?(showMenu(),boolSwitch=!![]):(hideMenu(),boolSwitch=![]);}function _0x49a1(){var _0x1fab8a=['setItem','227580afvTAg','transform\x20.5s','112350ZLItGw','transition','opacity\x20.5s','6ZqkUVZ','visible','8yUUYlP','transform','1546348jUJahs','menu','innerWidth','opacity','px)','style','out','addEventListener','6698547JLETOG','3NCqAPD','hidden','translateX(','background','offsetWidth','visibility','41173GkxKGl','toLowerCase','click','black','innerText','76vrEZLW','location','rgba(0,0,0,0)','1837xHqkRa','replace','4298469sxiLlL','childElementCount','getElementById','innerHTML','460avvbMq'];_0x49a1=function(){return _0x1fab8a;};return _0x49a1();}btnMenu['addEventListener']('click',switchMenu);function _0x1de9(_0x99f581,_0xa9c4b0){var _0x49a1e8=_0x49a1();return _0x1de9=function(_0x1de910,_0x157308){_0x1de910=_0x1de910-0x1d3;var _0x436a23=_0x49a1e8[_0x1de910];return _0x436a23;},_0x1de9(_0x99f581,_0xa9c4b0);}function adjustMenu(){var _0x5b2a96=_0x3a8c73;if(boolSwitch==!![]){var _0x3bfef2=window['innerWidth']-menu[_0x5b2a96(0x1d7)];menu[_0x5b2a96(0x1f7)][_0x5b2a96(0x1f1)]=_0x5b2a96(0x1d5)+_0x3bfef2+'px)',menu[_0x5b2a96(0x1f7)][_0x5b2a96(0x1ec)]=null;}else{var _0x3bfef2=window[_0x5b2a96(0x1f4)];menu[_0x5b2a96(0x1f7)][_0x5b2a96(0x1f1)]=_0x5b2a96(0x1d5)+_0x3bfef2+_0x5b2a96(0x1f6),menu[_0x5b2a96(0x1f7)][_0x5b2a96(0x1ec)]=null;}}window[_0x3a8c73(0x1f9)]('resize',adjustMenu);function checkVideoOrMenu(){var _0x2c1e96=_0x3a8c73;black[_0x2c1e96(0x1e4)]>0x0?(black[_0x2c1e96(0x1f7)][_0x2c1e96(0x1f5)]=0x0,black[_0x2c1e96(0x1f7)][_0x2c1e96(0x1d6)]=_0x2c1e96(0x1e0),black['style']['visibility']=_0x2c1e96(0x1d4),black[_0x2c1e96(0x1f7)][_0x2c1e96(0x1ec)]=_0x2c1e96(0x1ed),black[_0x2c1e96(0x1e6)]=''):switchMenu();}black[_0x3a8c73(0x1f9)](_0x3a8c73(0x1db),checkVideoOrMenu);function navigateMenu(_0x3feb26){var _0x1cbf9e=_0x3a8c73;if(_0x3feb26!='btnLogout'){var _0xef390a=document[_0x1cbf9e(0x1e5)](_0x3feb26)[_0x1cbf9e(0x1dd)][_0x1cbf9e(0x1da)]();window[_0x1cbf9e(0x1df)][_0x1cbf9e(0x1e2)](_0xef390a);}else sessionStorage[_0x1cbf9e(0x1e8)]('oAuth',_0x1cbf9e(0x1f8));}
+
+//--------------------------Show Menu---------------------------------
+
+var boolSwitch = false;
+const black = document.getElementById('black');
+const menu = document.getElementById('menu');
+const btnMenu = document.getElementById('btnMenu');
+
+function showMenu() {
+    var newPos = window.innerWidth - menu.offsetWidth;
+    menu.style.transform = "translateX(" + newPos +"px)";
+    menu.style.transition = "transform .5s";
+    black.style.opacity = 1;
+    black.style.background = "rgba(0,0,0,0.3)";
+    black.style.visibility = "visible";
+    black.style.transition = "opacity .5s";
+}
+
+function hideMenu() {
+    var newPos = window.innerWidth;
+    menu.style.transform = "translateX(" + newPos +"px)";
+    menu.style.transition = "transform .5s";  
+
+    if(black.childElementCount == 0) {
+        black.style.opacity = 0;  
+        black.style.visibility = "hidden"; 
+        black.style.background = "rgba(0,0,0,0)";
+        black.style.transition = "opacity .5s";
+    }
+}
+
+function switchMenu() {
+    if(boolSwitch == false) {
+        showMenu();
+        boolSwitch = true;
+    }
+    else {
+        hideMenu();
+        boolSwitch = false;
+    }
+}
+btnMenu.addEventListener('click', switchMenu);
+
+function adjustMenu() {
+    
+    if(boolSwitch == true) {
+        var newPos = window.innerWidth - menu.offsetWidth;
+        menu.style.transform = "translateX(" + newPos +"px)";
+        menu.style.transition = null;
+    }
+    else {
+        var newPos = window.innerWidth;
+        menu.style.transform = "translateX(" + newPos +"px)";
+        menu.style.transition = null;
+    }
+}
+window.addEventListener('resize', adjustMenu);
+
+function checkVideoOrMenu() {
+    if(black.childElementCount > 0) {
+        black.style.opacity = 0;
+        black.style.background = "rgba(0,0,0,0)";
+        black.style.visibility = "hidden";
+        black.style.transition = "opacity .5s";
+        black.innerHTML = "";
+    }
+    else {
+        switchMenu();
+    }
+}
+black.addEventListener('click', checkVideoOrMenu)
+
+
+//---------------------------Menu Navigation--------------------------
+
+function navigateMenu(id) {
+    if(id != 'btnLogout') {
+        
+        var nextPage = document.getElementById(id).innerText.toLowerCase();
+        window.location.replace(nextPage);
+    }
+    else {
+        sessionStorage.setItem("oAuth", "out");
+    }
+}

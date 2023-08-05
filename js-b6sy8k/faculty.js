@@ -27,17 +27,12 @@ const db = getDatabase();
 
     if (user) {
 
-        if(user.uid == "XribZIy3mORl28B3A7S3qOdv2Bs1") {
+        var sessID = sessionStorage.getItem("sessID");
+    
+        if(sessID == "XribZIy3mORl28B3A7S3qOdv2Bs1") {
 
-            var sessEmail = sessionStorage.getItem("sessEmail");
-
-            if((sessEmail != null) && (sessEmail != "")) {
-                bodyBlue.style.visibility = "visible";
-            }
-
-            else {
-                signOut(auth);
-            }
+            bodyBlue.style.visibility = "visible";
+            
         }
 
         else {

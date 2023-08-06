@@ -220,7 +220,7 @@ function addTrainingVideo() {
 
     if((dropCourse.value != "Select Course")&&(dropBatch.value != "Batch No.") && (txtTrainingVideo.value != "") && (txtTrainingVideoLink.value != "")) {
         
-        set(ref(db, 'courses/' + dropCourse.value + '/batch/' + dropBatch.value + '/trainingVideos/' + txtTrainingVideo.value + '_' + dropBatch.value + timestamp), {
+        set(ref(db, 'courses/' + dropCourse.value + '/batch/' + dropBatch.value + '/trainingVideos/' + txtTrainingVideo.value + timestamp), {
             link: txtTrainingVideoLink.value,
             views: 0
         })

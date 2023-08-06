@@ -200,7 +200,9 @@ function showTrainingVideo() {
                             <img src="img-h6rv2c/btnPlay.png" class="btnPlayTrainingVideo">
                             <img src="img-h6rv2c/btnDelete.png" class="btnDelTrainingVideo">
                         </div>
-                    </div>`;
+                    </div>
+                    <div class="clickLines"></div>
+                    `;
                 })
                 divTrainingVideo.innerHTML = append;
 
@@ -308,7 +310,9 @@ function showOtherVideos() {
                             <img src="img-h6rv2c/btnPlay.png" class="btnPlayOtherVideos">
                             <img src="img-h6rv2c/btnDelete.png" class="btnDelOtherVideos">
                         </div>     
-                    </div>`;
+                    </div>
+                    <div class="clickLines"></div>
+                    `;
                 })
                 
                 divOtherVideos.innerHTML = append;
@@ -377,7 +381,6 @@ function playOtherVideos() {
     
 }
 
-
 //--------------------------Basic Files -----------------------
 
 function showBasicFiles() {
@@ -413,7 +416,8 @@ function showBasicFiles() {
                             <img src="img-h6rv2c/btnDownload.png" class="btnDownloadBasicFiles">
                             <img src="img-h6rv2c/btnDelete.png" class="btnDelBasicFiles">
                         </div>     
-                    </div>`;
+                    </div>
+                    <div class="clickLines"></div>`;
                 })
                 
                 divBasicFiles.innerHTML = append;

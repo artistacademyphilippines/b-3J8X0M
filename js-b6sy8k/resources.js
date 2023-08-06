@@ -365,7 +365,7 @@ function playOtherVideos() {
     get(path).then((snapshot)=> {
         
         black.innerHTML = `
-        <iframe src="${snapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        <iframe src="${snapshot.val().link}/" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
         `;
 
         var oldViews = snapshot.val().views;

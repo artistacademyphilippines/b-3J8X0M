@@ -215,7 +215,7 @@ function showTrainingVideo() {
 
 function addTrainingVideo() {
     var d = new Date();
-
+    console.log("add Training video");
     var timestamp = '_Uploaded: ' + (d.getMonth() + 1) + '.' + d.getDate()  + '.' + d.getFullYear();
 
     if((dropCourse.value != "Select Course")&&(dropBatch.value != "Batch No.") && (txtTrainingVideo.value != "") && (txtTrainingVideoLink.value != "")) {

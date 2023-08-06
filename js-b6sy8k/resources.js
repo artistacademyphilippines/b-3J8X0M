@@ -216,7 +216,7 @@ function showTrainingVideo() {
 function addTrainingVideo() {
     var d = new Date();
 
-    var timestamp = ' | ' + (d.getMonth() + 1) + '-' + d.getDate()  + '-' + d.getFullYear();
+    var timestamp = ' | Uploaded: ' + (d.getMonth() + 1) + '.' + d.getDate()  + '.' + d.getFullYear();
 
     if((dropCourse.value != "Select Course")&&(dropBatch.value != "Batch No.") && (txtTrainingVideo.value != "") && (txtTrainingVideoLink.value != "")) {
         
@@ -250,6 +250,7 @@ function delTrainingVideo() {
 }
 
 function playTrainingVideo() {
+
     var vidTitle = this.parentElement.parentElement.children[0].innerText;
 
     black.style.opacity = 1;
@@ -261,7 +262,7 @@ function playTrainingVideo() {
     get(path).then((snapshot)=> {
         
         black.innerHTML = `
-        <iframe src="${snapshot.val().link}" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
+        <iframe src="${snapshot.val().link}/" allowfullscreen allowtransparency allow="autoplay" scrolling="no" frameborder="0"></iframe>
         `;
 
         var oldViews = snapshot.val().views;

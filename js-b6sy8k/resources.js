@@ -467,7 +467,7 @@ function downloadBasicFiles() {
 
     const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/files/' + getBasicFile);
     get(path).then((snapshot)=> {
-        window.open(snapshot.val().link);
+        window.location.href= snapshot.val().link;
         addDownload = snapshot.val().downloads + 1;
     })
     .then(()=> {

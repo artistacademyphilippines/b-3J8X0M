@@ -214,16 +214,13 @@ function showTrainingVideo() {
 }
 
 function addTrainingVideo() {
-    var d = new Date();
+    //var d = new Date();
  
-    var timestamp = '_Uploaded: ' + (d.getMonth() + 1) + '.' + d.getDate()  + '.' + d.getFullYear();
+    //var timestamp = ' | ' + (d.getMonth() + 1) + '.' + d.getDate()  + '.' + d.getFullYear();
 
     if((dropCourse.value != "Select Course")&&(dropBatch.value != "Batch No.") && (txtTrainingVideo.value != "") && (txtTrainingVideoLink.value != "")) {
         
-        var newKey = txtTrainingVideo.value + "_" + dropBatch.value + timestamp;
-        console.log(newKey);
-        
-        set(ref(db, 'courses/' + dropCourse.value + '/batch/' + dropBatch.value + '/trainingVideos/' + newKey), {
+        set(ref(db, 'courses/' + dropCourse.value + '/batch/' + dropBatch.value + '/trainingVideos/' + txtTrainingVideo.value), {
             link: txtTrainingVideoLink.value,
             views: 0
         })

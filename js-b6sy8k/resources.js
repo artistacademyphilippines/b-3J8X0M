@@ -218,7 +218,7 @@ function showTrainingVideo() {
 function addTrainingVideo() {
     var d = new Date();
  
-    var timestamp = '_' + (d.getMonth() + 1) + '.' + d.getDate()  + '.' + d.getFullYear();
+    var timestamp = '_' + (d.getMonth() + 1) + '-' + d.getDate()  + '-' + d.getFullYear();
 
     if((dropCourse.value != "Select Course")&&(dropBatch.value != "Batch No.") && (txtTrainingVideo.value != "") && (txtTrainingVideoLink.value != "")) {
         var newKey = txtTrainingVideo.value + timestamp;

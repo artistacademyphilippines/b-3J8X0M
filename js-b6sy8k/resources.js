@@ -221,8 +221,8 @@ function addTrainingVideo() {
     var timestamp = '_' + (d.getMonth() + 1) + '.' + d.getDate()  + '.' + d.getFullYear();
 
     if((dropCourse.value != "Select Course")&&(dropBatch.value != "Batch No.") && (txtTrainingVideo.value != "") && (txtTrainingVideoLink.value != "")) {
-        
-        set(ref(db, 'courses/' + dropCourse.value + '/batch/' + dropBatch.value + '/trainingVideos/' + txtTrainingVideo.value + timestamp), {
+        var newKey = txtTrainingVideo.value + timestamp;
+        set(ref(db, 'courses/' + dropCourse.value + '/batch/' + dropBatch.value + '/trainingVideos/' + newKey), {
             link: txtTrainingVideoLink.value,
             views: 0
         })

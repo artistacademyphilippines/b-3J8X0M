@@ -202,7 +202,7 @@ function displayCard() {
 }
 displayCard();
 
-function updateCard() {
+function updateEachCard() {
     txtCardNo = document.getElementById('txtCardNo').firstElementChild;
     txtCardTitle = document.getElementById('txtCardTitle');
     txtCardLink = document.getElementById('txtCardLink');
@@ -211,7 +211,7 @@ function updateCard() {
     var trim2 = trim1.replace("/view?usp=sharing", "");
     var newLink = "https://drive.google.com/uc?export=view&id=" + trim2;
 
-    if(txtCardNo.innerText != "" && txtCardTitle.value != "" && txtCardLink.value != "") {
+    if(( txtCardTitle.value != "") && (txtCardLink.value != "")) {
         update(ref(db, 'settings/cards/' + txtCardNo.innerText), {
             title: txtCardTitle.value,
             link: newLink
@@ -230,8 +230,57 @@ function updateCard() {
         alert("Please complete the fields");
     }
 }
-btnCardUpdate.addEventListener("click", updateCard);
 
+function addNewCard(){
+    var i = 1;
+    var getChild = [];
+    const path = ref(db, 'settings/cards/');
+
+    get(path).then((snapshot)=> {
+        snapshot.forEach((childSnapshot)=> {
+            getChild[i] = childSnapshot;
+            i++;
+            update(ref(db, 'settings/cards/' + i), getChild[i-1])
+        })
+    })
+    .then(()=> {
+
+        txtCardNo = document.getElementById('txtCardNo').firstElementChild;
+        txtCardTitle = document.getElementById('txtCardTitle');
+        txtCardLink = document.getElementById('txtCardLink');
+    
+        var trim1 = txtCardLink.value.replace("https://drive.google.com/file/d/", "");
+        var trim2 = trim1.replace("/view?usp=sharing", "");
+        var newLink = "https://drive.google.com/uc?export=view&id=" + trim2;
+
+        update(ref(db, 'settings/cards/1'), {
+            title: txtCardTitle.value,
+            link: newLink
+        })
+        .then(()=> {
+            txtCardNo.innerText = "";
+            txtCardTitle.value = "";
+            txtCardLink.value = "";
+        })
+        .catch((error)=> {
+            alert(error.code);
+        })
+    })
+    .catch((error)=> {
+        alert(error.code);
+    })
+
+}
+
+function updateCard() {    
+    if(txtCardNo.innerText != "") {
+        updateEachCard();
+    }
+    else {
+        addNewCard();
+    }
+}
+btnCardUpdate.addEventListener("click", updateCard);
 
 
 

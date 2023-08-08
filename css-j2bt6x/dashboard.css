@@ -96,6 +96,7 @@
     margin: auto;
     word-break: break-all;
     padding: 1em;
+    background-color: purple;
 }
 
 #divMessage h1{

@@ -232,6 +232,8 @@ function updateEachCard() {
 }
 
 function addNewCard(){
+    console.log('add new card');
+    
     var i = 1;
     var getChild = [];
     const path = ref(db, 'settings/cards/');

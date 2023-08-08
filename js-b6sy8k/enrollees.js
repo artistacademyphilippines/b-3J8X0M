@@ -50,6 +50,7 @@ onAuthStateChanged(auth, (user) => {
 
 });
 
+
 //--------------------------------Banner--------------------------------------
 
 var t = .002*window.innerWidth;
@@ -545,10 +546,10 @@ function addTrainee() {
                     email: txtEmail.value,
                     status: "offline",
                     name: txtName.value,
-                    devices: 0,
                     lastOnline: "--.--.--",
                     social: txtSocial.value,
                     contact: txtContact.value,
+                    role: "trainee",
                     warning: 0
                 })
                 .then(()=> {
@@ -587,10 +588,10 @@ function addTrainee() {
                 email: txtEmail.value,
                 status: "offline",
                 name: txtName.value,
-                devices: 0,
                 lastOnline: "--.--.--",
                 social: txtSocial.value,
                 contact: txtContact.value,
+                role: "trainee",
                 warning: 0
             })
             .then(()=> {
@@ -626,7 +627,7 @@ function addTrainee() {
     })
 }
 
-const addAuthTrainee = async() => {
+function addAuthTrainee() {
     if(checkFields()) {
         createUserWithEmailAndPassword(auth, txtEmail.value, '@Abcd1234')
         .then(()=> {

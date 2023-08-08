@@ -232,44 +232,28 @@ function updateEachCard() {
 }
 
 function addNewCard(){
-    console.log('add new card');
-    
-    var i = 1;
-    var getChild = [];
-    const path = ref(db, 'settings/cards/');
 
-    get(path).then((snapshot)=> {
-        snapshot.forEach((childSnapshot)=> {
-            getChild[i] = childSnapshot;
-            i++;
-            update(ref(db, 'settings/cards/' + i), getChild[i-1])
-        })
-    })
-    .then(()=> {
+    txtCardTitle = document.getElementById('txtCardTitle');
+    txtCardLink = document.getElementById('txtCardLink');
 
-        txtCardNo = document.getElementById('txtCardNo').firstElementChild;
-        txtCardTitle = document.getElementById('txtCardTitle');
-        txtCardLink = document.getElementById('txtCardLink');
-    
-        var trim1 = txtCardLink.value.replace("https://drive.google.com/file/d/", "");
-        var trim2 = trim1.replace("/view?usp=sharing", "");
-        var newLink = "https://drive.google.com/uc?export=view&id=" + trim2;
+    var trim1 = txtCardLink.value.replace("https://drive.google.com/file/d/", "");
+    var trim2 = trim1.replace("/view?usp=sharing", "");
+    var newLink = "https://drive.google.com/uc?export=view&id=" + trim2;
 
-        update(ref(db, 'settings/cards/1'), {
-            title: txtCardTitle.value,
-            link: newLink
+    var tempSnap = [];
+
+    for(var a= 1; a < 3; a++) {
+        const path = ref(db, 'settings/cards/'+ a);
+        get(path).then((snapshot)=> {
+            tempSnap[a] = snapshot;
+
+            update(ref(db, 'settings/cards/' + (a+1), tempSnap[a]))
         })
-        .then(()=> {
-            txtCardNo.innerText = "";
-            txtCardTitle.value = "";
-            txtCardLink.value = "";
-        })
-        .catch((error)=> {
-            alert(error.code);
-        })
-    })
-    .catch((error)=> {
-        alert(error.code);
+    }
+
+    update(ref(db, 'settings/cards/' + 1), {
+        title: txtCardTitle.value,
+        link: newLink
     })
 
 }

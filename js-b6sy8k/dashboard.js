@@ -240,20 +240,27 @@ function addNewCard(){
     var trim2 = trim1.replace("/view?usp=sharing", "");
     var newLink = "https://drive.google.com/uc?export=view&id=" + trim2;
 
-    var tempSnap = [];
+    //transfer card 1 to card 2
+    const path1 = ref(db, 'settings/cards/1');
+    get(path1, (snapshot)=> {
+        var card1 = snapshot;
 
-    for(var a= 1; a < 3; a++) {
-        const path = ref(db, 'settings/cards/'+ a);
-        get(path).then((snapshot)=> {
-            tempSnap[a] = snapshot;
+        const path2 = ref(db, 'settings/cards/2');
+        get(path2, (snapshot)=> {
+            var card2 = snapshot;
 
-            update(ref(db, 'settings/cards/' + (a+1), tempSnap[a]))
+            const path3 = ref(db, 'settings/cards/3');
+            update(path3, card2)
+            .then(()=> {
+                update(path2, card1)
+                .then(()=> {
+                    update(path1, {
+                        title: txtCardTitle.value,
+                        link: newLink
+                    })
+                })
+            })
         })
-    }
-
-    update(ref(db, 'settings/cards/' + 1), {
-        title: txtCardTitle.value,
-        link: newLink
     })
 
 }

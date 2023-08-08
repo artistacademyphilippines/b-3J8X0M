@@ -90,9 +90,11 @@
 
 #divMessage {
     width: 100%;
-    height: 54px;
+    height: 40px;
     display: flex;
     margin: 0.5em;
+    word-break: break-all;
+    background-color: rebeccapurple;
 }
 
 #divMessage h1{

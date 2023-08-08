@@ -1,2 +1,67 @@
-/* OBFUSCATED BY CSSOBFUSCATOR.COM at 2023/08/04 17:48:21 */
-#menu{height:100vh;}[class~=boxMenu],[class~=menuLine]{width:100%;}[class~=boxMenu] h1{margin-top:auto;}#black iframe{margin-left:auto;}#black iframe{margin-bottom:auto;}#menu{width:120pt;}#menu{z-index:9;}[class~=boxMenu]:hover h1,[class~=boxMenu] h1{color:#fff;}#menu,#black{position:fixed;}#menu{transform:translateX(100vw);}[class~=menuLine]{height:.0625pc;}#menu{background-color:#252525;}#boxAll{margin-top:4.5vh;}#black iframe{margin-right:auto;}[class~=menuLine]{background-color:#303030;}#black iframe{margin-top:auto;}[class~=boxMenu] h1{margin-bottom:auto;}#black iframe{width:6.666666667in;}#black{z-index:7;}#black iframe{height:270pt;}#black,[class~=boxMenu]{display:flex;}#black iframe{border-left-width:medium;}#black iframe{border-bottom-width:medium;}[class~=boxMenu] h1{margin-left:25%;}#black iframe{border-right-width:medium;}[class~=boxMenu]:hover h1{opacity:1;}#black iframe{border-top-width:medium;}[class~=boxMenu] h1{font-family:"Roboto";}#black iframe{border-left-style:none;}#black iframe{border-bottom-style:none;}#black iframe{border-right-style:none;}#black{opacity:.2;}#black iframe{border-top-style:none;}[class~=boxMenu] h1{font-style:normal;}#black iframe{border-left-color:currentColor;}#black iframe{border-bottom-color:currentColor;}#black iframe{border-right-color:currentColor;}[class~=boxMenu] h1{font-weight:700;}#black iframe{border-top-color:currentColor;}[class~=boxMenu] h1{font-size:.145833333in;}#black iframe{border-image:none;}[class~=boxMenu]{height:5pc;}[class~=boxMenu]{text-align:left;}[class~=boxMenu] h1{line-height:.21875in;}[class~=boxMenu] h1{letter-spacing:.1em;}[class~=boxMenu]{cursor:pointer;}#black{width:100vw;}#black{height:100vh;}[class~=boxMenu] h1{opacity:.35;}#black{visibility:hidden;}#black{background-color:black;}#black{transition:opacity .5s;}
+#menu {
+    height: 100vh;
+    width: 160px;
+    z-index: 9;
+    position: fixed;
+    transform: translateX(100vw);
+    background-color: #252525;
+}
+
+.menuLine {
+    width: 100%;
+    height: 1px;
+    background-color: #303030;
+}
+
+#boxAll {
+    margin-top: 4.5vh;
+}
+
+.boxMenu {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    text-align: left;
+    cursor: pointer;
+
+}
+
+.boxMenu h1 {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 25%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    opacity: 0.35;
+}
+
+
+.boxMenu:hover h1 {
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+#black {
+    z-index: 7;
+    opacity: .2;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    visibility: hidden;
+    background-color: black;
+    transition: opacity .5s;
+}
+
+#black iframe {
+    margin: auto;
+    width: 640px;
+    height: 360px;
+    border: none;
+    
+}

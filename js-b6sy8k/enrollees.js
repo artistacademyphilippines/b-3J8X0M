@@ -262,13 +262,13 @@ function showTable() {
                 onValue(path2, (snapshot)=> {
 
                     append = "";
-                    
+
                     snapshot.forEach((childSnapshot)=> {
 
                         if(childSnapshot.key == arrID) {
 
-                            var arrTimestamp = snapshot.val().lastOnline;
-                            var arrContact = snapshot.val().contact;
+                            var arrTimestamp = childSnapshot.val().lastOnline;
+                            var arrContact = childSnapshot.val().contact;
                             
                             append += 
                             `<div class="tblEntry">

@@ -257,42 +257,52 @@ function showTable() {
                 var arrEmail = childSnapshot.val().email;
                 var arrSocial = childSnapshot.val().social;
 
-                const path2 = ref(db, 'accounts/trainees/' + arrID);
+                const path2 = ref(db, 'accounts/trainees/');
             
                 onValue(path2, (snapshot)=> {
-                    var arrTimestamp = snapshot.val().lastOnline;
-                    var arrContact = snapshot.val().contact;
+
+                    append = "";
                     
-                    append += 
-                    `<div class="tblEntry">
-                        <input type="text" class="divEntryID" value="${arrID}" readonly>
-                        <input type="text" class="divEntryName" value="${arrName}" readonly>
-                        <input type="text" class="divEntryEmail" value="${arrEmail}" readonly>
-                        <input type="text" class="divEntrySocial" onclick="window.open('${arrSocial}'),'_blank'" value = "Link" readonly>
-                        <input type="text" class="divEntryContact" value="${arrContact}" readonly>
-                        <input type="text" class="divEntryCourse" value="${dropCourse.value}" readonly>
-                        <input type="text" class="divEntryBatch" value="${dropBatch.value}" readonly>
-                        <input type="text" class="divEntryTimestamp" value="${arrTimestamp}" readonly>
-                        <div class="imgEntry">
-                            <img src="img-h6rv2c/btnConfirm.png" class="btnStatus">
-                            <img src="img-h6rv2c/btnDelete.png" class="btnDelete">
-                        </div>
-                    </div>`;
+                    snapshot.forEach((childSnapshot)=> {
 
-                    tblEntries.innerHTML = append;
-                    lblRecords.innerHTML = `<h1>${tblEntries.childElementCount} records found</h1>`;
-        
-                    //add event listeners for each clickables---------
-                    for(var a=0; a < tblEntries.childElementCount; a++) {
-                        divEntryID[a].addEventListener('click', copyMe);
-                        divEntryName[a].addEventListener('click', copyMe);
-                        divEntryEmail[a].addEventListener('click', copyMe);
-                        divEntryContact[a].addEventListener('click', copyMe);
-                        btnDelete[a].addEventListener('click', deleteTrainee);
-                        btnStatus[a].addEventListener('click', changeTraineeStatus);
-                    }
+                        if(childSnapshot.key == arrID) {
 
-                    newTraineeStatus();
+                            var arrTimestamp = snapshot.val().lastOnline;
+                            var arrContact = snapshot.val().contact;
+                            
+                            append += 
+                            `<div class="tblEntry">
+                                <input type="text" class="divEntryID" value="${arrID}" readonly>
+                                <input type="text" class="divEntryName" value="${arrName}" readonly>
+                                <input type="text" class="divEntryEmail" value="${arrEmail}" readonly>
+                                <input type="text" class="divEntrySocial" onclick="window.open('${arrSocial}'),'_blank'" value = "Link" readonly>
+                                <input type="text" class="divEntryContact" value="${arrContact}" readonly>
+                                <input type="text" class="divEntryCourse" value="${dropCourse.value}" readonly>
+                                <input type="text" class="divEntryBatch" value="${dropBatch.value}" readonly>
+                                <input type="text" class="divEntryTimestamp" value="${arrTimestamp}" readonly>
+                                <div class="imgEntry">
+                                    <img src="img-h6rv2c/btnConfirm.png" class="btnStatus">
+                                    <img src="img-h6rv2c/btnDelete.png" class="btnDelete">
+                                </div>
+                            </div>`;
+
+                            tblEntries.innerHTML = append;
+                            lblRecords.innerHTML = `<h1>${tblEntries.childElementCount} records found</h1>`;
+                
+                            //add event listeners for each clickables---------
+                            for(var a=0; a < tblEntries.childElementCount; a++) {
+                                divEntryID[a].addEventListener('click', copyMe);
+                                divEntryName[a].addEventListener('click', copyMe);
+                                divEntryEmail[a].addEventListener('click', copyMe);
+                                divEntryContact[a].addEventListener('click', copyMe);
+                                btnDelete[a].addEventListener('click', deleteTrainee);
+                                btnStatus[a].addEventListener('click', changeTraineeStatus);
+                            }
+
+                            newTraineeStatus();
+
+                        }
+                    })
                     
                 })
                 

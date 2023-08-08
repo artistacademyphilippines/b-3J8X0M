@@ -253,10 +253,7 @@ function showTable() {
             snapshot.forEach((childSnapshot)=> {
             
                 var arrID = childSnapshot.key;
-                var arrName = childSnapshot.val().name;
-                var arrEmail = childSnapshot.val().email;
-                var arrSocial = childSnapshot.val().social;
-
+                
                 const path2 = ref(db, 'accounts/trainees/');
             
                 onValue(path2, (snapshot)=> {
@@ -269,6 +266,9 @@ function showTable() {
 
                             var arrTimestamp = childSnapshot.val().lastOnline;
                             var arrContact = childSnapshot.val().contact;
+                            var arrName = childSnapshot.val().name;
+                            var arrEmail = childSnapshot.val().email;
+                            var arrSocial = childSnapshot.val().social;
                             
                             append += 
                             `<div class="tblEntry">

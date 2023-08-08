@@ -242,11 +242,11 @@ function addNewCard(){
 
     //transfer card 1 to card 2
     const path1 = ref(db, 'settings/cards/1');
-    get(path1, (snapshot)=> {
+    onValue(path1, (snapshot)=> {
         var card1 = snapshot;
 
         const path2 = ref(db, 'settings/cards/2');
-        get(path2, (snapshot)=> {
+        onValue(path2, (snapshot)=> {
             var card2 = snapshot;
 
             const path3 = ref(db, 'settings/cards/3');

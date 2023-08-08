@@ -241,15 +241,15 @@ function addNewCard(){
     var newLink = "https://drive.google.com/uc?export=view&id=" + trim2;
 
     //transfer card 1 to card 2
-    const path1 = ref(db, 'settings/cards/1');
+    const path1 = ref(db, 'settings/cards/1/');
     onValue(path1, (snapshot)=> {
-        var card1 = snapshot;
+        var card1 = snapshot.val();
 
-        const path2 = ref(db, 'settings/cards/2');
+        const path2 = ref(db, 'settings/cards/2/');
         onValue(path2, (snapshot)=> {
-            var card2 = snapshot;
+            var card2 = snapshot.val();
 
-            const path3 = ref(db, 'settings/cards/3');
+            const path3 = ref(db, 'settings/cards/3/');
             update(path3, card2)
             .then(()=> {
                 update(path2, card1)
@@ -257,6 +257,10 @@ function addNewCard(){
                     update(path1, {
                         title: txtCardTitle.value,
                         link: newLink
+                    })
+                    .then(()=> {
+                        txtCardTitle.value = "";
+                        txtCardLink.value = "";
                     })
                 })
             })

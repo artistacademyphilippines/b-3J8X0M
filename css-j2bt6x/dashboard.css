@@ -56,7 +56,7 @@
 }
 
 .entry {
-    width: auto;
+    width: 100%;
     min-height: 140px;
     height: auto;
     border: 1px solid white;
@@ -93,14 +93,15 @@
     min-height: 40px;
     height: auto;
     display: flex;
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: auto;
     word-break: break-all;
     padding: 1em;
-    background-color: purple;
+    background-color: rebeccapurple;
+    justify-content: center;
 }
 
 #divMessage h1{
-    margin: auto;
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 14px;
@@ -108,6 +109,7 @@
     letter-spacing: 0.1em;
     color: #FFFFFF;
 }
+
 
 #btnShow {
     opacity: .25;

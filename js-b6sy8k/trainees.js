@@ -352,13 +352,21 @@ function showBatch() {
             snapshot.forEach((childSnapshot)=> {
         
                 var arrID = childSnapshot.key;
-                var arrName = childSnapshot.val().name;
-                var arrEmail = childSnapshot.val().email;
-                var arrSocial = childSnapshot.val().social;
+                
+                const path2 = ref(db, 'accounts/trainees/');
             
-                onValue(ref(db, 'accounts/trainees/' + arrID), (snapshot)=> {
+                onValue(path2, (snapshot)=> {
+
+                    append = "";
+
+                    snapshot.forEach((childSnapshot)=> {
+
+                    if(childSnapshot.key == arrID) {
                     var arrTimestamp = snapshot.val().lastOnline;
                     var arrContact = snapshot.val().contact;
+                    var arrName = childSnapshot.val().name;
+                    var arrEmail = childSnapshot.val().email;
+                    var arrSocial = childSnapshot.val().social;
                     
                     append += 
                     `<div class="tblEntry">
@@ -375,23 +383,27 @@ function showBatch() {
                             <img src="img-h6rv2c/btnDelete.png" class="btnDelete">
                         </div>
                     </div>`;
-                })
-            })
-            
-            tblEntries.innerHTML = append;
-            lblRecords.innerHTML = `<h1>${tblEntries.childElementCount} records found</h1>`;
-            
-            //add event listeners for each clickables---------
-            for(var a=0; a < tblEntries.childElementCount; a++) {
-                divEntryID[a].addEventListener('click', copyMe);
-                divEntryName[a].addEventListener('click', copyMe);
-                divEntryEmail[a].addEventListener('click', copyMe);
-                divEntryContact[a].addEventListener('click', copyMe);
-                btnDelete[a].addEventListener('click', deleteTrainee);
-                btnStatus[a].addEventListener('click', changeTraineeStatus);
-            }
-            newTraineeStatus();
 
+                        }
+                    })
+                    
+                })
+                
+                tblEntries.innerHTML = append;
+                lblRecords.innerHTML = `<h1>${tblEntries.childElementCount} records found</h1>`;
+                
+                //add event listeners for each clickables---------
+                for(var a=0; a < tblEntries.childElementCount; a++) {
+                    divEntryID[a].addEventListener('click', copyMe);
+                    divEntryName[a].addEventListener('click', copyMe);
+                    divEntryEmail[a].addEventListener('click', copyMe);
+                    divEntryContact[a].addEventListener('click', copyMe);
+                    btnDelete[a].addEventListener('click', deleteTrainee);
+                    btnStatus[a].addEventListener('click', changeTraineeStatus);
+                }
+                newTraineeStatus();
+
+            })
         })
     }
     else {

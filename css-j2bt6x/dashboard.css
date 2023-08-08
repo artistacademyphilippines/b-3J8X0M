@@ -96,7 +96,6 @@
     margin-top: auto;
     margin-bottom: auto;
     word-break: break-all;
-    background-color: rebeccapurple;
     justify-content: center;
 }
 
@@ -107,8 +106,8 @@
     line-height: 28px;
     letter-spacing: 0.1em;
     color: #FFFFFF;
-    margin-left: .5em;
-    margin-right: .5em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 

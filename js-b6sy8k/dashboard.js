@@ -286,7 +286,6 @@ btnCardUpdate.addEventListener("click", updateCard);
 function checkIfOnline() {
 
     var oAuth = sessionStorage.getItem("oAuth");
-    var sessEmail = sessionStorage.getItem('sessEmail');
 
     if(oAuth == "out") {
 
@@ -301,13 +300,14 @@ function checkIfOnline() {
     }
 
     else {
-        var checkCon = ref(db, 'accounts/');
-        onDisconnect(checkCon).signOut(auth)
-        .then(()=> {
-            sessionStorage.clear();
-        })
-        .catch((error)=> {
-            alert(error.code);
+        var path = ref(db, ".info/connected");
+        onValue(path, (snap) => {
+            if (snap.val() === true) { 
+                console.log(snap.val);
+            }
+            else {
+                console.log(snap.val);
+            }
         })
     }
 }

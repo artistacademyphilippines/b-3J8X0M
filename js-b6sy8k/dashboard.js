@@ -1,1 +1,318 @@
-var _0x20b695=_0x1fae;(function(_0x1d9ae2,_0x201753){var _0x432637=_0x1fae,_0x2c3fda=_0x1d9ae2();while(!![]){try{var _0x27aacf=parseInt(_0x432637(0x164))/0x1+parseInt(_0x432637(0x17c))/0x2+parseInt(_0x432637(0x198))/0x3+parseInt(_0x432637(0x16d))/0x4+-parseInt(_0x432637(0x1a5))/0x5*(parseInt(_0x432637(0x18f))/0x6)+-parseInt(_0x432637(0x18b))/0x7*(-parseInt(_0x432637(0x16c))/0x8)+parseInt(_0x432637(0x197))/0x9*(-parseInt(_0x432637(0x199))/0xa);if(_0x27aacf===_0x201753)break;else _0x2c3fda['push'](_0x2c3fda['shift']());}catch(_0x185893){_0x2c3fda['push'](_0x2c3fda['shift']());}}}(_0x3297,0xe74f4));import{initializeApp}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';import{getAuth,onAuthStateChanged,signOut}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';import{getDatabase,ref,onValue,update,child,get,onDisconnect}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js';const firebaseConfig={'apiKey':_0x20b695(0x175),'authDomain':_0x20b695(0x1a7),'databaseURL':_0x20b695(0x192),'projectId':_0x20b695(0x190),'storageBucket':'projartcademyph-29663.appspot.com','messagingSenderId':'651674935886','appId':_0x20b695(0x196)},app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase();var bodyBlue=document['getElementById'](_0x20b695(0x188));onAuthStateChanged(auth,_0x3a0fd2=>{var _0x45e343=_0x20b695;if(_0x3a0fd2){var _0x153e6d=sessionStorage[_0x45e343(0x17d)]('sessID');_0x153e6d==_0x45e343(0x1a9)?bodyBlue[_0x45e343(0x15c)][_0x45e343(0x19c)]=_0x45e343(0x184):window[_0x45e343(0x15d)][_0x45e343(0x17e)](_0x45e343(0x16a));}else window[_0x45e343(0x15d)][_0x45e343(0x17e)](_0x45e343(0x19d));});var txtBanner=null,lblBanner=null,bannerContainer=null,scrollingBannerText=null;const scrollingBanner=document[_0x20b695(0x165)](_0x20b695(0x185)),btnShow=document[_0x20b695(0x165)](_0x20b695(0x195)),btnUpdate=document[_0x20b695(0x165)]('btnUpdate');function getFields(){var _0x1af158=_0x20b695;return txtBanner=document[_0x1af158(0x165)](_0x1af158(0x15e)),scrollingBannerText=document['getElementById']('pBanner'),bannerContainer=document[_0x1af158(0x165)]('bannerContainer'),lblBanner=document[_0x1af158(0x165)](_0x1af158(0x186))[_0x1af158(0x1a8)],(txtBanner,scrollingBannerText,lblBanner,bannerContainer);}function checkBanner(){getFields();const _0xd33422=ref(db,'settings/banner');onValue(_0xd33422,_0x3e7df9=>{var _0x2cc4c3=_0x1fae;_0x3e7df9[_0x2cc4c3(0x187)]()&&(scrollingBannerText[_0x2cc4c3(0x16f)]=_0x3e7df9[_0x2cc4c3(0x167)]()[_0x2cc4c3(0x15f)],lblBanner[_0x2cc4c3(0x16f)]=_0x3e7df9['val']()[_0x2cc4c3(0x15f)],_0x3e7df9[_0x2cc4c3(0x167)]()[_0x2cc4c3(0x179)]===!![]?(scrollingBanner['style'][_0x2cc4c3(0x19c)]='visible',btnShow[_0x2cc4c3(0x15c)]['opacity']='1'):(scrollingBanner[_0x2cc4c3(0x15c)][_0x2cc4c3(0x19c)]='hidden',btnShow[_0x2cc4c3(0x15c)][_0x2cc4c3(0x180)]='.25'));});}checkBanner();var t=0.002*window[_0x20b695(0x1aa)],c=window[_0x20b695(0x1aa)];bannerContainer[_0x20b695(0x15c)][_0x20b695(0x176)]='translateX('+window[_0x20b695(0x1aa)]+'px)';function bannerAnimation(){var _0x4326f3=_0x20b695;c-=0.5,bannerContainer[_0x4326f3(0x15c)]['transform']=_0x4326f3(0x18a)+c+_0x4326f3(0x1a0),c<bannerContainer['offsetWidth']*-0x1&&(c=window['innerWidth'],bannerContainer['style'][_0x4326f3(0x176)]=_0x4326f3(0x18a)+window[_0x4326f3(0x1aa)]+'px)');}setInterval(bannerAnimation,t);function updateBanner(){var _0x4de96b=_0x20b695;getFields(),update(ref(db,_0x4de96b(0x18e)),{'message':txtBanner['value']})[_0x4de96b(0x171)](_0x1f2fb9=>{var _0x4208b0=_0x4de96b;alert(_0x1f2fb9[_0x4208b0(0x19a)]);}),txtBanner[_0x4de96b(0x166)]='';}function _0x1fae(_0x19a54b,_0x291a28){var _0x329715=_0x3297();return _0x1fae=function(_0x1fae75,_0x481597){_0x1fae75=_0x1fae75-0x15c;var _0x17fcbc=_0x329715[_0x1fae75];return _0x17fcbc;},_0x1fae(_0x19a54b,_0x291a28);}function _0x3297(){var _0x7f8aa9=['AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk','transform','then','innerHTML','status','divCards','txtCardTitle','958198jpdWyn','getItem','replace','settings/cards/3/','opacity','getElementsByClassName','txtCardNo','parentElement','visible','divBanner','divMessage','exists','bodyBlue','txtCardLink','translateX(','7voyxsQ','children','\x27),\x27_blank\x27\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnEdit.png\x22\x20class=\x22btnCardEdit\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','settings/banner','6UjHkBJ','projartcademyph-29663','addEventListener','https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app','click','clear','btnShow','1:651674935886:web:629aefbab24dd2a154991f','28800LyTUQC','4063263kDZqGy','7240mYiaQB','code','Please\x20complete\x20the\x20fields','visibility','https://creator.artcademy.ph','length','out','px)','\x22\x20onclick=\x22window.open(\x27','https://drive.google.com/file/d/','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cardEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cardNo\x22><h1>','setSelectionRange','5406215XsbKtt','btnCardUpdate','projartcademyph-29663.firebaseapp.com','firstElementChild','XribZIy3mORl28B3A7S3qOdv2Bs1','innerWidth','style','location','txtBanner','message','copy','settings/cards/1/','select','execCommand','1073680ExUHLO','getElementById','value','val','cardLink','settings/cards/','https://artcademy.ph/404','sessEmail','5719576cxrNVS','2893360RsgZvn','https://drive.google.com/uc?export=view&id=','innerText','forEach','catch','key','/view?usp=sharing','</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type\x22text\x22\x20class=\x22cardLink\x22\x20readonly\x20value=\x22'];_0x3297=function(){return _0x7f8aa9;};return _0x3297();}btnUpdate[_0x20b695(0x191)](_0x20b695(0x193),updateBanner);function showBanner(){var _0x5f2e81=_0x20b695;const _0x513486=ref(db,'settings/banner'),_0x35c786=ref(db);get(child(_0x35c786,'settings/banner'))[_0x5f2e81(0x177)](_0x4700fb=>{var _0x3cbdb3=_0x5f2e81;_0x4700fb['exists']()&&(_0x4700fb['val']()[_0x3cbdb3(0x179)]==![]?update(_0x513486,{'status':!![]}):update(_0x513486,{'status':![]}));});}btnShow[_0x20b695(0x191)](_0x20b695(0x193),showBanner);var txtCardNo,txtCardTitle,txtCardLink,oldCards=null,btnCardEdit=document[_0x20b695(0x181)]('btnCardEdit');const btnCardUpdate=document[_0x20b695(0x165)](_0x20b695(0x1a6));var cardLink=document['getElementsByClassName'](_0x20b695(0x168));function copyMe(){var _0x2a019d=_0x20b695,_0x49b80b=this;_0x49b80b['focus'](),_0x49b80b[_0x2a019d(0x162)](),_0x49b80b[_0x2a019d(0x1a4)](0x0,0x1869f),document[_0x2a019d(0x163)](_0x2a019d(0x160));}function editCard(){var _0x4f8905=_0x20b695;document[_0x4f8905(0x165)](_0x4f8905(0x182))[_0x4f8905(0x1a8)][_0x4f8905(0x16f)]=this['parentElement'][_0x4f8905(0x18c)][0x0][_0x4f8905(0x16f)],document[_0x4f8905(0x165)]('txtCardTitle')['value']=this[_0x4f8905(0x183)][_0x4f8905(0x18c)][0x1][_0x4f8905(0x16f)],document[_0x4f8905(0x165)](_0x4f8905(0x189))['value']=this[_0x4f8905(0x183)][_0x4f8905(0x18c)][0x2]['value'];}function displayCard(){var _0x2d7d29=_0x20b695;txtCardNo=document[_0x2d7d29(0x165)](_0x2d7d29(0x182))['firstElementChild'],txtCardTitle=document[_0x2d7d29(0x165)](_0x2d7d29(0x17b)),txtCardLink=document[_0x2d7d29(0x165)](_0x2d7d29(0x189));const _0x1bf6e6=ref(db,_0x2d7d29(0x169));onValue(_0x1bf6e6,_0x4abd10=>{var _0x453f55=_0x2d7d29,_0x409f64='';oldCards=document[_0x453f55(0x165)](_0x453f55(0x17a)),_0x4abd10[_0x453f55(0x170)](_0x5740ba=>{var _0xfe5cf2=_0x453f55;_0x409f64+=_0xfe5cf2(0x1a3)+_0x5740ba[_0xfe5cf2(0x172)]+'</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cardTitle\x22><h1>'+_0x5740ba['val']()['title']+_0xfe5cf2(0x174)+_0x5740ba[_0xfe5cf2(0x167)]()['link']+_0xfe5cf2(0x1a1)+_0x5740ba[_0xfe5cf2(0x167)]()['link']+_0xfe5cf2(0x18d);}),oldCards[_0x453f55(0x178)]=_0x409f64;for(var _0xfbd5f9=0x0;_0xfbd5f9<btnCardEdit[_0x453f55(0x19e)];_0xfbd5f9++){btnCardEdit[_0xfbd5f9][_0x453f55(0x191)](_0x453f55(0x193),editCard),cardLink[_0xfbd5f9][_0x453f55(0x191)](_0x453f55(0x193),copyMe);}});}displayCard();function updateEachCard(){var _0x40a83d=_0x20b695;txtCardNo=document[_0x40a83d(0x165)]('txtCardNo')[_0x40a83d(0x1a8)],txtCardTitle=document[_0x40a83d(0x165)](_0x40a83d(0x17b)),txtCardLink=document[_0x40a83d(0x165)](_0x40a83d(0x189));var _0x131b76=txtCardLink[_0x40a83d(0x166)][_0x40a83d(0x17e)](_0x40a83d(0x1a2),''),_0xf317f4=_0x131b76['replace'](_0x40a83d(0x173),''),_0x4fd4ec=_0x40a83d(0x16e)+_0xf317f4;txtCardTitle[_0x40a83d(0x166)]!=''&&txtCardLink[_0x40a83d(0x166)]!=''?(update(ref(db,_0x40a83d(0x169)+txtCardNo[_0x40a83d(0x16f)]),{'title':txtCardTitle[_0x40a83d(0x166)],'link':_0x4fd4ec})[_0x40a83d(0x177)](()=>{txtCardNo['innerText']='',txtCardTitle['value']='',txtCardLink['value']='';})[_0x40a83d(0x171)](_0x7d2e5a=>{var _0x45a154=_0x40a83d;alert(_0x7d2e5a[_0x45a154(0x19a)]);}),displayCard()):alert(_0x40a83d(0x19b));}function addNewCard(){var _0xa8284=_0x20b695;txtCardTitle=document['getElementById'](_0xa8284(0x17b)),txtCardLink=document[_0xa8284(0x165)](_0xa8284(0x189));var _0xbf7f6d=txtCardLink[_0xa8284(0x166)]['replace'](_0xa8284(0x1a2),''),_0x4c1754=_0xbf7f6d['replace'](_0xa8284(0x173),''),_0x3a1053='https://drive.google.com/uc?export=view&id='+_0x4c1754;const _0x2c2d70=ref(db,_0xa8284(0x161));get(_0x2c2d70)[_0xa8284(0x177)](_0x310c15=>{var _0x2691a9=_0xa8284,_0xd477d8=_0x310c15[_0x2691a9(0x167)]();const _0x46adbe=ref(db,'settings/cards/2/');get(_0x46adbe)[_0x2691a9(0x177)](_0x3c659d=>{var _0x573d96=_0x2691a9,_0x2ecd23=_0x3c659d['val']();const _0x388855=ref(db,_0x573d96(0x17f));update(_0x388855,_0x2ecd23)[_0x573d96(0x177)](()=>{var _0x1c885c=_0x573d96;update(_0x46adbe,_0xd477d8)[_0x1c885c(0x177)](()=>{var _0x31b3d4=_0x1c885c;update(_0x2c2d70,{'title':txtCardTitle[_0x31b3d4(0x166)],'link':_0x3a1053})['then'](()=>{var _0x1c5667=_0x31b3d4;txtCardTitle[_0x1c5667(0x166)]='',txtCardLink[_0x1c5667(0x166)]='';});});});});});}function updateCard(){var _0x5cbe92=_0x20b695;txtCardNo[_0x5cbe92(0x16f)]!=''?updateEachCard():addNewCard();}btnCardUpdate[_0x20b695(0x191)](_0x20b695(0x193),updateCard);function checkIfOnline(){var _0x553326=_0x20b695,_0xa4b1a4=sessionStorage['getItem']('oAuth'),_0x5c6b1e=sessionStorage[_0x553326(0x17d)](_0x553326(0x16b));if(_0xa4b1a4==_0x553326(0x19f))signOut(auth)[_0x553326(0x177)](()=>{var _0x2a46d5=_0x553326;sessionStorage[_0x2a46d5(0x194)]();})['catch'](_0x227ada=>{alert(_0x227ada['code']);});else{var _0x1bd6a1=ref(db,'.info/connected');onValue(_0x1bd6a1,_0x44b60c=>{var _0x534dd9=_0x553326;_0x44b60c[_0x534dd9(0x167)]()==![]&&signOut(auth)[_0x534dd9(0x177)](()=>{sessionStorage['clear']();})['catch'](_0x2bde8b=>{var _0x3a8459=_0x534dd9;alert(_0x2bde8b[_0x3a8459(0x19a)]);});});}}setInterval(checkIfOnline,0x1f4);
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getDatabase, ref, onValue, update, child, get, onDisconnect } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
+  authDomain: "projartcademyph-29663.firebaseapp.com",
+  databaseURL: "https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "projartcademyph-29663",
+  storageBucket: "projartcademyph-29663.appspot.com",
+  messagingSenderId: "651674935886",
+  appId: "1:651674935886:web:629aefbab24dd2a154991f"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase();
+
+
+  //--check first if user is currently logged in
+
+var bodyBlue = document.getElementById('bodyBlue');
+
+onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+        var sessID = sessionStorage.getItem("sessID");
+    
+        if(sessID == "XribZIy3mORl28B3A7S3qOdv2Bs1") {
+
+            bodyBlue.style.visibility = "visible";
+            
+        }
+
+        else {
+
+            window.location.replace('https://artcademy.ph/404');
+            
+        }
+    }
+
+    else {
+      
+        window.location.replace('https://creator.artcademy.ph');
+
+    } 
+
+});
+
+
+//--------------------------------Functions-------------------------
+
+var txtBanner = null;
+var lblBanner = null;
+var bannerContainer = null;
+var scrollingBannerText = null;
+const scrollingBanner = document.getElementById('divBanner');
+const btnShow = document.getElementById('btnShow');
+const btnUpdate = document.getElementById('btnUpdate');
+
+function getFields() {
+    
+    txtBanner = document.getElementById('txtBanner');
+    scrollingBannerText = document.getElementById('pBanner');
+    bannerContainer = document.getElementById('bannerContainer');
+    lblBanner = document.getElementById('divMessage').firstElementChild;
+    return txtBanner, scrollingBannerText, lblBanner, bannerContainer;
+}
+
+//----------------------------Common Banner codes---------------------
+function checkBanner() {
+    getFields();
+    const path = ref(db, 'settings/banner');
+    onValue(path, (snapshot) => {
+        if(snapshot.exists()) {
+           
+            scrollingBannerText.innerText = snapshot.val().message;
+            lblBanner.innerText = snapshot.val().message;
+        
+            if(snapshot.val().status === true) {
+                scrollingBanner.style.visibility = "visible";
+                btnShow.style.opacity = "1";
+            }
+            else {
+                scrollingBanner.style.visibility = "hidden";
+                btnShow.style.opacity = ".25";
+            }
+        }
+    });
+}
+checkBanner();
+
+var t = .002*window.innerWidth;
+var c = window.innerWidth;
+bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+
+function bannerAnimation() {
+    c -= .5;
+    bannerContainer.style.transform = "translateX(" + c +"px)";
+    if(c < (bannerContainer.offsetWidth*-1)) {
+        c = window.innerWidth;
+        bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+    }
+}
+setInterval(bannerAnimation, t);
+
+//---------------------------------------------------------------------
+
+function updateBanner() {
+    getFields();
+
+    update(ref (db, 'settings/banner'), {
+        message: txtBanner.value
+        
+    })
+    .catch((error)=> {
+        alert(error.code);
+    });
+    txtBanner.value = "";
+}
+btnUpdate.addEventListener('click', updateBanner);
+
+function showBanner() {
+    const path = ref(db, 'settings/banner');
+    const dbRef = ref(db);
+   
+    get(child(dbRef, 'settings/banner')).then((snapshot)=> {
+        if(snapshot.exists()){
+            if (snapshot.val().status == false) {
+                update(path, {
+                    status: true
+                })
+            }
+            else {
+                update(path, {
+                    status: false
+                })
+            }
+        }
+    })
+}
+btnShow.addEventListener('click', showBanner);
+
+
+//--------------------------Cards------------------------------------
+
+var txtCardNo, txtCardTitle, txtCardLink, oldCards = null;
+var btnCardEdit = document.getElementsByClassName("btnCardEdit");
+const btnCardUpdate = document.getElementById('btnCardUpdate');
+var cardLink = document.getElementsByClassName('cardLink');
+
+function copyMe() {
+    var copyText = this;
+
+    copyText.focus();
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+    document.execCommand('copy');
+}
+
+
+function editCard() {
+    document.getElementById('txtCardNo').firstElementChild.innerText = this.parentElement.children[0].innerText;
+    document.getElementById('txtCardTitle').value = this.parentElement.children[1].innerText;
+    document.getElementById('txtCardLink').value = this.parentElement.children[2].value;
+}
+
+function displayCard() {
+    txtCardNo = document.getElementById('txtCardNo').firstElementChild;
+    txtCardTitle = document.getElementById('txtCardTitle');
+    txtCardLink = document.getElementById('txtCardLink');
+
+    
+    const path = ref(db, 'settings/cards/');
+
+    onValue( path, (snapshot) => {
+        var divCards = "";
+        oldCards = document.getElementById('divCards');
+
+        snapshot.forEach((childSnapshot)=> {
+            
+            divCards += `
+                <div class="cardEntry">
+                    <div class="cardNo"><h1>${childSnapshot.key}</h1></div>
+                    <div class="cardTitle"><h1>${childSnapshot.val().title}</h1></div>
+                    <input type"text" class="cardLink" readonly value="${childSnapshot.val().link}" onclick="window.open('${childSnapshot.val().link}'),'_blank'">
+                    <img src="img-h6rv2c/btnEdit.png" class="btnCardEdit">
+                </div>
+            `;
+        })
+        // append divCards total -----------------------------
+        oldCards.innerHTML = divCards;
+
+        // add listeners for btnCredit again
+        for (var i = 0; i < btnCardEdit.length; i++) {
+            btnCardEdit[i].addEventListener('click', editCard);
+            cardLink[i].addEventListener('click', copyMe);
+        }
+    });
+}
+displayCard();
+
+function updateEachCard() {
+    txtCardNo = document.getElementById('txtCardNo').firstElementChild;
+    txtCardTitle = document.getElementById('txtCardTitle');
+    txtCardLink = document.getElementById('txtCardLink');
+
+    var trim1 = txtCardLink.value.replace("https://drive.google.com/file/d/", "");
+    var trim2 = trim1.replace("/view?usp=sharing", "");
+    var newLink = "https://drive.google.com/uc?export=view&id=" + trim2;
+
+    if(( txtCardTitle.value != "") && (txtCardLink.value != "")) {
+        update(ref(db, 'settings/cards/' + txtCardNo.innerText), {
+            title: txtCardTitle.value,
+            link: newLink
+        })
+        .then(() => {
+            txtCardNo.innerText = "";
+            txtCardTitle.value = "";
+            txtCardLink.value = "";
+        })
+        .catch((error)=> {
+            alert(error.code);
+        });
+        displayCard();
+    }
+    else {
+        alert("Please complete the fields");
+    }
+}
+
+function addNewCard(){
+
+    txtCardTitle = document.getElementById('txtCardTitle');
+    txtCardLink = document.getElementById('txtCardLink');
+
+    var trim1 = txtCardLink.value.replace("https://drive.google.com/file/d/", "");
+    var trim2 = trim1.replace("/view?usp=sharing", "");
+    var newLink = "https://drive.google.com/uc?export=view&id=" + trim2;
+
+    //transfer card 1 to card 2
+    const path1 = ref(db, 'settings/cards/1/');
+    get(path1).then((snapshot)=> {
+        var card1 = snapshot.val();
+
+        const path2 = ref(db, 'settings/cards/2/');
+        get(path2).then((snapshot)=> {
+            var card2 = snapshot.val();
+
+            const path3 = ref(db, 'settings/cards/3/');
+            update(path3, card2)
+            .then(()=> {
+                update(path2, card1)
+                .then(()=> {
+                    update(path1, {
+                        title: txtCardTitle.value,
+                        link: newLink
+                    })
+                    .then(()=> {
+                        txtCardTitle.value = "";
+                        txtCardLink.value = "";
+                    })
+                })
+            })
+        })
+    })
+
+}
+
+function updateCard() {    
+    if(txtCardNo.innerText != "") {
+        updateEachCard();
+    }
+    else {
+        addNewCard();
+    }
+}
+btnCardUpdate.addEventListener("click", updateCard);
+
+
+
+//-----------------------Monitor Logout------------------------
+
+function checkIfOnline() {
+
+    var oAuth = sessionStorage.getItem("oAuth");
+    var sessEmail = sessionStorage.getItem('sessEmail');
+
+    if(oAuth == "out") {
+
+        signOut(auth)
+        .then(()=> {
+            sessionStorage.clear();
+        })
+        .catch((error)=> {
+            alert(error.code);
+        })
+           
+    }
+
+    else {
+        var checkCon = ref(db, 'accounts/');
+        onDisconnect(checkCon).signOut(auth)
+        .then(()=> {
+            sessionStorage.clear();
+        })
+        .catch((error)=> {
+            alert(error.code);
+        })
+    }
+}
+setInterval(checkIfOnline, 500);
+
+
+
+

@@ -306,7 +306,13 @@ function checkIfOnline() {
                 console.log(snap.val);
             }
             else {
-                console.log(snap.val);
+                signOut(auth)
+                .then(()=> {
+                    sessionStorage.clear();
+                })
+                .catch((error)=> {
+                    alert(error.code);
+                })
             }
         })
     }

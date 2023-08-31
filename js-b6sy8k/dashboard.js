@@ -28,7 +28,7 @@ onAuthStateChanged(auth, (user) => {
 
         var sessID = sessionStorage.getItem("sessID");
     
-        if(sessID == "XribZIy3mORl28B3A7S3qOdv2Bs1") {
+        if(sessID === "XribZIy3mORl28B3A7S3qOdv2Bs1") {
 
             bodyBlue.style.visibility = "visible";
             
@@ -36,7 +36,7 @@ onAuthStateChanged(auth, (user) => {
 
         else {
 
-            window.location.replace('https://artcademy.ph/404');
+            signOut(auth);
             
         }
     }
@@ -299,23 +299,6 @@ function checkIfOnline() {
            
     }
 
-    else {
-        var path = ref(db, ".info/connected");
-        onValue(path, (snap) => {
-            if (snap.val() === true) { 
-                console.log(snap.val);
-            }
-            else {
-                signOut(auth)
-                .then(()=> {
-                    sessionStorage.clear();
-                })
-                .catch((error)=> {
-                    alert(error.code);
-                })
-            }
-        })
-    }
 }
 setInterval(checkIfOnline, 500);
 

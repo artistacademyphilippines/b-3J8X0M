@@ -89,18 +89,8 @@
     border: 1px solid white;
     border-radius: 6px;
     background: rgba(0, 0, 0, 0.05);
-    animation-name: expand;
-    animation-duration: 1s;
+    transition: height 1s linear;
     
-}
-
-@keyframes expand {
-    0% {
-        height: 60px;
-    }
-    100% {
-        height: auto;
-    }
 }
 
 .frm img {

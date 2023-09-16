@@ -146,6 +146,7 @@
     margin-bottom: auto;
     margin-right: .5em;
     background-color: blue;
+    justify-content: left;
 }
 
 .appIconHeader img {

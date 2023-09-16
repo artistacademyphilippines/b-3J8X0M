@@ -249,10 +249,10 @@ function loadResData() {
 
 function showHideRes() {
     if(showHide == false) {
-        var newAppTable = this.parentElement.parentElement.children[2];
-        newAppTable.style.display = "inline-flex";
-        newAppTable.style.flexDirection = "column";
-        console.log(newAppTable);
+        //var newAppTable = this.parentElement.parentElement.children[2];
+        //newAppTable.style.display = "inline-flex";
+        //newAppTable.style.flexDirection = "column";
+        console.log('puqe ng ina');
         //showHide = true
     }
 }

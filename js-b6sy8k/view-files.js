@@ -171,15 +171,16 @@ function loadResTable() {
                             
                             </div>        
                         </div>`; 
-                        resources.innerHTML = append;        
+                        resources.innerHTML = append; 
+                        
+                        for(var a = 0; a < btnExpand.length; a++) {
+                            btnExpand[a].addEventListener('click', showHideRes);
+                        }       
                 }
                 
             }) 
-           
         })
-        for(var a = 0; a < btnExpand.length; a++) {
-            btnExpand[a].addEventListener('click', showHideRes);
-        }
+        
         loadResData(); 
     })
 }

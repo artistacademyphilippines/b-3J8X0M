@@ -80,7 +80,7 @@
 
 .frm {
     width: 100%;
-    height: 60px;
+    height: auto;
     display: inline-flex;
     flex-direction: column;
     margin-left: auto;
@@ -136,7 +136,7 @@
 
 .btnExpand {
     transform: rotate(0deg);
-    transition: transform 1s linear;
+    transition: transform .3s linear;
 }
 
 .appIconHeader {

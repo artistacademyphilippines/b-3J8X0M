@@ -159,19 +159,17 @@ function loadResTable() {
                 if(snapshot.size > 0) {
                     append += 
                         `<div class="frm" data-count = "${newID}">
-                            
-                                <div class="entryHeader">
-                                    <div class="leftHeader">
-                                        <div class="appIconHeader"><img src="${childSnapshot.val().appIcon}"></div>
-                                        <h1>${childSnapshot.val().appName}</h1>
-                                    </div>
-                                    <img src="img-h6rv2c/btnExpand.svg" class="btnExpand">
+                            <div class="entryHeader">
+                                <div class="leftHeader">
+                                    <div class="appIconHeader"><img src="${childSnapshot.val().appIcon}"></div>
+                                    <h1>${childSnapshot.val().appName}</h1>
                                 </div>
-                                <div class="bannerLine"></div>
-                                <div class="divAppTable">
-                                
-                                </div>
+                                <img src="img-h6rv2c/btnExpand.svg" class="btnExpand">
+                            </div>
+                            <div class="bannerLine"></div>
+                            <div class="divAppTable">
                             
+                            </div>        
                         </div>`; 
                         resources.innerHTML = append;        
                 }
@@ -251,8 +249,9 @@ function loadResData() {
 
 function showHideRes() {
     if(showHide == false) {
-        var getForm = Number(this.parentElement.parentElement.parentElement.dataset.count);
-
+        var newAppTable = this.parentElement.parentElement.children[2];
+        newAppTable.style.display = "inline-flex";
+        newAppTable.style.flexDirection = "column";
 
         showHide = true
     }

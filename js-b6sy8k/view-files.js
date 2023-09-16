@@ -259,7 +259,7 @@ function showHideRes() {
     else {
         
         var newAppTable = this.parentElement.parentElement.children[2];
-        this.style.transform = "rotate(0deg)";
+        this.style.transform = "rotate(-360deg)";
         newAppTable.style.display = "none";
         showHide = false
     }

@@ -131,6 +131,7 @@
 .leftHeader {
     display: inline-flex;
     width: auto;
+    height: auto;
     background-color: aqua;
 }
 
@@ -147,6 +148,7 @@
     margin-right: .5em;
     background-color: blue;
     justify-content: left;
+    display: flex;
 }
 
 .appIconHeader img {

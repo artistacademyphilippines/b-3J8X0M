@@ -141,19 +141,21 @@
 }
 
 .appIconHeader {
-    width: 30px;
+    width: 24px;
     height: 24px;
     margin-top: auto;
     margin-bottom: auto;
     margin-right: .5em;
     background-color: blue;
-    justify-content: left;
     display: flex;
+    justify-content: left;
 }
 
 .appIconHeader img {
     scale: 1;
     object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 

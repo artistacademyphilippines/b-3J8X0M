@@ -252,8 +252,8 @@ function showHideRes() {
         var newAppTable = this.parentElement.parentElement.children[2];
         newAppTable.style.display = "inline-flex";
         newAppTable.style.flexDirection = "column";
-
-        showHide = true
+        console.log(newAppTable);
+        //showHide = true
     }
 }
 

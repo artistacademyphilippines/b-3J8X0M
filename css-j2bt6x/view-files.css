@@ -136,7 +136,7 @@
 
 .btnExpand {
     transform: rotate(0deg);
-    transition: transform .3s linear;
+    transition: transform .2s linear;
 }
 
 .appIconHeader {

@@ -88,9 +88,7 @@
     margin-bottom: 3em;
     border: 1px solid white;
     border-radius: 6px;
-    background: rgba(0, 0, 0, 0.05);
-    transition: height 1s linear;
-    
+    background: rgba(0, 0, 0, 0.05);    
 }
 
 .frm img {
@@ -136,6 +134,10 @@
     margin-bottom: auto;
 }
 
+.btnExpand {
+    transform: rotate(0deg);
+    transition: transform 1s linear;
+}
 
 .appIconHeader {
     width: 24px;

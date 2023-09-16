@@ -172,7 +172,7 @@ function loadResTable() {
                             </div>        
                         </div>`; 
                         resources.innerHTML = append; 
-                        
+
                         for(var a = 0; a < btnExpand.length; a++) {
                             btnExpand[a].addEventListener('click', showHideRes);
                         }       
@@ -249,13 +249,17 @@ function loadResData() {
 }
 
 function showHideRes() {
-    //if(showHide == false) {
-        //var newAppTable = this.parentElement.parentElement.children[2];
-        //newAppTable.style.display = "inline-flex";
-        //newAppTable.style.flexDirection = "column";
-        console.log('puqe ng ina');
-        //showHide = true
-    //}
+    if(showHide == false) {
+        var newAppTable = this.parentElement.parentElement.children[2];
+        newAppTable.style.display = "inline-flex";
+        newAppTable.style.flexDirection = "column";
+        showHide = true
+    }
+    else {
+        var newAppTable = this.parentElement.parentElement.children[2];
+        newAppTable.style.display = "none";
+        showHide = false
+    }
 }
 
 function playFile() {

@@ -250,13 +250,17 @@ function loadResData() {
 
 function showHideRes() {
     if(showHide == false) {
+        var newFrm = this.parentElement.parentElement;
         var newAppTable = this.parentElement.parentElement.children[2];
+        newFrm.style.height = "auto"
         newAppTable.style.display = "inline-flex";
         newAppTable.style.flexDirection = "column";
         showHide = true
     }
     else {
+        var newFrm = this.parentElement.parentElement;
         var newAppTable = this.parentElement.parentElement.children[2];
+        newFrm.style.height = "auto"
         newAppTable.style.display = "none";
         showHide = false
     }

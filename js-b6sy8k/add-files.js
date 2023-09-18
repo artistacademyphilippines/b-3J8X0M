@@ -551,7 +551,15 @@ function addNotifs(newID) {
         snapshot.forEach((childSnapshot)=> {
             
             const path2 = ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + newID + '/' + txtVideoTitle.value + '/');
-            update(path2, { new: true });
+            update(path2, { new: true })
+            .then(()=> {
+                txtVideoID.value = "";
+                txtVideoTitle.value = "";
+                txtVideoLink.value = "";
+                txtFileLink.value = "";
+                chkNew.dataset.checked = false;
+                chkNew.style.backgroundColor = "transparent";
+            })
             
         })
     })
@@ -606,14 +614,17 @@ function insertRes() {
 
                                 //add notifications to trainees
                                 if(chkNew.dataset.checked == "true") {
-                                    addNotifs(newID, txtVideoTitle.value)
+                                    addNotifs(newID)
+                                }
+                                else {
+                                    txtVideoID.value = "";
+                                    txtVideoTitle.value = "";
+                                    txtVideoLink.value = "";
+                                    txtFileLink.value = "";
+                                    chkNew.dataset.checked = false;
+                                    chkNew.style.backgroundColor = "transparent";
                                 }
 
-                                txtVideoTitle.value = "";
-                                txtVideoLink.value = "";
-                                txtFileLink.value = "";
-                                chkNew.dataset.checked = false;
-                                chkNew.style.backgroundColor = "transparent";
                             })
                         }
                     }
@@ -659,15 +670,17 @@ function addResources() {
 
                                 //add notifications to trainees
                                 if(chkNew.dataset.checked == "true") {
-                                    addNotifs(newID, txtVideoTitle.value)
+                                    addNotifs(newID)
+                                }
+                                else {
+                                    txtVideoID.value = "";
+                                    txtVideoTitle.value = "";
+                                    txtVideoLink.value = "";
+                                    txtFileLink.value = "";
+                                    chkNew.dataset.checked = false;
+                                    chkNew.style.backgroundColor = "transparent";
                                 }
 
-                                txtVideoID.value = "";
-                                txtVideoTitle.value = "";
-                                txtVideoLink.value = "";
-                                txtFileLink.value = "";
-                                chkNew.dataset.checked = false;
-                                chkNew.style.backgroundColor = "transparent";
                             })
                         })
                     }

@@ -311,18 +311,6 @@ function downloadFile() {
     })
 }
 
-function deleteNotifs(filename) {
-    const path = ref(db, 'accounts/trainees/');
-    get(path).then((snapshot)=> {
-        snapshot.forEach((childSnapshot)=> {
-            
-            const path2 = ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + newID + '/' + filename);
-            remove(path2);
-            
-        })
-    })
-}
-
 
 function deleteFile() {
     var z = null;
@@ -356,8 +344,6 @@ function deleteFile() {
                }
             }
         })
-
-        deleteNotifs(fileName);
        
     }
     

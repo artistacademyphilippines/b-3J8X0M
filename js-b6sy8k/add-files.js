@@ -547,7 +547,7 @@ function insertRes() {
 
 function addResources() {
    
-    if((txtVideoTitle.value != "")&&(txtVideoLink.value != "")&&(txtFileLink.value != "")&&(dropApp.value !="")) {
+    if((txtVideoTitle.value != "")&&(txtVideoLink.value != "")&&(txtFileLink.value != "")&&(dropApp.value != "Select App")) {
 
         if(txtVideoID.value == "") {
 

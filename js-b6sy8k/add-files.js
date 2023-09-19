@@ -432,7 +432,7 @@ function deleteNotifs(deleteMe) {
     get(path).then((snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
             
-            const path2 = ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + newID);
+            const path2 = ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + deleteMe);
             remove(path2);
             
         })
@@ -445,7 +445,6 @@ function delApp() {
     var oldSnapshots = [];
     var deleteMe = Number(this.parentElement.parentElement.children[0].innerText);
 
-    console.log(deleteMe);
     if(confirm("Permanently delete this record?")) {
         const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/');
         get(path).then((snapshot)=> {
@@ -474,6 +473,7 @@ function delApp() {
     }
 
 }
+
 
 function editApp() {
     txtAppID.value = this.parentElement.parentElement.children[0].innerText;
@@ -665,16 +665,6 @@ function addResources() {
 
 }
 btnConfirm.addEventListener('click', addResources)
-
-//-------------------------Validate ID if number only---------
-
-function validateID(e) {
-    if (!((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105))) { 
-        alert('Please enter a numeric value');
-      }
-}
-txtAppID.addEventListener('keydown', validateID);
-txtVideoID.addEventListener('keydown', validateID);
 
 //-----------------------Monitor Logout------------------------
 

@@ -409,7 +409,7 @@ function addAppNotifs() {
             get(path2).then((snapshot)=> {
                 var newCount = snapshot.size + 1;
 
-                update(path2, {newCount})
+                update(ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/'), { newCount})
                 .then(()=> {
 
                     txtAppIconLink.value = "";
@@ -439,7 +439,8 @@ function addAppName() {
                 })
                 .then(()=> {
 
-                    addAppNotifs();
+                    txtAppIconLink.value = "";
+                    txtAppName.value = "";
                     
                 })
                 .catch((error)=> {

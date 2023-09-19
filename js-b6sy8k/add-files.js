@@ -409,12 +409,12 @@ function addAppNotifs() {
             get(path2).then((snapshot)=> {
                 var newCount = snapshot.size + 1;
 
-                update(path2, newCount)
+                update(path2, {newCount})
                 .then(()=> {
 
                     txtAppIconLink.value = "";
                     txtAppName.value = "";  
-                    
+
                 })
             })
             

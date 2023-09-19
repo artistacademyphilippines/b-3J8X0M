@@ -450,7 +450,7 @@ function delAppNotifs(deleteMe) {
                         var b = a-1;
                         
                         update(ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + b), oldSnapshots[a])
-                        remove(ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + z))
+                        remove(ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + a))
                     }
                    else if(a == deleteMe) {
                     remove(ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + a))

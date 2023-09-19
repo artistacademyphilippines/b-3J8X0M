@@ -294,60 +294,6 @@ function playTrainingVideo() {
 
 //------------------------------APP Name-----------------------------
 
-function insertNotifs() {
-    var oldSnapshots = [];
-    var z = null;
-    const path = ref(db, 'accounts/trainees/');
-    get(path).then((snapshot)=> {
-
-        snapshot.forEach((childSnapshot)=> {
-
-            const path2 = ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/');
-            get(path2).then((snapshot)=> {
-
-                z = snapshot.size;
-
-                snapshot.forEach((childSnapshot)=> {
-
-                    //copy old childSnapshots
-                    if(childSnapshot.key >= txtAppID.value) {
-                        oldSnapshots[childSnapshot.key] = childSnapshot.val();
-                    }
-                
-                })
-
-                for(var a = z; a >= 1; a-- ) {
-                    if(a > txtAppID.value) {
-                        var b = a+1;
-                        update(ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + b), oldSnapshots[a])
-                    }
-                    else if(a == txtAppID.value) {
-                        var b = a+1;
-                        update(ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + b), oldSnapshots[a])
-                        
-                        var newIcon = "https://artcademy.ph/img-h6rv2c/" + txtAppIconLink.value + ".svg";
-                        update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + a), {
-                            appName: txtAppName.value,
-                            appIcon: newIcon,
-                            files: ""
-                        })
-                        .then(()=> {
-        
-                            insertNotifs();
-                            txtAppIconLink.value = "";
-                            txtAppName.value = "";
-                            txtAppID.value = "";
-                        })
-                        .catch((error)=> {
-                            alert(error.code);
-                        })
-                    }
-                }
-
-            })
-        })
-    })
-}
 
 function insertApps() {
     var oldSnapshots = [];
@@ -382,8 +328,6 @@ function insertApps() {
                     files: ""
                 })
                 .then(()=> {
-
-                    insertNotifs();
                     txtAppIconLink.value = "";
                     txtAppName.value = "";
                     txtAppID.value = "";
@@ -397,30 +341,6 @@ function insertApps() {
     })
 }
 
-function addAppNotifs() {
-    txtAppIconLink.value = "";
-    txtAppName.value = "";
-
-    const path = ref(db, 'accounts/trainees/');
-    get(path).then((snapshot)=> {
-        snapshot.forEach((childSnapshot)=> {
-            
-            const path2 = ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/');
-            get(path2).then((snapshot)=> {
-                var newCount = snapshot.size + 1;
-
-                update(ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/'), { newCount})
-                .then(()=> {
-
-                    txtAppIconLink.value = "";
-                    txtAppName.value = "";  
-
-                })
-            })
-            
-        })
-    })
-}
 
 function addAppName() {
 
@@ -490,42 +410,6 @@ function showApps() {
 }
 showApps();
 
-function delAppNotifs(deleteMe) {
-    var z = null;
-    var oldSnapshots = [];
-
-    const path = ref(db, 'accounts/trainees/');
-    get(path).then((snapshot)=> {
-        snapshot.forEach((childSnapshot)=> {
-            
-            const path2 = ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/');
-            get(path2).then((snapshot)=> {
-                z = snapshot.size;
-
-                snapshot.forEach((childSnapshot)=> {
-                    if(childSnapshot.key > deleteMe) {
-                        oldSnapshots[childSnapshot.key] = childSnapshot.val();
-                    }
-                })
-
-                for(var a = 1; a <= z; a++) {
-                    if(a > deleteMe) {
-                        var b = a-1;
-                        
-                        update(ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + b), oldSnapshots[a])
-                        remove(ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + a))
-                    }
-                   else if(a == deleteMe) {
-                    remove(ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + a))
-                   }
-                }
-
-            })
-            
-        })
-    })
-}
-
 function delApp() {
     
     var z = null;
@@ -555,8 +439,7 @@ function delApp() {
                }
             }
         })
-        
-        delAppNotifs(deleteMe);
+
     }
 
 }
@@ -593,26 +476,6 @@ function loadApps() {
         })
 
         dropApp.innerHTML = append;
-    })
-}
-
-function addNotifs(newID) {
-    const path = ref(db, 'accounts/trainees/');
-    get(path).then((snapshot)=> {
-        snapshot.forEach((childSnapshot)=> {
-            
-            const path2 = ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + newID + '/' + txtVideoTitle.value + '/');
-            update(path2, { new: true })
-            .then(()=> {
-                txtVideoID.value = "";
-                txtVideoTitle.value = "";
-                txtVideoLink.value = "";
-                txtFileLink.value = "";
-                chkNew.dataset.checked = false;
-                chkNew.style.backgroundColor = "transparent";
-            })
-            
-        })
     })
 }
 
@@ -662,19 +525,13 @@ function insertRes() {
                                 notify: chkNew.dataset.checked
                             })
                             .then(()=> {
-
-                                //add notifications to trainees
-                                if(chkNew.dataset.checked == "true") {
-                                    addNotifs(newID)
-                                }
-                                else {
-                                    txtVideoID.value = "";
-                                    txtVideoTitle.value = "";
-                                    txtVideoLink.value = "";
-                                    txtFileLink.value = "";
-                                    chkNew.dataset.checked = false;
-                                    chkNew.style.backgroundColor = "transparent";
-                                }
+                                
+                                txtVideoID.value = "";
+                                txtVideoTitle.value = "";
+                                txtVideoLink.value = "";
+                                txtFileLink.value = "";
+                                chkNew.dataset.checked = false;
+                                chkNew.style.backgroundColor = "transparent";           
 
                             })
                         }
@@ -718,20 +575,14 @@ function addResources() {
                                 notify: chkNew.dataset.checked
                             })
                             .then(()=> {
-
-                                //add notifications to trainees
-                                if(chkNew.dataset.checked == "true") {
-                                    addNotifs(newID)
-                                }
-                                else {
-                                    txtVideoID.value = "";
-                                    txtVideoTitle.value = "";
-                                    txtVideoLink.value = "";
-                                    txtFileLink.value = "";
-                                    chkNew.dataset.checked = false;
-                                    chkNew.style.backgroundColor = "transparent";
-                                }
-
+                               
+                                txtVideoID.value = "";
+                                txtVideoTitle.value = "";
+                                txtVideoLink.value = "";
+                                txtFileLink.value = "";
+                                chkNew.dataset.checked = false;
+                                chkNew.style.backgroundColor = "transparent";
+                                
                             })
                         })
                     }

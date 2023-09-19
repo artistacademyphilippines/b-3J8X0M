@@ -316,7 +316,6 @@ function deleteFile() {
     var z = null;
     var oldSnapshots = [];
     var fileNo = Number(this.parentElement.parentElement.children[0].innerText);
-    var fileName = this.parentElement.parentElement.children[1].innerText;
     var appNo = Number(this.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.count);
 
     

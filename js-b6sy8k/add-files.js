@@ -427,13 +427,37 @@ function showApps() {
 }
 showApps();
 
-function deleteNotifs(deleteMe) {
+function delAppNotifs(deleteMe) {
+    var z = null;
+    var oldSnapshots = [];
+
     const path = ref(db, 'accounts/trainees/');
     get(path).then((snapshot)=> {
         snapshot.forEach((childSnapshot)=> {
             
-            const path2 = ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + deleteMe);
-            remove(path2);
+            const path2 = ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/');
+            get(path2).then((snapshot)=> {
+                z = snapshot.size;
+
+                snapshot.forEach((childSnapshot)=> {
+                    if(childSnapshot.key > deleteMe) {
+                        oldSnapshots[childSnapshot.key] = childSnapshot.val();
+                    }
+                })
+
+                for(var a = 1; a <= z; a++) {
+                    if(a > deleteMe) {
+                        var b = a-1;
+                        
+                        update(ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + b), oldSnapshots[a])
+                        remove(ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + z))
+                    }
+                   else if(a == deleteMe) {
+                    remove(ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + a))
+                   }
+                }
+
+            })
             
         })
     })
@@ -469,7 +493,7 @@ function delApp() {
             }
         })
         
-        deleteNotifs(deleteMe);
+        delAppNotifs(deleteMe);
     }
 
 }

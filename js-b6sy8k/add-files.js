@@ -57,7 +57,8 @@ const scrollingBanner = document.getElementById('divBanner');
 var bannerContainer = document.getElementById('bannerContainer');
 bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
 
-//----------------------------Common Banner codes---------------------
+//----------------------------Common Banner codes-----------------------------
+
 function checkBanner() {
     
     const path = ref(db, 'settings/banner');
@@ -85,8 +86,6 @@ function bannerAnimation() {
     }
 }
 setInterval(bannerAnimation, t);
-
-
 
 //-----------------------------Select Course-------------------------
 const black = document.getElementById('black');
@@ -294,6 +293,7 @@ function playTrainingVideo() {
 
 
 //------------------------------APP Name-----------------------------
+
 function insertNotifs() {
     var oldSnapshots = [];
     var z = null;
@@ -308,45 +308,9 @@ function insertNotifs() {
             })
 
         })
-        //get old childSnapshot size
-        z = snapshot.size;
-
-        snapshot.forEach((childSnapshot)=> {
-
-            //copy old childSnapshots
-            if(childSnapshot.key >= txtAppID.value) {
-                oldSnapshots[childSnapshot.key] = childSnapshot.val();
-            }
-        })
-        
-        //paste new childSnapshots
-        for(var a = z; a >= 1; a-- ) {
-            if(a > txtAppID.value) {
-                var b = a+1;
-                update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + b), oldSnapshots[a])
-            }
-            else if(a == txtAppID.value) {
-                var b = a+1;
-                update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + b), oldSnapshots[a])
-                
-                var newIcon = "https://artcademy.ph/img-h6rv2c/" + txtAppIconLink.value + ".svg";
-                update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + a), {
-                    appName: txtAppName.value,
-                    appIcon: newIcon,
-                    files: ""
-                })
-                .then(()=> {
-                    txtAppIconLink.value = "";
-                    txtAppName.value = "";
-                    txtAppID.value = "";
-                })
-                .catch((error)=> {
-                    alert(error.code);
-                })
-            }
-        }
         
     })
+
 }
 
 function insertApps() {
@@ -481,6 +445,7 @@ function delApp() {
     var oldSnapshots = [];
     var deleteMe = Number(this.parentElement.parentElement.children[0].innerText);
 
+    console.log(deleteMe);
     if(confirm("Permanently delete this record?")) {
         const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/');
         get(path).then((snapshot)=> {
@@ -504,7 +469,7 @@ function delApp() {
                }
             }
         })
-       
+        
         deleteNotifs(deleteMe);
     }
 
@@ -701,7 +666,15 @@ function addResources() {
 }
 btnConfirm.addEventListener('click', addResources)
 
+//-------------------------Validate ID if number only---------
 
+function validateID(e) {
+    if (!((e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105))) { 
+        alert('Please enter a numeric value');
+      }
+}
+txtAppID.addEventListener('keydown', validateID);
+txtVideoID.addEventListener('keydown', validateID);
 
 //-----------------------Monitor Logout------------------------
 

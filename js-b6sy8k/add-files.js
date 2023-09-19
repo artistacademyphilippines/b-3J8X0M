@@ -303,14 +303,50 @@ function insertNotifs() {
         snapshot.forEach((childSnapshot)=> {
 
             const path2 = ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/');
-            get(path).then((snapshot)=> {
+            get(path2).then((snapshot)=> {
+
+                z = snapshot.size;
+
+                snapshot.forEach((childSnapshot)=> {
+
+                    //copy old childSnapshots
+                    if(childSnapshot.key >= txtAppID.value) {
+                        oldSnapshots[childSnapshot.key] = childSnapshot.val();
+                    }
                 
-            })
+                })
 
-        })
+                for(var a = z; a >= 1; a-- ) {
+                    if(a > txtAppID.value) {
+                        var b = a+1;
+                        update(ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + b), oldSnapshots[a])
+                    }
+                    else if(a == txtAppID.value) {
+                        var b = a+1;
+                        update(ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/' + b), oldSnapshots[a])
+                        
+                        var newIcon = "https://artcademy.ph/img-h6rv2c/" + txtAppIconLink.value + ".svg";
+                        update(ref(db, 'courses/' + dropCourse.value + '/resources/public/' + a), {
+                            appName: txtAppName.value,
+                            appIcon: newIcon,
+                            files: ""
+                        })
+                        .then(()=> {
         
-    })
+                            insertNotifs();
+                            txtAppIconLink.value = "";
+                            txtAppName.value = "";
+                            txtAppID.value = "";
+                        })
+                        .catch((error)=> {
+                            alert(error.code);
+                        })
+                    }
+                }
 
+            })
+        })
+    })
 }
 
 function insertApps() {
@@ -361,6 +397,31 @@ function insertApps() {
     })
 }
 
+function addAppNotifs() {
+    txtAppIconLink.value = "";
+    txtAppName.value = "";
+
+    const path = ref(db, 'accounts/trainees/');
+    get(path).then((snapshot)=> {
+        snapshot.forEach((childSnapshot)=> {
+            
+            const path2 = ref(db, 'accounts/trainees/' + childSnapshot.key + '/courses/' + dropCourse.value + '/notifications/');
+            get(path2).then((snapshot)=> {
+                var newCount = snapshot.size + 1;
+
+                update(path2, newCount)
+                .then(()=> {
+
+                    txtAppIconLink.value = "";
+                    txtAppName.value = "";  
+                    
+                })
+            })
+            
+        })
+    })
+}
+
 function addAppName() {
 
     if((dropCourse.value != "Select Course")&&(txtAppIconLink.value != "")&&(txtAppName.value != "")) {
@@ -377,8 +438,9 @@ function addAppName() {
                     files: ""
                 })
                 .then(()=> {
-                    txtAppIconLink.value = "";
-                    txtAppName.value = "";
+
+                    addAppNotifs();
+                    
                 })
                 .catch((error)=> {
                     alert(error.code);
@@ -497,7 +559,6 @@ function delApp() {
     }
 
 }
-
 
 function editApp() {
     txtAppID.value = this.parentElement.parentElement.children[0].innerText;

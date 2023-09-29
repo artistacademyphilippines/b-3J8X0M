@@ -66,11 +66,12 @@ setInterval(bannerAnimation, t);
 
 var bodyBlue = document.getElementById('bodyBlue');
 
+
 onAuthStateChanged(auth, (user) => {
 
   if (user) {
 
-    if(user.uid == "XribZIy3mORl28B3A7S3qOdv2Bs1") {
+    if(user.uid == "EHjLcp5e6pctChxax7kfnYINPCj1") {
 
       sessionStorage.setItem("sessID", user.uid);
       window.location.replace('https://creator.artcademy.ph/dashboard');
@@ -129,7 +130,6 @@ onAuthStateChanged(auth, (user) => {
       
     } 
   });
-
 
   //---------------------validate login--------------------
 
@@ -195,6 +195,8 @@ onAuthStateChanged(auth, (user) => {
     else {
       alertMsg.innerText = "Email or password is incorrect";
       alertMsg.style.opacity = "1";
+      document.getElementById('txtEmail').value = "";
+      document.getElementById('txtPw').value = ""
     }
   }
 

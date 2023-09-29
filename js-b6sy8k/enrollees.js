@@ -27,7 +27,7 @@ onAuthStateChanged(auth, (user) => {
 
         var sessID = sessionStorage.getItem("sessID");
     
-        if(sessID === "XribZIy3mORl28B3A7S3qOdv2Bs1") {
+        if(sessID === "EHjLcp5e6pctChxax7kfnYINPCj1") {
 
             bodyBlue.style.visibility = "visible";
             

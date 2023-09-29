@@ -267,7 +267,7 @@ function showHideRes() {
 function playFile() {
     //var vidTitle = this.parentElement.parentElement.children[0].innerText;
     var fileNo = Number(this.parentElement.parentElement.children[0].innerText);
-    var appNo = Number(this.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.count);
+    var appNo = Number(this.parentElement.parentElement.parentElement.parentElement.dataset.count);
 
     black.style.opacity = 1;
     black.style.background = "rgba(0,0,0,0.3)";

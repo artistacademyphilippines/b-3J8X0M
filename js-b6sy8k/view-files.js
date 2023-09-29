@@ -297,7 +297,7 @@ function downloadFile() {
 
     const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/' + fileNo + '/');
     get(path).then((snapshot)=> {
-        window.location.open(snapshot.val().link);
+        window.open(snapshot.val().link);
         addDownload = snapshot.val().downloads + 1;
     })
     .then(()=> {

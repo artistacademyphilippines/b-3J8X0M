@@ -312,7 +312,7 @@ function deleteFile() {
     var z = null;
     var oldSnapshots = [];
     var fileNo = Number(this.parentElement.parentElement.children[0].innerText);
-    var appNo = Number(this.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.count);
+    var appNo = Number(this.parentElement.parentElement.parentElement.parentElement.dataset.count);
 
     
     if(confirm("Permanently delete this record?")) {

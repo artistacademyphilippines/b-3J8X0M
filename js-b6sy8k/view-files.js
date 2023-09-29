@@ -274,6 +274,7 @@ function playFile() {
     black.style.visibility = "visible";
     black.style.transition = "opacity .5s";
 
+    console.log('fileno: ' + fileNo + ' ' + 'appno: ' + appNo);
     const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/' + fileNo + '/');
     get(path).then((snapshot)=> {
         

@@ -206,7 +206,7 @@ function loadResData() {
                             <div class="tableFileDownloads"><h1>Clicks: ${childSnapshot.val().downloads}</h1></div>
                             <div class="tableFileViews"><h1>Views: ${childSnapshot.val().videoViews}</h1></div>
                             <div class="tableFileControls">
-                                <img src="img-h6rv2c/btnDownload.png" class="btnDownloadFile" onclick="window.open('${childSnapshot.val().fileLink}');">
+                                <img src="img-h6rv2c/btnDownload.png" class="btnDownloadFile" onclick="window.location.href = '${childSnapshot.val().fileLink}';">
                                 <img src="img-h6rv2c/btnPlay.png" class="btnPlayFile">
                                 <img src="img-h6rv2c/btnDelete.png" class="btnDelFile">
                             </div>

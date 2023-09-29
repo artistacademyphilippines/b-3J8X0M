@@ -1,1 +1,307 @@
-var _0x528ee2=_0x3662;(function(_0xcf97a1,_0x306f75){var _0x4a74eb=_0x3662,_0xd37da3=_0xcf97a1();while(!![]){try{var _0x3133bd=parseInt(_0x4a74eb(0x88))/0x1+parseInt(_0x4a74eb(0x84))/0x2+-parseInt(_0x4a74eb(0xa5))/0x3*(-parseInt(_0x4a74eb(0x96))/0x4)+-parseInt(_0x4a74eb(0x87))/0x5*(parseInt(_0x4a74eb(0x9f))/0x6)+parseInt(_0x4a74eb(0xac))/0x7+parseInt(_0x4a74eb(0x93))/0x8+-parseInt(_0x4a74eb(0x91))/0x9;if(_0x3133bd===_0x306f75)break;else _0xd37da3['push'](_0xd37da3['shift']());}catch(_0xf316ec){_0xd37da3['push'](_0xd37da3['shift']());}}}(_0x82fd,0x18b1a));import{initializeApp}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';import{getAuth,onAuthStateChanged,signOut}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';import{getDatabase,ref,onValue,update,child,get,onDisconnect}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js';const firebaseConfig={'apiKey':_0x528ee2(0xb6),'authDomain':_0x528ee2(0x7c),'databaseURL':'https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app','projectId':_0x528ee2(0xbb),'storageBucket':_0x528ee2(0x94),'messagingSenderId':_0x528ee2(0x82),'appId':_0x528ee2(0xbf)},app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase();var bodyBlue=document[_0x528ee2(0x9e)](_0x528ee2(0x9c));onAuthStateChanged(auth,_0x32e82d=>{var _0x1d265c=_0x528ee2;if(_0x32e82d){var _0x3998f9=sessionStorage['getItem'](_0x1d265c(0xad));_0x3998f9===_0x1d265c(0x8f)?bodyBlue[_0x1d265c(0xa7)][_0x1d265c(0x70)]=_0x1d265c(0x92):signOut(auth);}else window[_0x1d265c(0xab)]['replace'](_0x1d265c(0x98));});var txtBanner=null,lblBanner=null,bannerContainer=null,scrollingBannerText=null;const scrollingBanner=document['getElementById'](_0x528ee2(0xb9)),btnShow=document[_0x528ee2(0x9e)](_0x528ee2(0x8c)),btnUpdate=document[_0x528ee2(0x9e)](_0x528ee2(0xae));function getFields(){var _0x4972e6=_0x528ee2;return txtBanner=document[_0x4972e6(0x9e)]('txtBanner'),scrollingBannerText=document['getElementById'](_0x4972e6(0x7e)),bannerContainer=document[_0x4972e6(0x9e)]('bannerContainer'),lblBanner=document[_0x4972e6(0x9e)](_0x4972e6(0x8a))[_0x4972e6(0xa0)],(txtBanner,scrollingBannerText,lblBanner,bannerContainer);}function checkBanner(){var _0x3701fd=_0x528ee2;getFields();const _0x295ab5=ref(db,_0x3701fd(0x8b));onValue(_0x295ab5,_0x361fa0=>{var _0x2357d6=_0x3701fd;_0x361fa0[_0x2357d6(0xa1)]()&&(scrollingBannerText[_0x2357d6(0xb8)]=_0x361fa0['val']()[_0x2357d6(0x77)],lblBanner[_0x2357d6(0xb8)]=_0x361fa0[_0x2357d6(0x76)]()[_0x2357d6(0x77)],_0x361fa0['val']()['status']===!![]?(scrollingBanner[_0x2357d6(0xa7)]['visibility']=_0x2357d6(0x92),btnShow[_0x2357d6(0xa7)][_0x2357d6(0xa8)]='1'):(scrollingBanner[_0x2357d6(0xa7)][_0x2357d6(0x70)]=_0x2357d6(0xaa),btnShow[_0x2357d6(0xa7)][_0x2357d6(0xa8)]=_0x2357d6(0x8d)));});}checkBanner();var t=0.002*window[_0x528ee2(0x9a)],c=window[_0x528ee2(0x9a)];bannerContainer[_0x528ee2(0xa7)][_0x528ee2(0x75)]=_0x528ee2(0xbc)+window[_0x528ee2(0x9a)]+_0x528ee2(0x90);function bannerAnimation(){var _0xf7da57=_0x528ee2;c-=0.5,bannerContainer[_0xf7da57(0xa7)][_0xf7da57(0x75)]=_0xf7da57(0xbc)+c+_0xf7da57(0x90),c<bannerContainer[_0xf7da57(0x89)]*-0x1&&(c=window[_0xf7da57(0x9a)],bannerContainer[_0xf7da57(0xa7)][_0xf7da57(0x75)]='translateX('+window[_0xf7da57(0x9a)]+_0xf7da57(0x90));}setInterval(bannerAnimation,t);function updateBanner(){var _0x5f2939=_0x528ee2;getFields(),update(ref(db,_0x5f2939(0x8b)),{'message':txtBanner[_0x5f2939(0x72)]})[_0x5f2939(0x99)](_0x5179ef=>{alert(_0x5179ef['code']);}),txtBanner[_0x5f2939(0x72)]='';}btnUpdate['addEventListener']('click',updateBanner);function showBanner(){var _0x320deb=_0x528ee2;const _0xb808f7=ref(db,_0x320deb(0x8b)),_0x4aa63b=ref(db);get(child(_0x4aa63b,_0x320deb(0x8b)))['then'](_0x1f671d=>{var _0x1fef38=_0x320deb;_0x1f671d[_0x1fef38(0xa1)]()&&(_0x1f671d[_0x1fef38(0x76)]()[_0x1fef38(0x7d)]==![]?update(_0xb808f7,{'status':!![]}):update(_0xb808f7,{'status':![]}));});}btnShow[_0x528ee2(0xaf)](_0x528ee2(0x7f),showBanner);var txtCardNo,txtCardTitle,txtCardLink,oldCards=null,btnCardEdit=document[_0x528ee2(0x8e)](_0x528ee2(0xb5));function _0x3662(_0x24835d,_0x427556){var _0x82fd0c=_0x82fd();return _0x3662=function(_0x366240,_0x4b0e52){_0x366240=_0x366240-0x6f;var _0x88142e=_0x82fd0c[_0x366240];return _0x88142e;},_0x3662(_0x24835d,_0x427556);}const btnCardUpdate=document['getElementById'](_0x528ee2(0xb7));var cardLink=document[_0x528ee2(0x8e)]('cardLink');function copyMe(){var _0x58273a=_0x528ee2,_0x5a4e35=this;_0x5a4e35[_0x58273a(0x9d)](),_0x5a4e35[_0x58273a(0x85)](),_0x5a4e35[_0x58273a(0x9b)](0x0,0x1869f),document[_0x58273a(0x71)](_0x58273a(0xbd));}function editCard(){var _0x554ee2=_0x528ee2;document[_0x554ee2(0x9e)](_0x554ee2(0x80))[_0x554ee2(0xa0)][_0x554ee2(0xb8)]=this['parentElement'][_0x554ee2(0x73)][0x0][_0x554ee2(0xb8)],document['getElementById'](_0x554ee2(0xb3))[_0x554ee2(0x72)]=this[_0x554ee2(0x7b)][_0x554ee2(0x73)][0x1]['innerText'],document[_0x554ee2(0x9e)]('txtCardLink')['value']=this[_0x554ee2(0x7b)][_0x554ee2(0x73)][0x2][_0x554ee2(0x72)];}function displayCard(){var _0x1f8d13=_0x528ee2;txtCardNo=document['getElementById']('txtCardNo')[_0x1f8d13(0xa0)],txtCardTitle=document[_0x1f8d13(0x9e)]('txtCardTitle'),txtCardLink=document[_0x1f8d13(0x9e)](_0x1f8d13(0x86));const _0x55ed8e=ref(db,_0x1f8d13(0x81));onValue(_0x55ed8e,_0x49c1c4=>{var _0x4ad5fb=_0x1f8d13,_0x5b22f3='';oldCards=document['getElementById'](_0x4ad5fb(0xb1)),_0x49c1c4['forEach'](_0x426a8f=>{var _0xcc26f8=_0x4ad5fb;_0x5b22f3+=_0xcc26f8(0x79)+_0x426a8f['key']+_0xcc26f8(0x83)+_0x426a8f[_0xcc26f8(0x76)]()[_0xcc26f8(0x95)]+'</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20type\x22text\x22\x20class=\x22cardLink\x22\x20readonly\x20value=\x22'+_0x426a8f[_0xcc26f8(0x76)]()['link']+'\x22\x20onclick=\x22window.open(\x27'+_0x426a8f[_0xcc26f8(0x76)]()[_0xcc26f8(0xa6)]+_0xcc26f8(0xb4);}),oldCards[_0x4ad5fb(0xb0)]=_0x5b22f3;for(var _0x13be37=0x0;_0x13be37<btnCardEdit[_0x4ad5fb(0xa9)];_0x13be37++){btnCardEdit[_0x13be37][_0x4ad5fb(0xaf)](_0x4ad5fb(0x7f),editCard),cardLink[_0x13be37][_0x4ad5fb(0xaf)](_0x4ad5fb(0x7f),copyMe);}});}displayCard();function updateEachCard(){var _0x5eb269=_0x528ee2;txtCardNo=document[_0x5eb269(0x9e)](_0x5eb269(0x80))[_0x5eb269(0xa0)],txtCardTitle=document[_0x5eb269(0x9e)](_0x5eb269(0xb3)),txtCardLink=document['getElementById'](_0x5eb269(0x86));var _0xf02c0d=txtCardLink[_0x5eb269(0x72)]['replace'](_0x5eb269(0x74),''),_0xcc7ddd=_0xf02c0d[_0x5eb269(0x78)]('/view?usp=sharing',''),_0x5e5430=_0x5eb269(0x6f)+_0xcc7ddd;txtCardTitle[_0x5eb269(0x72)]!=''&&txtCardLink[_0x5eb269(0x72)]!=''?(update(ref(db,'settings/cards/'+txtCardNo['innerText']),{'title':txtCardTitle['value'],'link':_0x5e5430})[_0x5eb269(0xba)](()=>{var _0xfe74ad=_0x5eb269;txtCardNo[_0xfe74ad(0xb8)]='',txtCardTitle['value']='',txtCardLink[_0xfe74ad(0x72)]='';})[_0x5eb269(0x99)](_0x3cd988=>{var _0x5b9735=_0x5eb269;alert(_0x3cd988[_0x5b9735(0xbe)]);}),displayCard()):alert(_0x5eb269(0xa3));}function addNewCard(){var _0x3b3929=_0x528ee2;txtCardTitle=document[_0x3b3929(0x9e)](_0x3b3929(0xb3)),txtCardLink=document[_0x3b3929(0x9e)](_0x3b3929(0x86));var _0x5c9f3d=txtCardLink['value'][_0x3b3929(0x78)](_0x3b3929(0x74),''),_0x5d18a8=_0x5c9f3d[_0x3b3929(0x78)](_0x3b3929(0xa2),''),_0x3df774='https://drive.google.com/uc?export=view&id='+_0x5d18a8;const _0x1de79c=ref(db,'settings/cards/1/');get(_0x1de79c)['then'](_0x1e6895=>{var _0x190567=_0x3b3929,_0xf7dc34=_0x1e6895['val']();const _0x51e2c6=ref(db,_0x190567(0x97));get(_0x51e2c6)[_0x190567(0xba)](_0xf2129f=>{var _0x1cf47d=_0x190567,_0x44e1d4=_0xf2129f[_0x1cf47d(0x76)]();const _0x12c718=ref(db,'settings/cards/3/');update(_0x12c718,_0x44e1d4)[_0x1cf47d(0xba)](()=>{update(_0x51e2c6,_0xf7dc34)['then'](()=>{var _0xcefb5b=_0x3662;update(_0x1de79c,{'title':txtCardTitle[_0xcefb5b(0x72)],'link':_0x3df774})[_0xcefb5b(0xba)](()=>{var _0x182801=_0xcefb5b;txtCardTitle[_0x182801(0x72)]='',txtCardLink[_0x182801(0x72)]='';});});});});});}function updateCard(){txtCardNo['innerText']!=''?updateEachCard():addNewCard();}function _0x82fd(){var _0xaa190=['click','txtCardNo','settings/cards/','651674935886','</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cardTitle\x22><h1>','7014ZyXzhs','select','txtCardLink','5955ZVJjDg','48459TnBGQj','offsetWidth','divMessage','settings/banner','btnShow','.25','getElementsByClassName','XribZIy3mORl28B3A7S3qOdv2Bs1','px)','1809558ROxuhN','visible','1422136CYjmHo','projartcademyph-29663.appspot.com','title','1052yjkWsJ','settings/cards/2/','https://creator.artcademy.ph','catch','innerWidth','setSelectionRange','bodyBlue','focus','getElementById','222jbxnSt','firstElementChild','exists','/view?usp=sharing','Please\x20complete\x20the\x20fields','oAuth','849jfHIMX','link','style','opacity','length','hidden','location','294791KddgVe','sessID','btnUpdate','addEventListener','innerHTML','divCards','clear','txtCardTitle','\x27),\x27_blank\x27\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnEdit.png\x22\x20class=\x22btnCardEdit\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','btnCardEdit','AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk','btnCardUpdate','innerText','divBanner','then','projartcademyph-29663','translateX(','copy','code','1:651674935886:web:629aefbab24dd2a154991f','https://drive.google.com/uc?export=view&id=','visibility','execCommand','value','children','https://drive.google.com/file/d/','transform','val','message','replace','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cardEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22cardNo\x22><h1>','out','parentElement','projartcademyph-29663.firebaseapp.com','status','pBanner'];_0x82fd=function(){return _0xaa190;};return _0x82fd();}btnCardUpdate[_0x528ee2(0xaf)](_0x528ee2(0x7f),updateCard);function checkIfOnline(){var _0x3631ee=_0x528ee2,_0x298ffe=sessionStorage['getItem'](_0x3631ee(0xa4));_0x298ffe==_0x3631ee(0x7a)&&signOut(auth)[_0x3631ee(0xba)](()=>{var _0x422586=_0x3631ee;sessionStorage[_0x422586(0xb2)]();})['catch'](_0x36118d=>{alert(_0x36118d['code']);});}setInterval(checkIfOnline,0x1f4);
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getAuth, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getDatabase, ref, onValue, update, child, get, onDisconnect } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
+  authDomain: "projartcademyph-29663.firebaseapp.com",
+  databaseURL: "https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "projartcademyph-29663",
+  storageBucket: "projartcademyph-29663.appspot.com",
+  messagingSenderId: "651674935886",
+  appId: "1:651674935886:web:629aefbab24dd2a154991f"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase();
+
+
+  //--check first if user is currently logged in
+
+var bodyBlue = document.getElementById('bodyBlue');
+
+onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+        var sessID = sessionStorage.getItem("sessID");
+    
+        if(sessID === "XribZIy3mORl28B3A7S3qOdv2Bs1") {
+
+            bodyBlue.style.visibility = "visible";
+            
+        }
+
+        else {
+
+            signOut(auth);
+            
+        }
+    }
+
+    else {
+      
+        window.location.replace('https://creator.artcademy.ph');
+
+    } 
+
+});
+
+
+//--------------------------------Functions-------------------------
+
+var txtBanner = null;
+var lblBanner = null;
+var bannerContainer = null;
+var scrollingBannerText = null;
+const scrollingBanner = document.getElementById('divBanner');
+const btnShow = document.getElementById('btnShow');
+const btnUpdate = document.getElementById('btnUpdate');
+
+function getFields() {
+    
+    txtBanner = document.getElementById('txtBanner');
+    scrollingBannerText = document.getElementById('pBanner');
+    bannerContainer = document.getElementById('bannerContainer');
+    lblBanner = document.getElementById('divMessage').firstElementChild;
+    return txtBanner, scrollingBannerText, lblBanner, bannerContainer;
+}
+
+//----------------------------Common Banner codes---------------------
+function checkBanner() {
+    getFields();
+    const path = ref(db, 'settings/banner');
+    onValue(path, (snapshot) => {
+        if(snapshot.exists()) {
+           
+            scrollingBannerText.innerText = snapshot.val().message;
+            lblBanner.innerText = snapshot.val().message;
+        
+            if(snapshot.val().status === true) {
+                scrollingBanner.style.visibility = "visible";
+                btnShow.style.opacity = "1";
+            }
+            else {
+                scrollingBanner.style.visibility = "hidden";
+                btnShow.style.opacity = ".25";
+            }
+        }
+    });
+}
+checkBanner();
+
+var t = .002*window.innerWidth;
+var c = window.innerWidth;
+bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+
+function bannerAnimation() {
+    c -= .5;
+    bannerContainer.style.transform = "translateX(" + c +"px)";
+    if(c < (bannerContainer.offsetWidth*-1)) {
+        c = window.innerWidth;
+        bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+    }
+}
+setInterval(bannerAnimation, t);
+
+//---------------------------------------------------------------------
+
+function updateBanner() {
+    getFields();
+
+    update(ref (db, 'settings/banner'), {
+        message: txtBanner.value
+        
+    })
+    .catch((error)=> {
+        alert(error.code);
+    });
+    txtBanner.value = "";
+}
+btnUpdate.addEventListener('click', updateBanner);
+
+function showBanner() {
+    const path = ref(db, 'settings/banner');
+    const dbRef = ref(db);
+   
+    get(child(dbRef, 'settings/banner')).then((snapshot)=> {
+        if(snapshot.exists()){
+            if (snapshot.val().status == false) {
+                update(path, {
+                    status: true
+                })
+            }
+            else {
+                update(path, {
+                    status: false
+                })
+            }
+        }
+    })
+}
+btnShow.addEventListener('click', showBanner);
+
+
+//--------------------------Cards------------------------------------
+
+var txtCardNo, txtCardTitle, txtCardLink, oldCards = null;
+var btnCardEdit = document.getElementsByClassName("btnCardEdit");
+const btnCardUpdate = document.getElementById('btnCardUpdate');
+var cardLink = document.getElementsByClassName('cardLink');
+
+function copyMe() {
+    var copyText = this;
+
+    copyText.focus();
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+    document.execCommand('copy');
+}
+
+
+function editCard() {
+    document.getElementById('txtCardNo').firstElementChild.innerText = this.parentElement.children[0].innerText;
+    document.getElementById('txtCardTitle').value = this.parentElement.children[1].innerText;
+    document.getElementById('txtCardLink').value = this.parentElement.children[2].value;
+}
+
+function displayCard() {
+    txtCardNo = document.getElementById('txtCardNo').firstElementChild;
+    txtCardTitle = document.getElementById('txtCardTitle');
+    txtCardLink = document.getElementById('txtCardLink');
+
+    
+    const path = ref(db, 'settings/cards/');
+
+    onValue( path, (snapshot) => {
+        var divCards = "";
+        oldCards = document.getElementById('divCards');
+
+        snapshot.forEach((childSnapshot)=> {
+            
+            divCards += `
+                <div class="cardEntry">
+                    <div class="cardNo"><h1>${childSnapshot.key}</h1></div>
+                    <div class="cardTitle"><h1>${childSnapshot.val().title}</h1></div>
+                    <input type"text" class="cardLink" readonly value="${childSnapshot.val().link}" onclick="window.open('${childSnapshot.val().link}'),'_blank'">
+                    <img src="img-h6rv2c/btnEdit.png" class="btnCardEdit">
+                </div>
+            `;
+        })
+        // append divCards total -----------------------------
+        oldCards.innerHTML = divCards;
+
+        // add listeners for btnCredit again
+        for (var i = 0; i < btnCardEdit.length; i++) {
+            btnCardEdit[i].addEventListener('click', editCard);
+            cardLink[i].addEventListener('click', copyMe);
+        }
+    });
+}
+displayCard();
+
+function updateEachCard() {
+    txtCardNo = document.getElementById('txtCardNo').firstElementChild;
+    txtCardTitle = document.getElementById('txtCardTitle');
+    txtCardLink = document.getElementById('txtCardLink');
+
+    var trim1 = txtCardLink.value.replace("https://drive.google.com/file/d/", "");
+    var trim2 = trim1.replace("/view?usp=sharing", "");
+    var newLink = "https://drive.google.com/uc?export=view&id=" + trim2;
+
+    if(( txtCardTitle.value != "") && (txtCardLink.value != "")) {
+        update(ref(db, 'settings/cards/' + txtCardNo.innerText), {
+            title: txtCardTitle.value,
+            link: newLink
+        })
+        .then(() => {
+            txtCardNo.innerText = "";
+            txtCardTitle.value = "";
+            txtCardLink.value = "";
+        })
+        .catch((error)=> {
+            alert(error.code);
+        });
+        displayCard();
+    }
+    else {
+        alert("Please complete the fields");
+    }
+}
+
+function addNewCard(){
+
+    txtCardTitle = document.getElementById('txtCardTitle');
+    txtCardLink = document.getElementById('txtCardLink');
+
+    var trim1 = txtCardLink.value.replace("https://drive.google.com/file/d/", "");
+    var trim2 = trim1.replace("/view?usp=sharing", "");
+    var newLink = "https://drive.google.com/uc?export=view&id=" + trim2;
+
+    //transfer card 1 to card 2
+    const path1 = ref(db, 'settings/cards/1/');
+    get(path1).then((snapshot)=> {
+        var card1 = snapshot.val();
+
+        const path2 = ref(db, 'settings/cards/2/');
+        get(path2).then((snapshot)=> {
+            var card2 = snapshot.val();
+
+            const path3 = ref(db, 'settings/cards/3/');
+            update(path3, card2)
+            .then(()=> {
+                update(path2, card1)
+                .then(()=> {
+                    update(path1, {
+                        title: txtCardTitle.value,
+                        link: newLink
+                    })
+                    .then(()=> {
+                        txtCardTitle.value = "";
+                        txtCardLink.value = "";
+                    })
+                })
+            })
+        })
+    })
+
+}
+
+function updateCard() {    
+    if(txtCardNo.innerText != "") {
+        updateEachCard();
+    }
+    else {
+        addNewCard();
+    }
+}
+btnCardUpdate.addEventListener("click", updateCard);
+
+
+
+//-----------------------Monitor Logout------------------------
+
+function checkIfOnline() {
+
+    var oAuth = sessionStorage.getItem("oAuth");
+
+    if(oAuth == "out") {
+
+        signOut(auth)
+        .then(()=> {
+            sessionStorage.clear();
+        })
+        .catch((error)=> {
+            alert(error.code);
+        })
+           
+    }
+
+}
+setInterval(checkIfOnline, 500);
+
+
+
+

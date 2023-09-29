@@ -1,1 +1,520 @@
-var _0x514741=_0x1717;(function(_0x328a11,_0x4eb32c){var _0xf3af1=_0x1717,_0x1307d8=_0x328a11();while(!![]){try{var _0x3f0448=parseInt(_0xf3af1(0x1f5))/0x1*(parseInt(_0xf3af1(0x246))/0x2)+-parseInt(_0xf3af1(0x229))/0x3*(parseInt(_0xf3af1(0x212))/0x4)+parseInt(_0xf3af1(0x1dd))/0x5*(parseInt(_0xf3af1(0x23a))/0x6)+-parseInt(_0xf3af1(0x215))/0x7*(-parseInt(_0xf3af1(0x221))/0x8)+parseInt(_0xf3af1(0x227))/0x9*(-parseInt(_0xf3af1(0x1fb))/0xa)+parseInt(_0xf3af1(0x209))/0xb*(parseInt(_0xf3af1(0x1f1))/0xc)+-parseInt(_0xf3af1(0x1e2))/0xd*(parseInt(_0xf3af1(0x1ef))/0xe);if(_0x3f0448===_0x4eb32c)break;else _0x1307d8['push'](_0x1307d8['shift']());}catch(_0x65e0e){_0x1307d8['push'](_0x1307d8['shift']());}}}(_0x946a,0x78ea9));import{initializeApp}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js';import{getAuth,createUserWithEmailAndPassword,signOut,signInWithEmailAndPassword,onAuthStateChanged}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js';import{getDatabase,ref,onValue,update,child,get,set,remove,query,orderByChild}from'https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js';const firebaseConfig={'apiKey':_0x514741(0x21c),'authDomain':_0x514741(0x22b),'databaseURL':'https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app','projectId':'projartcademyph-29663','storageBucket':_0x514741(0x220),'messagingSenderId':_0x514741(0x204),'appId':'1:651674935886:web:629aefbab24dd2a154991f'},app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase();var bodyBlue=document[_0x514741(0x22a)](_0x514741(0x22f));onAuthStateChanged(auth,_0x244849=>{var _0x21763b=_0x514741;if(_0x244849){var _0x8b9542=sessionStorage[_0x21763b(0x228)](_0x21763b(0x242));_0x8b9542===_0x21763b(0x213)?bodyBlue[_0x21763b(0x236)]['visibility']=_0x21763b(0x1f3):signOut(auth);}else window[_0x21763b(0x1ff)][_0x21763b(0x1e9)](_0x21763b(0x21d));});var t=0.002*window[_0x514741(0x22e)],c=window['innerWidth'],scrollingBannerText=document[_0x514741(0x22a)](_0x514741(0x216));const scrollingBanner=document['getElementById'](_0x514741(0x245));var bannerContainer=document[_0x514741(0x22a)](_0x514741(0x235));bannerContainer[_0x514741(0x236)][_0x514741(0x1e8)]='translateX('+window[_0x514741(0x22e)]+_0x514741(0x21f);function _0x946a(){var _0x11415c=['AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk','https://creator.artcademy.ph','then','px)','projartcademyph-29663.appspot.com','3019944OgfNfa','btnSuspendMentor','</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnConfirm.png\x22\x20class=\x22btnSuspendMentor\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','btnAddAssignment','sessEmail','email','2718PPAMhr','getItem','1843377gBOIlD','getElementById','projartcademyph-29663.firebaseapp.com','settings/banner','divMentors','innerWidth','bodyBlue','accounts/mentors/','getDate','getFullYear','src','accounts/mentors','bannerContainer','style','message','<option\x20class=\x22optionFaculty\x22\x20value=\x22Select\x20Course\x22>Select\x20Course</option>','childElementCount','1002bsFBVb','clear','</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDelete.png\x22\x20class=\x22btnDelAssignment\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>','remove','getSeconds','@Abcd1234','</option>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20','getElementsByClassName','sessID','val','innerText','divBanner','2KUrIys','getMonth','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22facultyEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22facultyName\x22><h1>','offline','.25','exists','substring','22065sLzcvb','btnEditCourse','divCourses','sessPw','color','334711cnMoaG','../img-h6rv2c/btnConfirm.png','click','innerHTML','courses/','opacity','transform','replace','key','length','txtMentorEmail','catch','toString','336eDIDfF','dropMentorName','66564DTseKJ','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22facultyEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22facultyTitle\x22><h1>','visible','../img-h6rv2c/btnSuspended.png','842483tjBGzZ','Select\x20Course','getHours','mentor','Permanently\x20delete\x20this\x20record?','Select\x20Mentor','22470zltJNs','name','addEventListener','txtCourseTitle','location','parentElement','oAuth','<div\x20class=\x22facultyEntry\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22facultyDesc\x22><h1>','children','651674935886','status','\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<option\x20class=\x22optionFaculty\x22\x20value=\x22','btnDelAssignment','firstElementChild','891ZAcrcP','offsetWidth','</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22facultyDesc\x22><h1>','visibility','suspended','translateX(','forEach','value','hidden','4UbTyqM','XribZIy3mORl28B3A7S3qOdv2Bs1','out','7uHhGZi','pBanner','code','dropCourseTitle','white','btnAddMentor','online'];_0x946a=function(){return _0x11415c;};return _0x946a();}function checkBanner(){var _0x3fa457=_0x514741;const _0x5f0ed3=ref(db,_0x3fa457(0x22c));onValue(_0x5f0ed3,_0x5cd4cc=>{var _0x299e2e=_0x3fa457;_0x5cd4cc[_0x299e2e(0x1db)]()&&(scrollingBannerText[_0x299e2e(0x244)]=_0x5cd4cc[_0x299e2e(0x243)]()[_0x299e2e(0x237)],_0x5cd4cc[_0x299e2e(0x243)]()[_0x299e2e(0x205)]===!![]?scrollingBanner['style'][_0x299e2e(0x20c)]=_0x299e2e(0x1f3):scrollingBanner[_0x299e2e(0x236)]['visibility']=_0x299e2e(0x211));});}function _0x1717(_0x30b920,_0x1a6b9f){var _0x946a11=_0x946a();return _0x1717=function(_0x1717c4,_0x559655){_0x1717c4=_0x1717c4-0x1d9;var _0x461813=_0x946a11[_0x1717c4];return _0x461813;},_0x1717(_0x30b920,_0x1a6b9f);}checkBanner();function bannerAnimation(){var _0x57bfed=_0x514741;c-=0.5,bannerContainer['style']['transform']=_0x57bfed(0x20e)+c+'px)',c<bannerContainer[_0x57bfed(0x20a)]*-0x1&&(c=window[_0x57bfed(0x22e)],bannerContainer['style']['transform']=_0x57bfed(0x20e)+window[_0x57bfed(0x22e)]+_0x57bfed(0x21f));}setInterval(bannerAnimation,t);var txtCourseTitle=null,oldCourse=null;const btnAddCourse=document['getElementById']('btnAddCourse'),btnDelCourse=document[_0x514741(0x241)]('btnDelCourse'),btnEditCourse=document[_0x514741(0x241)](_0x514741(0x1de));function getCourses(){var _0x1f8a8f=_0x514741;return txtCourseTitle=document['getElementById'](_0x1f8a8f(0x1fe)),txtCourseTitle;}function changeCourse(){var _0x2b48d4=_0x514741;return getCourses(),oldCourse=this[_0x2b48d4(0x200)]['firstElementChild']['innerText'],txtCourseTitle[_0x2b48d4(0x210)]=oldCourse,oldCourse;}function deleteCourse(){var _0x12d998=_0x514741;getCourses();var _0x176c99=this[_0x12d998(0x200)]['firstElementChild']['innerText'],_0x2d7939=_0x12d998(0x1f9);confirm(_0x2d7939)==!![]&&remove(ref(db,'courses/'+_0x176c99))[_0x12d998(0x21e)](()=>{displayCourse(),updateDropCourse();});}function displayCourse(){var _0x5bce77=_0x514741;const _0x57b3f9=ref(db,_0x5bce77(0x1e6));var _0x47f9cc=document[_0x5bce77(0x22a)](_0x5bce77(0x1df));for(var _0x106cda=0x0;_0x106cda<_0x47f9cc[_0x5bce77(0x203)];_0x106cda++){_0x47f9cc['children'][_0x106cda][_0x5bce77(0x23d)]();}onValue(_0x57b3f9,_0x55a7eb=>{var _0x10ba1b=_0x5bce77,_0x4f5f7f='';_0x55a7eb['forEach'](_0x3e0be7=>{var _0x331fbb=_0x1717;_0x4f5f7f+=_0x331fbb(0x1f2)+_0x3e0be7[_0x331fbb(0x1ea)]+'</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnDelete.png\x22\x20class=\x22btnDelCourse\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20src=\x22img-h6rv2c/btnEdit.png\x22\x20class=\x22btnEditCourse\x22\x20>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20';}),_0x47f9cc['innerHTML']=_0x4f5f7f;for(var _0x44f4f6=0x0;_0x44f4f6<btnDelCourse['length'];_0x44f4f6++){btnEditCourse[_0x44f4f6][_0x10ba1b(0x1fd)]('click',changeCourse),btnDelCourse[_0x44f4f6]['addEventListener'](_0x10ba1b(0x1e4),deleteCourse);}});}displayCourse();function addUpdateCourse(){var _0x37f5b6=_0x514741;getCourses();const _0x3211c1=ref(db);get(child(_0x3211c1,_0x37f5b6(0x1e6)+oldCourse))[_0x37f5b6(0x21e)](_0x20ac68=>{var _0x2639cf=_0x37f5b6;if(_0x20ac68[_0x2639cf(0x1db)]()){var _0x4e3d29=_0x20ac68[_0x2639cf(0x243)]();set(ref(db,'courses/'+txtCourseTitle[_0x2639cf(0x210)]),_0x4e3d29)['then'](()=>{var _0x2aa5c1=_0x2639cf;remove(ref(db,_0x2aa5c1(0x1e6)+oldCourse)),displayCourse(),updateDropCourse();});}else{var _0x35481f=txtCourseTitle[_0x2639cf(0x210)];set(ref(db,'courses/'+_0x35481f),{'batch':'','mentor':'','resources':''})[_0x2639cf(0x21e)](()=>{displayCourse(),updateDropCourse();});}txtCourseTitle[_0x2639cf(0x210)]='';});}btnAddCourse[_0x514741(0x1fd)](_0x514741(0x1e4),addUpdateCourse);var generateID='',txtMentorName,txtMentorEmail=null;const btnAddMentor=document[_0x514741(0x22a)](_0x514741(0x21a));var divMentors=document[_0x514741(0x22a)](_0x514741(0x22d));const btnSuspendMentor=document[_0x514741(0x241)](_0x514741(0x222));function getID(){var _0x2b350e=_0x514741;generateID='M';const _0xe7cf8f=new Date();var _0x214597=[];_0x214597[0x0]=_0xe7cf8f[_0x2b350e(0x232)]()[_0x2b350e(0x1ee)]()[_0x2b350e(0x1dc)](0x2),_0x214597[0x1]=(_0xe7cf8f[_0x2b350e(0x247)]()+0x1)['toString'](),_0x214597[0x2]=_0xe7cf8f[_0x2b350e(0x231)]()[_0x2b350e(0x1ee)](),_0x214597[0x3]=_0xe7cf8f[_0x2b350e(0x1f7)]()[_0x2b350e(0x1ee)](),_0x214597[0x4]=_0xe7cf8f['getMinutes']()[_0x2b350e(0x1ee)](),_0x214597[0x5]=_0xe7cf8f[_0x2b350e(0x23e)]()[_0x2b350e(0x1ee)]();for(var _0x1c5a79=0x0;_0x1c5a79<_0x214597[_0x2b350e(0x1eb)];_0x1c5a79++){Number(_0x214597[_0x1c5a79])<0xa&&(_0x214597[_0x1c5a79]='0'+_0x214597[_0x1c5a79]),generateID+=_0x214597[_0x1c5a79];}return generateID;}function getMentor(){var _0x33b429=_0x514741;return txtMentorName=document['getElementById']('txtMentorName'),txtMentorEmail=document[_0x33b429(0x22a)](_0x33b429(0x1ec)),(txtMentorName,txtMentorEmail);}function changeMentorStatus(){var _0x3ad982=_0x514741;const _0x4d7aba=this[_0x3ad982(0x200)]['children'][0x1];get(ref(db,_0x3ad982(0x234)))['then'](_0x28b3fd=>{var _0x5950a1=_0x3ad982;_0x28b3fd[_0x5950a1(0x20f)](_0x242f9b=>{var _0xdbe5fa=_0x5950a1;_0x4d7aba[_0xdbe5fa(0x244)]==_0x242f9b[_0xdbe5fa(0x243)]()[_0xdbe5fa(0x226)]&&(_0x242f9b[_0xdbe5fa(0x243)]()['status']==_0xdbe5fa(0x20d)?update(ref(db,_0xdbe5fa(0x230)+_0x242f9b['key']),{'status':_0xdbe5fa(0x1d9)}):update(ref(db,_0xdbe5fa(0x230)+_0x242f9b[_0xdbe5fa(0x1ea)]),{'status':_0xdbe5fa(0x20d)}));});});}function displayMentor(){var _0x2cd6aa=_0x514741;const _0x4e7fd1=ref(db,_0x2cd6aa(0x230)),_0x26b66e=query(_0x4e7fd1,orderByChild('name'));onValue(_0x26b66e,_0x53a66f=>{var _0x7ac3=_0x2cd6aa,_0x5105cd='',_0x330f21=[],_0x36ff2b=0x0;_0x53a66f[_0x7ac3(0x20f)](_0x2a7fd4=>{var _0x5656b9=_0x7ac3;_0x5105cd+=_0x5656b9(0x248)+_0x2a7fd4['val']()[_0x5656b9(0x1fc)]+'</h1></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22facultyEmail\x22><h1>'+_0x2a7fd4['val']()[_0x5656b9(0x226)]+_0x5656b9(0x223),_0x330f21[_0x36ff2b]=_0x2a7fd4['val']()[_0x5656b9(0x205)],_0x36ff2b++;}),divMentors['innerHTML']=_0x5105cd;for(var _0x2fc97f=0x0;_0x2fc97f<divMentors[_0x7ac3(0x239)];_0x2fc97f++){if(_0x330f21[_0x2fc97f]=='suspended')divMentors[_0x7ac3(0x203)][_0x2fc97f][_0x7ac3(0x203)][0x0][_0x7ac3(0x208)]['style'][_0x7ac3(0x1e1)]='salmon',divMentors[_0x7ac3(0x203)][_0x2fc97f][_0x7ac3(0x203)][0x1]['firstElementChild'][_0x7ac3(0x236)]['color']='salmon',divMentors[_0x7ac3(0x203)][_0x2fc97f][_0x7ac3(0x203)][0x2][_0x7ac3(0x233)]=_0x7ac3(0x1f4),divMentors[_0x7ac3(0x203)][_0x2fc97f]['children'][0x0][_0x7ac3(0x208)]['style'][_0x7ac3(0x1e7)]='1',divMentors[_0x7ac3(0x203)][_0x2fc97f]['children'][0x1][_0x7ac3(0x208)]['style'][_0x7ac3(0x1e7)]='1',divMentors[_0x7ac3(0x203)][_0x2fc97f][_0x7ac3(0x203)][0x2]['style'][_0x7ac3(0x1e7)]='1';else _0x330f21[_0x2fc97f]==_0x7ac3(0x21b)?(divMentors['children'][_0x2fc97f][_0x7ac3(0x203)][0x0][_0x7ac3(0x208)][_0x7ac3(0x236)][_0x7ac3(0x1e1)]='white',divMentors['children'][_0x2fc97f]['children'][0x1][_0x7ac3(0x208)]['style'][_0x7ac3(0x1e1)]=_0x7ac3(0x219),divMentors['children'][_0x2fc97f][_0x7ac3(0x203)][0x2][_0x7ac3(0x233)]='../img-h6rv2c/btnConfirm.png',divMentors[_0x7ac3(0x203)][_0x2fc97f][_0x7ac3(0x203)][0x0][_0x7ac3(0x208)]['style']['opacity']='1',divMentors[_0x7ac3(0x203)][_0x2fc97f][_0x7ac3(0x203)][0x1][_0x7ac3(0x208)][_0x7ac3(0x236)][_0x7ac3(0x1e7)]='1',divMentors[_0x7ac3(0x203)][_0x2fc97f]['children'][0x2][_0x7ac3(0x236)]['opacity']='1'):(divMentors[_0x7ac3(0x203)][_0x2fc97f][_0x7ac3(0x203)][0x0][_0x7ac3(0x208)]['style'][_0x7ac3(0x1e1)]=_0x7ac3(0x219),divMentors[_0x7ac3(0x203)][_0x2fc97f][_0x7ac3(0x203)][0x1][_0x7ac3(0x208)][_0x7ac3(0x236)][_0x7ac3(0x1e1)]=_0x7ac3(0x219),divMentors[_0x7ac3(0x203)][_0x2fc97f]['children'][0x2][_0x7ac3(0x233)]=_0x7ac3(0x1e3),divMentors[_0x7ac3(0x203)][_0x2fc97f][_0x7ac3(0x203)][0x0][_0x7ac3(0x208)]['style'][_0x7ac3(0x1e7)]='.25',divMentors[_0x7ac3(0x203)][_0x2fc97f]['children'][0x1][_0x7ac3(0x208)][_0x7ac3(0x236)][_0x7ac3(0x1e7)]=_0x7ac3(0x1da),divMentors[_0x7ac3(0x203)][_0x2fc97f]['children'][0x2]['style'][_0x7ac3(0x1e7)]=_0x7ac3(0x1da));}for(var _0x2fc97f=0x0;_0x2fc97f<btnSuspendMentor[_0x7ac3(0x1eb)];_0x2fc97f++){btnSuspendMentor[_0x2fc97f][_0x7ac3(0x1fd)](_0x7ac3(0x1e4),changeMentorStatus);}});}displayMentor();function addMentor(){var _0x1e1ea2=_0x514741;getID(),getMentor(),set(ref(db,_0x1e1ea2(0x230)+generateID),{'email':txtMentorEmail[_0x1e1ea2(0x210)],'name':txtMentorName[_0x1e1ea2(0x210)],'devices':0x0,'lastOnline':'','status':_0x1e1ea2(0x1d9),'warning':0x0})[_0x1e1ea2(0x21e)](()=>{var _0x4e11d2=_0x1e1ea2;displayMentor(),updateDropMentor(),txtMentorEmail[_0x4e11d2(0x210)]='',txtMentorName[_0x4e11d2(0x210)]='';})[_0x1e1ea2(0x1ed)](_0x5b58ff=>{alert(_0x5b58ff['code']);});}function addAuthMentor(){var _0x22a55b=_0x514741;getMentor(),txtMentorName[_0x22a55b(0x210)]!=''&&txtMentorEmail[_0x22a55b(0x210)]!=''&&createUserWithEmailAndPassword(auth,txtMentorEmail[_0x22a55b(0x210)],_0x22a55b(0x23f))[_0x22a55b(0x21e)](()=>{var _0xcb2efc=_0x22a55b,_0x3b742f=sessionStorage[_0xcb2efc(0x228)](_0xcb2efc(0x225)),_0x1118f7=sessionStorage[_0xcb2efc(0x228)](_0xcb2efc(0x1e0));signInWithEmailAndPassword(auth,_0x3b742f,_0x1118f7)[_0xcb2efc(0x21e)](()=>{addMentor();});})[_0x22a55b(0x1ed)](_0x390707=>{addMentor();});}btnAddMentor[_0x514741(0x1fd)](_0x514741(0x1e4),addAuthMentor);var dropCourse=document['getElementById'](_0x514741(0x218)),dropMentor=document[_0x514741(0x22a)](_0x514741(0x1f0));const btnAddAssignment=document[_0x514741(0x22a)](_0x514741(0x224)),btnDelAssignment=document[_0x514741(0x241)](_0x514741(0x207));function updateDropCourse(){var _0x560fc4=_0x514741,_0x1d5af5=_0x560fc4(0x238);const _0x2ce0f3=ref(db,_0x560fc4(0x1e6));get(_0x2ce0f3)[_0x560fc4(0x21e)](_0x183095=>{var _0x1d18d4=_0x560fc4;for(var _0x315844=0x0;_0x315844<dropCourse['children'];_0x315844++){dropCourse[_0x1d18d4(0x203)][_0x315844][_0x1d18d4(0x23d)]();}_0x183095[_0x1d18d4(0x1db)]()&&(_0x183095[_0x1d18d4(0x20f)](_0x2f9d26=>{var _0x378a28=_0x1d18d4;_0x1d5af5+=_0x378a28(0x206)+_0x2f9d26[_0x378a28(0x1ea)]+'\x22>'+_0x2f9d26[_0x378a28(0x1ea)]+_0x378a28(0x240);}),dropCourse['innerHTML']=_0x1d5af5);});}updateDropCourse();function updateDropMentor(){var _0x2c4e33=_0x514741,_0x34e505='<option\x20class=\x22optionFaculty\x22\x20value=\x22Select\x20Mentor\x22>Select\x20Mentor</option>';const _0x4b6f32=ref(db,_0x2c4e33(0x230));get(_0x4b6f32)['then'](_0x2e1c33=>{var _0x4ba5f3=_0x2c4e33;for(var _0x214a01=0x0;_0x214a01<dropMentor['children'];_0x214a01++){dropMentor[_0x4ba5f3(0x203)][_0x214a01]['remove']();}_0x2e1c33['exists']()&&(_0x2e1c33[_0x4ba5f3(0x20f)](_0x2bfe6f=>{var _0x82b836=_0x4ba5f3;_0x34e505+=_0x82b836(0x206)+_0x2bfe6f[_0x82b836(0x243)]()[_0x82b836(0x1fc)]+'\x22>'+_0x2bfe6f[_0x82b836(0x243)]()[_0x82b836(0x1fc)]+_0x82b836(0x240);}),dropMentor[_0x4ba5f3(0x1e5)]=_0x34e505);});}updateDropMentor();function deleteFaculty(){var _0x3b2771=_0x514741;const _0x585a66=this[_0x3b2771(0x200)]['children'][0x0],_0x28cbd9=ref(db,_0x3b2771(0x1e6));onValue(_0x28cbd9,_0x4d9f22=>{var _0x3c65d2=_0x3b2771;_0x4d9f22[_0x3c65d2(0x20f)](_0x13a79b=>{var _0x430540=_0x3c65d2;_0x585a66[_0x430540(0x208)][_0x430540(0x244)]==_0x13a79b[_0x430540(0x1ea)]&&update(ref(db,_0x430540(0x1e6)+_0x13a79b['key']),{'mentor':''})[_0x430540(0x21e)](()=>{var _0x48501a=_0x430540;_0x585a66[_0x48501a(0x23d)]();})[_0x430540(0x1ed)](_0x4e343b=>{var _0x2721fc=_0x430540;alert(_0x4e343b[_0x2721fc(0x217)]);});});});}function displayFaculty(){var _0x24073a=_0x514741;const _0x3a6fdb=ref(db,_0x24073a(0x1e6));onValue(_0x3a6fdb,_0x5a9dfe=>{var _0x4ede5e=_0x24073a,_0x352865='';const _0x2a9ac0=document[_0x4ede5e(0x22a)]('divAssignment');if(_0x5a9dfe['exists']()){_0x5a9dfe['forEach'](_0x3001dc=>{var _0x4fc22f=_0x4ede5e;_0x3001dc[_0x4fc22f(0x243)]()[_0x4fc22f(0x1f8)]&&(_0x352865+=_0x4fc22f(0x202)+_0x3001dc[_0x4fc22f(0x1ea)]+_0x4fc22f(0x20b)+_0x3001dc[_0x4fc22f(0x243)]()[_0x4fc22f(0x1f8)]+_0x4fc22f(0x23c));}),_0x2a9ac0['innerHTML']=_0x352865;for(var _0x1efd05=0x0;_0x1efd05<_0x2a9ac0['childElementCount'];_0x1efd05++){btnDelAssignment[_0x1efd05][_0x4ede5e(0x1fd)](_0x4ede5e(0x1e4),deleteFaculty);}}});}displayFaculty();function assignFaculty(){var _0x5f21f1=_0x514741;dropCourse[_0x5f21f1(0x210)]!=_0x5f21f1(0x1f6)&&dropMentor[_0x5f21f1(0x210)]!='Select\x20Mentor'?update(ref(db,'courses/'+dropCourse['value']),{'mentor':dropMentor[_0x5f21f1(0x210)]})[_0x5f21f1(0x21e)](()=>{var _0x4ce628=_0x5f21f1;dropCourse[_0x4ce628(0x210)]=_0x4ce628(0x1f6),dropMentor[_0x4ce628(0x210)]=_0x4ce628(0x1fa),displayFaculty();})[_0x5f21f1(0x1ed)](_0x50ed1e=>{var _0x3d87ee=_0x5f21f1;alert(_0x50ed1e[_0x3d87ee(0x217)]);}):(dropCourse[_0x5f21f1(0x210)]=_0x5f21f1(0x1f6),dropMentor[_0x5f21f1(0x210)]=_0x5f21f1(0x1fa));}btnAddAssignment['addEventListener'](_0x514741(0x1e4),assignFaculty);function checkIfOnline(){var _0x2fff07=_0x514741,_0x5df5be=sessionStorage[_0x2fff07(0x228)](_0x2fff07(0x201)),_0x36cea1=sessionStorage[_0x2fff07(0x228)]('sessEmail');_0x5df5be==_0x2fff07(0x214)&&signOut(auth)['then'](()=>{var _0x400ab4=_0x2fff07;sessionStorage[_0x400ab4(0x23b)]();})[_0x2fff07(0x1ed)](_0xa41389=>{alert(_0xa41389['code']);});}setInterval(checkIfOnline,0x1f4);
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-auth.js";
+import { getDatabase, ref, onValue, update, child, get, set, remove, query, orderByChild } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
+  authDomain: "projartcademyph-29663.firebaseapp.com",
+  databaseURL: "https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "projartcademyph-29663",
+  storageBucket: "projartcademyph-29663.appspot.com",
+  messagingSenderId: "651674935886",
+  appId: "1:651674935886:web:629aefbab24dd2a154991f"
+};
+
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const db = getDatabase();
+
+
+ //--check first if user is currently logged in
+
+ var bodyBlue = document.getElementById('bodyBlue');
+
+ onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+        var sessID = sessionStorage.getItem("sessID");
+    
+        if(sessID === "XribZIy3mORl28B3A7S3qOdv2Bs1") {
+
+            bodyBlue.style.visibility = "visible";
+            
+        }
+
+        else {
+
+            signOut(auth);
+            
+        }
+    }
+
+    else {
+      
+        window.location.replace('https://creator.artcademy.ph');
+
+    } 
+
+});
+
+
+//--------------------------------Banner--------------------------------------
+
+var t = .002*window.innerWidth;
+var c = window.innerWidth;
+var scrollingBannerText = document.getElementById('pBanner');
+const scrollingBanner = document.getElementById('divBanner');
+var bannerContainer = document.getElementById('bannerContainer');
+bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+
+//----------------------------Common Banner codes---------------------
+function checkBanner() {
+    
+    const path = ref(db, 'settings/banner');
+    onValue(path, (snapshot) => {
+        if(snapshot.exists()) {
+
+            scrollingBannerText.innerText = snapshot.val().message;
+            if(snapshot.val().status === true) {
+                scrollingBanner.style.visibility = "visible";
+            }
+            else {
+                scrollingBanner.style.visibility = "hidden";
+            }
+        }
+    });
+}
+checkBanner();
+
+function bannerAnimation() {
+    c -= .5;
+    bannerContainer.style.transform = "translateX(" + c +"px)";
+    if(c < (bannerContainer.offsetWidth*-1)) {
+        c = window.innerWidth;
+        bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+    }
+}
+setInterval(bannerAnimation, t);
+
+//--------------------------------Courses--------------------------------------
+
+var txtCourseTitle = null;
+var oldCourse = null;
+const btnAddCourse = document.getElementById('btnAddCourse');
+const btnDelCourse = document.getElementsByClassName('btnDelCourse');
+const btnEditCourse = document.getElementsByClassName('btnEditCourse');
+
+function getCourses() {
+    txtCourseTitle = document.getElementById('txtCourseTitle');
+    return txtCourseTitle;
+}
+
+function changeCourse() {
+    getCourses();
+    oldCourse = this.parentElement.firstElementChild.innerText;
+    txtCourseTitle.value = oldCourse;
+    return oldCourse;
+}
+
+function deleteCourse () {
+    getCourses();
+    var delCourse = this.parentElement.firstElementChild.innerText;
+
+    var lblConfirm = "Permanently delete this record?";
+    if(confirm(lblConfirm) == true) {
+        remove(ref(db, 'courses/' + delCourse))
+        .then(()=> {
+            displayCourse();
+            updateDropCourse();
+        })
+    }
+}
+
+function displayCourse() {
+    
+    const path = ref(db, 'courses/');
+    var divCourses = document.getElementById('divCourses');
+
+    for(var a=0; a < divCourses.children; a++){
+        divCourses.children[a].remove();
+    }
+
+    onValue(path, (snapshot)=> {
+        var entries = "";
+        snapshot.forEach((childSnapshot)=> {
+            entries += `
+                <div class="facultyEntry">
+                    <div class="facultyTitle"><h1>${childSnapshot.key}</h1></div>
+                    <img src="img-h6rv2c/btnDelete.png" class="btnDelCourse">
+                    <img src="img-h6rv2c/btnEdit.png" class="btnEditCourse" >
+                </div>
+            `;
+            
+        })
+        divCourses.innerHTML = entries;
+        
+        for(var a=0; a < btnDelCourse.length; a++) {
+            btnEditCourse[a].addEventListener('click', changeCourse);
+            btnDelCourse[a].addEventListener('click', deleteCourse);
+        }
+    })
+}
+displayCourse();
+
+function addUpdateCourse() {
+    getCourses();
+
+    const path = ref(db);
+    get(child(path, 'courses/' + oldCourse)).then((snapshot) => {
+        if(snapshot.exists()) {
+            var data = snapshot.val()
+
+            set((ref(db, 'courses/' + txtCourseTitle.value)),data)
+            .then(()=> {
+                remove(ref(db, 'courses/' + oldCourse));
+                displayCourse();
+                updateDropCourse();
+            });
+        }
+        else {
+            var newKey = txtCourseTitle.value;
+            set(ref(db, 'courses/' + newKey), {
+                batch: "",
+                mentor: "",
+                resources: ""
+            })
+            .then(()=> {
+                displayCourse();
+                updateDropCourse();
+            });
+        }
+        txtCourseTitle.value = "";
+    })
+}
+btnAddCourse.addEventListener('click', addUpdateCourse);
+
+
+//-------------------------------Mentors--------------------------------------
+
+var generateID = "";
+var txtMentorName, txtMentorEmail = null;
+const btnAddMentor = document.getElementById('btnAddMentor');
+var divMentors = document.getElementById('divMentors');
+const btnSuspendMentor = document.getElementsByClassName('btnSuspendMentor');
+
+function getID() {
+    generateID = "M";
+    const currentTime = new Date();
+    var id = [];
+
+    id[0] = currentTime.getFullYear().toString().substring(2);
+    id[1] = (currentTime.getMonth() + 1).toString();
+    id[2] = currentTime.getDate().toString();
+    id[3] = currentTime.getHours().toString();
+    id[4] = currentTime.getMinutes().toString();
+    id[5] = currentTime.getSeconds().toString();
+
+    for(var a= 0; a < id.length; a++) {
+
+        if(Number(id[a]) < 10) {
+            id[a] = "0" + id[a];
+        }
+    
+        generateID += id[a];
+    }
+    return generateID;
+}
+
+function getMentor() {
+    txtMentorName = document.getElementById('txtMentorName');
+    txtMentorEmail = document.getElementById('txtMentorEmail');
+
+    return txtMentorName, txtMentorEmail;
+}
+
+function changeMentorStatus() {
+
+    const divMentor = this.parentElement.children[1];
+    
+    get(ref(db, 'accounts/mentors')).then((snapshot)=> {
+        snapshot.forEach((childSnapshot) => {
+            if(divMentor.innerText == childSnapshot.val().email) {
+                if(childSnapshot.val().status == "suspended") {
+                    update(ref(db, 'accounts/mentors/' + childSnapshot.key), {
+                        status: "offline"
+                    })
+                }
+                else {
+                    update(ref(db, 'accounts/mentors/' + childSnapshot.key), {
+                        status: "suspended"
+                    })   
+                }
+            }
+        })
+    })       
+}
+
+function displayMentor(){
+    const path = ref(db, 'accounts/mentors/');
+    const newQuery = query(path , orderByChild('name'));
+    
+    onValue(newQuery , (snapshot) => {
+
+        var append = "";
+        var arrStatus = [];
+        var i = 0;
+
+        snapshot.forEach((childSnapshot)=> {
+
+            append += `
+                <div class="facultyEntry">
+                    <div class="facultyName"><h1>${childSnapshot.val().name}</h1></div>
+                    <div class="facultyEmail"><h1>${childSnapshot.val().email}</h1></div>
+                    <img src="img-h6rv2c/btnConfirm.png" class="btnSuspendMentor">
+                </div>
+            `;
+
+            //store status of record
+            arrStatus[i] = childSnapshot.val().status;
+            i++;
+        })
+
+        //append all elements
+        divMentors.innerHTML = append;
+
+        for(var a=0; a < divMentors.childElementCount; a++) {
+        
+            if(arrStatus[a] == "suspended") {
+                divMentors.children[a].children[0].firstElementChild.style.color = "salmon";
+                divMentors.children[a].children[1].firstElementChild.style.color = "salmon";
+                divMentors.children[a].children[2].src = "../img-h6rv2c/btnSuspended.png"
+                
+                divMentors.children[a].children[0].firstElementChild.style.opacity = "1";
+                divMentors.children[a].children[1].firstElementChild.style.opacity = "1";
+                divMentors.children[a].children[2].style.opacity = "1";
+            }
+            else if (arrStatus[a] == "online") {
+                divMentors.children[a].children[0].firstElementChild.style.color = "white";
+                divMentors.children[a].children[1].firstElementChild.style.color = "white";
+                divMentors.children[a].children[2].src = "../img-h6rv2c/btnConfirm.png";
+    
+                divMentors.children[a].children[0].firstElementChild.style.opacity = "1";
+                divMentors.children[a].children[1].firstElementChild.style.opacity = "1";
+                divMentors.children[a].children[2].style.opacity = "1";
+            }
+            else {
+                divMentors.children[a].children[0].firstElementChild.style.color = "white";
+                divMentors.children[a].children[1].firstElementChild.style.color = "white";
+                divMentors.children[a].children[2].src = "../img-h6rv2c/btnConfirm.png"
+    
+                divMentors.children[a].children[0].firstElementChild.style.opacity = ".25";
+                divMentors.children[a].children[1].firstElementChild.style.opacity = ".25";
+                divMentors.children[a].children[2].style.opacity = ".25";    
+            }
+    
+        }
+
+        //add event listeners to all delete buttons
+        for(var a = 0; a < btnSuspendMentor.length; a++) {
+            btnSuspendMentor[a].addEventListener('click', changeMentorStatus);
+        } 
+
+    })  
+}
+displayMentor();
+
+function addMentor() {
+
+    getID();
+    getMentor();
+  
+    set(ref(db, 'accounts/mentors/' + generateID), {
+        email: txtMentorEmail.value,
+        name: txtMentorName.value,
+        devices: 0,
+        lastOnline: "",
+        status: "offline",
+        warning: 0
+    })
+    .then(()=> {
+        displayMentor();
+        updateDropMentor();
+        txtMentorEmail.value = "";
+        txtMentorName.value = "";
+    })
+    .catch((error)=> {
+        alert(error.code);
+    })           
+}
+
+function addAuthMentor() {
+    getMentor();
+
+    if((txtMentorName.value != "") && (txtMentorEmail.value != "")) {
+        
+        createUserWithEmailAndPassword(auth, txtMentorEmail.value, '@Abcd1234')
+        .then(()=>{
+            
+            var loginEmail = sessionStorage.getItem("sessEmail");
+            var loginPw = sessionStorage.getItem("sessPw");
+            signInWithEmailAndPassword(auth, loginEmail, loginPw)
+            .then(()=> {
+                addMentor();
+            })
+          
+        })
+        .catch((error) => {
+            addMentor();
+        }) 
+    }
+}
+btnAddMentor.addEventListener('click', addAuthMentor);
+
+
+//---------------------------Assigning Mentors-----------------------
+
+var dropCourse = document.getElementById('dropCourseTitle');
+var dropMentor = document.getElementById('dropMentorName');
+const btnAddAssignment = document.getElementById('btnAddAssignment');
+const btnDelAssignment = document.getElementsByClassName('btnDelAssignment');
+
+function updateDropCourse() {
+    var append = `<option class="optionFaculty" value="Select Course">Select Course</option>`;
+    const path = ref(db, 'courses/');
+
+    get(path).then((snapshot) => {
+
+        for(var a = 0; a < dropCourse.children; a++) {
+
+            dropCourse.children[a].remove();
+        }
+
+        if(snapshot.exists()) {
+
+            snapshot.forEach((childSnapshot)=> {
+
+                append += `
+                <option class="optionFaculty" value="${childSnapshot.key}">${childSnapshot.key}</option>
+                `;
+            })
+            dropCourse.innerHTML = append;
+        }
+    })
+}
+updateDropCourse();
+
+function updateDropMentor() {
+    var append = `<option class="optionFaculty" value="Select Mentor">Select Mentor</option>`;
+    const path = ref(db, 'accounts/mentors/');
+
+    get(path).then((snapshot) => {
+
+        for(var a = 0; a < dropMentor.children; a++) {
+          
+            dropMentor.children[a].remove();
+        }
+
+        if(snapshot.exists()) {
+
+            snapshot.forEach((childSnapshot)=> {
+
+                append += `
+                <option class="optionFaculty" value="${childSnapshot.val().name}">${childSnapshot.val().name}</option>
+                `;
+            })
+            dropMentor.innerHTML = append;
+        }
+    })
+}
+updateDropMentor();
+
+function deleteFaculty() {
+    const facultyEntry = this.parentElement.children[0];
+
+    const path = ref(db, 'courses/');
+    onValue(path, (snapshot)=> {
+        snapshot.forEach((childSnapshot) => {
+            if(facultyEntry.firstElementChild.innerText == childSnapshot.key) {
+                update(ref(db, 'courses/' + childSnapshot.key), {
+                    mentor: ""
+                })
+                .then(() => {
+                    facultyEntry.remove();
+                })
+                .catch((error)=> {
+                    alert(error.code);
+                })
+            }
+        })
+    })
+}
+
+function displayFaculty() {
+    const path = ref(db, 'courses/');
+    
+    onValue(path, (snapshot) => {
+        var append = "";
+        const divAssignment = document.getElementById('divAssignment');
+        if(snapshot.exists()) {
+            snapshot.forEach((childSnapshot) => {
+
+                if(childSnapshot.val().mentor) {
+
+                    append +=
+                    `<div class="facultyEntry">
+                        <div class="facultyDesc"><h1>${childSnapshot.key}</h1></div>
+                        <div class="facultyDesc"><h1>${childSnapshot.val().mentor}</h1></div>
+                        <img src="img-h6rv2c/btnDelete.png" class="btnDelAssignment">
+                        </div>`;
+                }
+            })
+            divAssignment.innerHTML = append;
+
+            for(var a = 0; a < divAssignment.childElementCount; a++) {
+                btnDelAssignment[a].addEventListener('click', deleteFaculty);
+            }
+
+        }
+    })
+}
+displayFaculty();
+
+function assignFaculty() {
+    if((dropCourse.value != "Select Course") && (dropMentor.value != "Select Mentor")) {
+        update(ref(db, 'courses/' + dropCourse.value), {
+            mentor: dropMentor.value
+        })
+        .then(() => {
+            dropCourse.value = "Select Course";
+            dropMentor.value = "Select Mentor";
+            displayFaculty();
+        })
+        .catch((error) => {
+            alert(error.code);
+        })
+    }
+    else {
+        dropCourse.value = "Select Course";
+        dropMentor.value = "Select Mentor";
+    }
+}
+btnAddAssignment.addEventListener('click', assignFaculty);
+
+
+//-----------------------Monitor Logout------------------------
+
+function checkIfOnline() {
+
+    var oAuth = sessionStorage.getItem("oAuth");
+    var sessEmail = sessionStorage.getItem('sessEmail');
+
+    if(oAuth == "out") {
+
+        signOut(auth)
+        .then(()=> {
+            sessionStorage.clear();
+        })
+        .catch((error)=> {
+            alert(error.code);
+        })
+           
+    }
+
+}
+setInterval(checkIfOnline, 500);
+
+
+

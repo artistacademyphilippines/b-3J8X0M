@@ -1,1 +1,220 @@
-var _0x135098=_0xf78a;(function(_0x9820b9,_0x25d6a6){var _0x2f1978=_0xf78a,_0x17c0d0=_0x9820b9();while(!![]){try{var _0x3f9a52=parseInt(_0x2f1978(0x19b))/0x1+parseInt(_0x2f1978(0x18b))/0x2+parseInt(_0x2f1978(0x174))/0x3*(parseInt(_0x2f1978(0x195))/0x4)+parseInt(_0x2f1978(0x165))/0x5+-parseInt(_0x2f1978(0x191))/0x6*(-parseInt(_0x2f1978(0x196))/0x7)+parseInt(_0x2f1978(0x16e))/0x8+parseInt(_0x2f1978(0x18a))/0x9*(-parseInt(_0x2f1978(0x17a))/0xa);if(_0x3f9a52===_0x25d6a6)break;else _0x17c0d0['push'](_0x17c0d0['shift']());}catch(_0x562ab4){_0x17c0d0['push'](_0x17c0d0['shift']());}}}(_0x1a33,0x3ee05));import{initializeApp}from'https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js';import{getAuth,signInWithEmailAndPassword,onAuthStateChanged,signOut}from'https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js';import{getDatabase,ref,onValue,set}from'https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js';const firebaseConfig={'apiKey':_0x135098(0x180),'authDomain':_0x135098(0x179),'databaseURL':'https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app','projectId':_0x135098(0x19f),'storageBucket':_0x135098(0x187),'messagingSenderId':'651674935886','appId':'1:651674935886:web:629aefbab24dd2a154991f'},app=initializeApp(firebaseConfig),auth=getAuth(app),db=getDatabase();var t=0.002*window['innerWidth'],c=window[_0x135098(0x17c)],scrollingBannerText=document[_0x135098(0x184)](_0x135098(0x183));const scrollingBanner=document[_0x135098(0x184)](_0x135098(0x18e));var bannerContainer=document[_0x135098(0x184)](_0x135098(0x192));bannerContainer['style'][_0x135098(0x19a)]='translateX('+window['innerWidth']+_0x135098(0x15e);function checkBanner(){var _0x3a8263=_0x135098;const _0x13f686=ref(db,_0x3a8263(0x189));onValue(_0x13f686,_0xc8e606=>{var _0x3e949c=_0x3a8263;_0xc8e606[_0x3e949c(0x163)]()&&(scrollingBannerText[_0x3e949c(0x182)]=_0xc8e606[_0x3e949c(0x15f)]()[_0x3e949c(0x19e)],_0xc8e606[_0x3e949c(0x15f)]()[_0x3e949c(0x176)]===!![]?scrollingBanner['style'][_0x3e949c(0x161)]=_0x3e949c(0x168):scrollingBanner[_0x3e949c(0x1a0)][_0x3e949c(0x161)]=_0x3e949c(0x171));});}checkBanner();function bannerAnimation(){var _0x476049=_0x135098;c-=0.5,bannerContainer[_0x476049(0x1a0)][_0x476049(0x19a)]='translateX('+c+_0x476049(0x15e),c<bannerContainer[_0x476049(0x198)]*-0x1&&(c=window['innerWidth'],bannerContainer[_0x476049(0x1a0)][_0x476049(0x19a)]=_0x476049(0x16a)+window['innerWidth']+_0x476049(0x15e));}function _0xf78a(_0x473a92,_0x4588ea){var _0x1a338e=_0x1a33();return _0xf78a=function(_0xf78a72,_0x1bbda0){_0xf78a72=_0xf78a72-0x15d;var _0x18f3b7=_0x1a338e[_0xf78a72];return _0x18f3b7;},_0xf78a(_0x473a92,_0x4588ea);}setInterval(bannerAnimation,t);var loginEmail=document[_0x135098(0x16f)](_0x135098(0x16b)),loginPw=document[_0x135098(0x16f)](_0x135098(0x18c));const btnLogin=document[_0x135098(0x184)]('btnLogin');function _0x1a33(){var _0x400cc4=['getSeconds','innerWidth','------','getMinutes','getHours','AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk','catch','innerText','pBanner','getElementById','keydown','code','projartcademyph-29663.appspot.com','Email\x20or\x20password\x20is\x20incorrect','settings/banner','9cufYdj','426200CpRyOq','#txtPw','Unauthorized\x20access','divBanner','XribZIy3mORl28B3A7S3qOdv2Bs1','https://artcademy.ph/404','558dNMhMr','bannerContainer','sessID','location','4hUctrU','24913iIyIzi','setItem','offsetWidth','org','transform','26748eTIoTo','unauthorizedAccess/','replace','message','projartcademyph-29663','style','value','opacity','match','uid','px)','val','sessPw','visibility','then','exists','pageshow','382905YNmIJc','Enter','country','visible','getDate','translateX(','#txtEmail','addEventListener','https://creator.artcademy.ph/dashboard','3363576HzRWev','querySelector','sessEmail','hidden','getFullYear','#alertMessage','761448CyANNK','https://ipapi.co/json','status','json','click','projartcademyph-29663.firebaseapp.com','10641380RbKkBh'];_0x1a33=function(){return _0x400cc4;};return _0x1a33();}var alertMsg=document['querySelector'](_0x135098(0x173)),bodyBlue=document[_0x135098(0x184)]('bodyBlue');onAuthStateChanged(auth,_0x1a9156=>{var _0x575f1f=_0x135098;if(_0x1a9156){if(_0x1a9156['uid']==_0x575f1f(0x18f))sessionStorage[_0x575f1f(0x197)](_0x575f1f(0x193),_0x1a9156[_0x575f1f(0x15d)]),window[_0x575f1f(0x194)][_0x575f1f(0x19d)](_0x575f1f(0x16d));else{var _0x41ed90,_0xf5c43f,_0x3f8fef,_0x1cbe11,_0x55107e,_0x14d8e0,_0x5afbb0='';fetch(_0x575f1f(0x175))[_0x575f1f(0x162)](_0x41683b=>_0x41683b['json']())[_0x575f1f(0x162)](_0x277a5f=>_0xaf6b68(_0x277a5f));function _0xaf6b68(_0x59ab77){var _0x4eb19e=_0x575f1f;const _0xc0168=new Date();var _0x4f97ba=_0xc0168[_0x4eb19e(0x172)](),_0x12cb1c=_0xc0168['getMonth']()+0x1,_0x194ff5=_0xc0168[_0x4eb19e(0x169)](),_0x49044d=_0xc0168[_0x4eb19e(0x17f)](),_0x286e6e=_0xc0168[_0x4eb19e(0x17e)](),_0x19edff=_0xc0168[_0x4eb19e(0x17b)]();_0x5afbb0=_0x12cb1c+'-'+_0x194ff5+'-'+_0x4f97ba,_0x14d8e0=_0x49044d+':'+_0x286e6e+':'+_0x19edff,_0x41ed90=_0x59ab77['ip'],_0xf5c43f=_0x59ab77['country'],_0x3f8fef=_0x59ab77[_0x4eb19e(0x199)],_0x1cbe11=loginEmail,_0x55107e=_0x1a9156[_0x4eb19e(0x15d)],set(ref(db,_0x4eb19e(0x19c)+_0x4f97ba+_0x12cb1c+_0x194ff5+_0x49044d+_0x286e6e+_0x19edff),{'ip':_0x41ed90,'country':_0xf5c43f,'network':_0x3f8fef,'email':_0x1cbe11,'uid':_0x55107e,'date':_0x5afbb0,'time':_0x14d8e0})[_0x4eb19e(0x162)](()=>{var _0x457059=_0x4eb19e;window['location'][_0x457059(0x19d)](_0x457059(0x190));});}}}else bodyBlue[_0x575f1f(0x1a0)][_0x575f1f(0x161)]=_0x575f1f(0x168);});function validateLogin(){var _0x329744=_0x135098,_0x5f2fee=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;loginEmail[_0x329744(0x1a1)][_0x329744(0x1a3)](_0x5f2fee)&&loginPw[_0x329744(0x1a1)]!=''?signInWithEmailAndPassword(auth,loginEmail[_0x329744(0x1a1)],loginPw[_0x329744(0x1a1)])[_0x329744(0x162)](()=>{var _0x1a56dc=_0x329744;sessionStorage[_0x1a56dc(0x197)](_0x1a56dc(0x170),loginEmail[_0x1a56dc(0x1a1)]),sessionStorage[_0x1a56dc(0x197)](_0x1a56dc(0x160),loginPw[_0x1a56dc(0x1a1)]);})[_0x329744(0x181)](_0x969ae5=>{var _0x1113ed=_0x329744,_0x304b1c,_0x2e0f8a,_0x124681,_0x2899b5,_0x5129bb,_0x418166='';fetch(_0x1113ed(0x175))[_0x1113ed(0x162)](_0x59e4af=>_0x59e4af[_0x1113ed(0x177)]())[_0x1113ed(0x162)](_0x3fb62a=>_0x3b5299(_0x3fb62a));function _0x3b5299(_0x19f21d){var _0x2e4fba=_0x1113ed;const _0xd2b35d=new Date();var _0x2cf2ce=_0xd2b35d['getFullYear'](),_0x44ed33=_0xd2b35d['getMonth']()+0x1,_0x587c81=_0xd2b35d[_0x2e4fba(0x169)](),_0x3bc983=_0xd2b35d[_0x2e4fba(0x17f)](),_0x25f57f=_0xd2b35d['getMinutes'](),_0x47c856=_0xd2b35d[_0x2e4fba(0x17b)]();_0x418166=_0x44ed33+'-'+_0x587c81+'-'+_0x2cf2ce,_0x5129bb=_0x3bc983+':'+_0x25f57f+':'+_0x47c856,_0x304b1c=_0x19f21d['ip'],_0x2e0f8a=_0x19f21d[_0x2e4fba(0x167)],_0x124681=_0x19f21d[_0x2e4fba(0x199)],_0x2899b5=loginEmail,set(ref(db,_0x2e4fba(0x19c)+_0x2cf2ce+_0x44ed33+_0x587c81+_0x3bc983+_0x25f57f+_0x47c856),{'ip':_0x304b1c,'country':_0x2e0f8a,'network':_0x124681,'email':_0x2899b5,'uid':_0x2e4fba(0x17d),'date':_0x418166,'time':_0x5129bb})['then'](()=>{var _0x2ec7a2=_0x2e4fba;alertMsg[_0x2ec7a2(0x182)]=_0x2ec7a2(0x18d),alertMsg[_0x2ec7a2(0x1a0)][_0x2ec7a2(0x1a2)]='1',loginEmail[_0x2ec7a2(0x1a1)]='',loginPw['value']='';});}}):(alertMsg['innerText']=_0x329744(0x188),alertMsg[_0x329744(0x1a0)][_0x329744(0x1a2)]='1');}function pressEnter(_0x512080){var _0x2bf978=_0x135098;_0x512080[_0x2bf978(0x186)]===_0x2bf978(0x166)&&validateLogin();}btnLogin['addEventListener'](_0x135098(0x178),validateLogin),document[_0x135098(0x16f)](_0x135098(0x16b))[_0x135098(0x16c)](_0x135098(0x185),pressEnter),document[_0x135098(0x16f)](_0x135098(0x18c))[_0x135098(0x16c)](_0x135098(0x185),pressEnter);function clearText(){var _0x2e5273=_0x135098;document['querySelector'](_0x2e5273(0x16b))[_0x2e5273(0x1a1)]='',document[_0x2e5273(0x16f)](_0x2e5273(0x18c))['value']='';}window[_0x135098(0x16c)](_0x135098(0x164),clearText);
+
+//------------------------Firebase--------------------
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js";
+  import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+  import { getDatabase, ref, onValue, set} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyADks-XldL82do7F8_A46cAWb6ZnDjQ3Yk",
+    authDomain: "projartcademyph-29663.firebaseapp.com",
+    databaseURL: "https://projartcademyph-29663-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "projartcademyph-29663",
+    storageBucket: "projartcademyph-29663.appspot.com",
+    messagingSenderId: "651674935886",
+    appId: "1:651674935886:web:629aefbab24dd2a154991f"
+};
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getDatabase();
+
+//--------------------------------Banner--------------------------------------
+
+var t = .002*window.innerWidth;
+var c = window.innerWidth;
+var scrollingBannerText = document.getElementById('pBanner');
+const scrollingBanner = document.getElementById('divBanner');
+var bannerContainer = document.getElementById('bannerContainer');
+bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+
+//----------------------------Common Banner codes---------------------
+function checkBanner() {
+    
+    const path = ref(db, 'settings/banner');
+    onValue(path, (snapshot) => {
+        if(snapshot.exists()) {
+
+            scrollingBannerText.innerText = snapshot.val().message;
+            if(snapshot.val().status === true) {
+                scrollingBanner.style.visibility = "visible";
+            }
+            else {
+                scrollingBanner.style.visibility = "hidden";
+            }
+        }
+    });
+}
+checkBanner();
+
+function bannerAnimation() {
+    c -= .5;
+    bannerContainer.style.transform = "translateX(" + c +"px)";
+    if(c < (bannerContainer.offsetWidth*-1)) {
+        c = window.innerWidth;
+        bannerContainer.style.transform = "translateX(" + window.innerWidth +"px)";
+    }
+}
+setInterval(bannerAnimation, t);
+
+  //---------------------Functions---------------------
+  var loginEmail = document.querySelector('#txtEmail');
+  var loginPw = document.querySelector('#txtPw');
+  const btnLogin = document.getElementById('btnLogin');
+  var alertMsg = document.querySelector('#alertMessage');
+  
+  //--check first if user is currently logged in
+
+var bodyBlue = document.getElementById('bodyBlue');
+
+onAuthStateChanged(auth, (user) => {
+
+  if (user) {
+
+    if(user.uid == "XribZIy3mORl28B3A7S3qOdv2Bs1") {
+
+      sessionStorage.setItem("sessID", user.uid);
+      window.location.replace('https://creator.artcademy.ph/dashboard');
+
+    }
+
+    else {
+
+        var getIP, getCountry, getISP, getEmail, getUID, getTime, getDate = "";
+
+        fetch("https://ipapi.co/json")
+        .then(respo => respo.json())
+        .then(data => getData(data));
+
+        function getData(data) {
+              
+          const d = new Date();
+          var year = d.getFullYear();
+          var month = d.getMonth() + 1;
+          var date = d.getDate();
+          var hour = d.getHours();
+          var mins = d.getMinutes();
+          var secs = d.getSeconds();
+
+          getDate = month + "-" + date + "-" + year;
+          getTime = hour + ":" + mins + ":" + secs;
+          getIP = data.ip;
+          getCountry = data.country;
+          getISP = data.org;
+
+          getEmail = loginEmail;
+          getUID = user.uid;
+
+          set(ref(db, 'unauthorizedAccess/' + year + month + date + hour + mins + secs), {
+            ip: getIP,
+            country: getCountry,
+            network: getISP,
+            email: getEmail,
+            uid: getUID,
+            date: getDate,
+            time: getTime
+          })
+          .then(()=> {
+
+            window.location.replace('https://artcademy.ph/404');
+          
+            })
+          }
+      }
+      
+    }
+    
+    else {
+      
+      bodyBlue.style.visibility = "visible";
+      
+    } 
+  });
+
+
+  //---------------------validate login--------------------
+
+  function validateLogin() {
+
+    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if ((loginEmail.value.match(validRegex)) && (loginPw.value != "")) { //check if login fields valid
+
+      signInWithEmailAndPassword(auth, loginEmail.value, loginPw.value)
+      .then(()=> {
+       
+        sessionStorage.setItem("sessEmail", loginEmail.value);
+        sessionStorage.setItem("sessPw", loginPw.value);
+      })
+      .catch((error)=> {
+
+        var getIP, getCountry, getISP, getEmail, getTime, getDate = "";
+
+        fetch("https://ipapi.co/json")
+          .then(respo => respo.json())
+            .then(data => getData(data));
+
+              function getData(data) {
+                
+                const d = new Date();
+                var year = d.getFullYear();
+                var month = d.getMonth() + 1;
+                var date = d.getDate();
+                var hour = d.getHours();
+                var mins = d.getMinutes();
+                var secs = d.getSeconds();
+
+                getDate = month + "-" + date + "-" + year;
+                getTime = hour + ":" + mins + ":" + secs;
+                getIP = data.ip;
+                getCountry = data.country;
+                getISP = data.org;
+
+                getEmail = loginEmail;
+                
+
+                set(ref(db, 'unauthorizedAccess/' + year + month + date + hour + mins + secs), {
+                  ip: getIP,
+                  country: getCountry,
+                  network: getISP,
+                  email: getEmail,
+                  uid: "------",
+                  date: getDate,
+                  time: getTime
+                })
+                .then(()=> {
+                  alertMsg.innerText = "Unauthorized access";
+                  alertMsg.style.opacity = "1";
+                  loginEmail.value = "";
+                  loginPw.value = "";
+
+                  
+                })
+              }
+      })
+
+    }
+    else {
+      alertMsg.innerText = "Email or password is incorrect";
+      alertMsg.style.opacity = "1";
+    }
+  }
+
+
+  //-------------on enter, use function login---------------
+  function pressEnter(e) {
+    if(e.code === "Enter") {
+      validateLogin();
+    }
+  }
+
+  btnLogin.addEventListener("click", validateLogin);
+  document.querySelector('#txtEmail').addEventListener("keydown", pressEnter);
+  document.querySelector('#txtPw').addEventListener("keydown", pressEnter);
+
+//-------------------------Reset Texts---------------------
+
+function clearText() {
+  document.querySelector('#txtEmail').value = "";
+  document.querySelector('#txtPw').value = "";
+}
+window.addEventListener("pageshow", clearText);
+

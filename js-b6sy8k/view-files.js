@@ -234,8 +234,8 @@ function loadResData() {
                 divAppTable[a-1].innerHTML = append2[a];
                 
                 console.log(tableFileEntry.length)
-                
-                for(var z = 0; z < tableFileEntry.length; z++) {
+
+                for(var z = 0; z <= tableFileEntry.length; z++) {
                 
                     console.log(`z: ${z} length: ${tableFileEntry.length}`);
 

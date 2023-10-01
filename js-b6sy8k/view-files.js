@@ -233,18 +233,16 @@ function loadResData() {
 
                 divAppTable[a-1].innerHTML = append2[a];
 
-                
-            })
-            
-            for(var z = 0; z < tableFileEntry.length; z++) {
-                
-                console.log(z);
+                for(var z = 0; z < tableFileEntry.length; z++) {
 
-                btnDelFile[z].addEventListener('click', deleteFile);
-                btnPlayFile[z].addEventListener('click', playFile);
-                btnDownloadFile[z].addEventListener('click', downloadFile);
-                
-            }
+                    console.log(z);
+                    
+                    btnDelFile[z].addEventListener('click', deleteFile);
+                    //btnPlayFile[z].addEventListener('click', playFile);
+                    //btnDownloadFile[z].addEventListener('click', downloadFile);
+                    
+                }
+            })
             
         }
 

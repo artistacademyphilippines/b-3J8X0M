@@ -101,7 +101,7 @@ var resources = document.getElementById('resources');
 //---file components--------
 
 const btnExpand = document.getElementsByClassName('btnExpand');
-const tableFileControls = document.getElementsByClassName('tableFileControls');
+const tableFileEntry = document.getElementsByClassName('tableFileEntry');
 const btnDelFile = document.getElementsByClassName('btnDelFile');
 const btnPlayFile =  document.getElementsByClassName('btnPlayFile');
 const btnDownloadFile =  document.getElementsByClassName('btnDownloadFile');
@@ -232,7 +232,7 @@ function loadResData() {
 
                 divAppTable[a-1].innerHTML = append2[a];
                 
-                for(var z = 0; z <= tableFileControls.length; z++) {
+                for(var z = 0; z < tableFileEntry.length; z++) {
                     btnDelFile[z].addEventListener('click', deleteFile);
                     btnPlayFile[z].addEventListener('click', playFile);
                     btnDownloadFile[z].addEventListener('click', downloadFile);

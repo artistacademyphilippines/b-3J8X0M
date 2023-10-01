@@ -232,16 +232,14 @@ function loadResData() {
                 append2[a] = append;
 
                 divAppTable[a-1].innerHTML = append2[a];
-                
-                console.log(tableFileEntry.length)
 
                 for(var z = 0; z < tableFileEntry.length; z++) {
                 
                     console.log(z);
 
-                    //btnDelFile[z].addEventListener('click', deleteFile);
-                    //btnPlayFile[z].addEventListener('click', playFile);
-                    //btnDownloadFile[z].addEventListener('click', downloadFile);
+                    btnDelFile[z].addEventListener('click', deleteFile);
+                    btnPlayFile[z].addEventListener('click', playFile);
+                    btnDownloadFile[z].addEventListener('click', downloadFile);
                     
                 }
             })
@@ -313,7 +311,6 @@ function downloadFile() {
         })
     })
 }
-
 
 function deleteFile() {
     var z = null;

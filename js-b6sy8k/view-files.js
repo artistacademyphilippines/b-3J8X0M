@@ -232,7 +232,7 @@ function loadResData() {
 
                 divAppTable[a-1].innerHTML = append2[a];
                 
-                for(var z = 0; z < tableFileControls.length; z++) {
+                for(var z = 0; z <= tableFileControls.length; z++) {
                     btnDelFile[z].addEventListener('click', deleteFile);
                     btnPlayFile[z].addEventListener('click', playFile);
                     btnDownloadFile[z].addEventListener('click', downloadFile);
@@ -315,7 +315,7 @@ function deleteFile() {
     var appNo = Number(this.parentElement.parentElement.parentElement.parentElement.dataset.count);
 
     console.log(`fileno: ${fileNo} appno: ${appNo}`)
-    
+
     if(confirm("Permanently delete this record?")) {
         const path = ref(db, 'courses/' + dropCourse.value + '/resources/public/' + appNo + '/files/');
         get(path).then((snapshot)=> {

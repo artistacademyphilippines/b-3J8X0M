@@ -235,11 +235,12 @@ function loadResData() {
                 
                 
                 for(var z = 0; z <= tableFileEntry.length; z++) {
-                    console.log(`z: ${z} length: ${tableFileEntry.length}`);
-
+                
                     btnDelFile[z].addEventListener('click', deleteFile);
                     btnPlayFile[z].addEventListener('click', playFile);
                     btnDownloadFile[z].addEventListener('click', downloadFile);
+                    
+                    console.log(`z: ${z} length: ${tableFileEntry.length}`);
                 }
             })
             

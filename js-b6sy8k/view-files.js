@@ -235,7 +235,7 @@ function loadResData() {
                 
                 console.log(tableFileEntry.length)
 
-                for(var z = 0; z <= tableFileEntry.length; z++) {
+                for(var z = 0; z < tableFileEntry.length; z++) {
                 
                     console.log(z);
 

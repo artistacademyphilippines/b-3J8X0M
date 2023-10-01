@@ -237,11 +237,11 @@ function loadResData() {
 
                 for(var z = 0; z <= tableFileEntry.length; z++) {
                 
-                    console.log(`z: ${z} length: ${tableFileEntry.length}`);
+                    console.log(z);
 
-                    btnDelFile[z].addEventListener('click', deleteFile);
-                    btnPlayFile[z].addEventListener('click', playFile);
-                    btnDownloadFile[z].addEventListener('click', downloadFile);
+                    //btnDelFile[z].addEventListener('click', deleteFile);
+                    //btnPlayFile[z].addEventListener('click', playFile);
+                    //btnDownloadFile[z].addEventListener('click', downloadFile);
                     
                 }
             })

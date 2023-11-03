@@ -242,10 +242,7 @@ function showBatch() {
             newQuery = query(path, orderByChild(orderBy));
         }
         
-        get(newQuery).then((snapshot) => {
-
-            
-            tblEntries.innerHTML = "";
+        onValue(newQuery, (snapshot) => {
 
             snapshot.forEach((childSnapshot)=> {
             
@@ -256,6 +253,7 @@ function showBatch() {
                 onValue(path2, (snapshot)=> {
                     
                     var append = "";
+                    tblEntries.innerHTML = "";
 
                     snapshot.forEach((childSnapshot)=> {
 

@@ -244,6 +244,9 @@ function showBatch() {
         
         onValue(newQuery, (snapshot) => {
 
+            var append = "";
+            tblEntries.innerHTML = "";
+
             snapshot.forEach((childSnapshot)=> {
             
                 var arrID = childSnapshot.key;
@@ -252,9 +255,6 @@ function showBatch() {
             
                 onValue(path2, (snapshot)=> {
                     
-                    var append = "";
-                    tblEntries.innerHTML = "";
-
                     snapshot.forEach((childSnapshot)=> {
 
                         if(childSnapshot.key == arrID) {
@@ -280,6 +280,8 @@ function showBatch() {
                                     <img src="img-h6rv2c/btnDelete.png" class="btnDelete">
                                 </div>
                             </div>`;
+
+                            console.log(append);
                         }
                     })
 

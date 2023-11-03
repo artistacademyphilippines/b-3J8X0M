@@ -253,7 +253,7 @@ function showBatch() {
                 
                 const path2 = ref(db, 'accounts/trainees/');
             
-                onValue(path2, (snapshot)=> {
+                get(path2).then((snapshot)=> {
                     
                     snapshot.forEach((childSnapshot)=> {
 
